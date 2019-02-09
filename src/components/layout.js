@@ -34,7 +34,6 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
         >
@@ -61,7 +60,7 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
+        <main id="content">{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

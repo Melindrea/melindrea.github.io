@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "mariehogebrandt.se",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Marie Hogebrandt <iam@mariehogebrandt.se>",
   "dependencies": {
     "gatsby": "^2.0.117",
     "gatsby-image": "^2.0.29",
@@ -33,10 +30,9 @@
     "typeface-merriweather": "0.0.54",
     "typeface-montserrat": "0.0.54",
     "typography": "^0.16.18",
-    "typography-theme-twin-peaks": "^0.16.18",
-    "typography-theme-wordpress-2016": "^0.16.18"
+    "typography-theme-twin-peaks": "^0.16.18"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://melindrea.github.io",
   "keywords": [
     "gatsby"
   ],
@@ -44,13 +40,17 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://Melindrea/melindrea.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }

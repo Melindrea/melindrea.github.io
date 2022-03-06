@@ -10,13 +10,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="/static/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
       <div class="md:container md:mx-auto md:px-8">
         <h1>Melindrea <small class="font-smallcaps text-base text-slate-500 dark:text-slate-400 font-semibold"> aka: Marie Hogebrandt, Antonius M., Antonius Marie</small></h1>
 
-        <img class="max-w-xs rounded-3xl shadow-lg" width="1000" height="1000" src="/static/images/square-portrait.jpg" alt="Portrait of me with a braided updo, in a vintage style">
+        <img class="max-w-xs rounded-3xl shadow-lg" width="1000" height="1000" src="{{ url_for('static', filename='images/square-portrait.jpg') }}" alt="Portrait of me with a braided updo, in a vintage style">
         <h2>Presence</h2>
         <ul class="list-disc list-inside px-4">
             <li><a href="https://keybase.io/melindrea">Keybase: melindrea</a></li>

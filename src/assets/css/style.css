@@ -2,16 +2,16 @@
 
 @layer base {
   h1, h2, h3 {
-    @apply font-black py-2 text-slate-900 dark:text-slate-200 font-serif;
+    @apply font-bold py-2 text-slate-900 dark:text-slate-200 font-serif;
   }
   h1 {
-    @apply text-4xl;
+    @apply text-5xl;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-4xl;
   }
   h3 {
-    @apply text-xl;
+    @apply text-2xl;
   }
   a {
     @apply text-slate-800 dark:text-slate-500 underline;
@@ -25,4 +25,29 @@
     .font-smallcaps {
         font-variant:  small-caps;
     }
+}
+
+
+/*
+ *  Navigation-specific
+ */
+#js-paper-window.tilt {
+    overflow: hidden;
+    pointer-events: none;
+}
+#js-paper-window.tilt #js-paper-front {
+    transform: rotate(10deg) translateZ(0);
+}
+
+#js-paper-front {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  transform-origin: center 70%;
+  transition: all 0.3s ease;
+}
+
+.js-menu-close:before {
+  transform: translateY(-50%) rotate(45deg);
+}
+.js-menu-close:after {
+  transform: translateY(-50%) rotate(-45deg);
 }

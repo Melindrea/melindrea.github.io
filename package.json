@@ -21,10 +21,12 @@
     "@metalsmith/markdown": "^1.6.0",
     "@metalsmith/permalinks": "^2.4.0",
     "autoprefixer": "^9.8.8",
+    "jquery": "^3.6.0",
     "jstransformer-handlebars": "^1.2.0",
     "metalsmith": "^2.4.3",
     "metalsmith-discover-helpers": "^0.1.1",
     "metalsmith-discover-partials": "^0.1.2",
+    "metalsmith-include-files": "^0.1.10",
     "metalsmith-publish": "^0.1.6",
     "metalsmith-with-postcss": "^1.1.0",
     "postcss": "^8.4.14",
@@ -40,6 +42,71 @@
     "metadata": {
       "sitename": "MelindreaMakes: {art, words, thoughts, code}",
       "analytics": "UA-42118135-5"
-    }
+    },
+    "presence": [
+      {
+        "site": "Keybase",
+        "url": "https://keybase.io/melindrea",
+        "nickname": "melindrea"
+      },
+      {
+        "site": "Twitter",
+        "url": "https://twitter.com/melindrea",
+        "nickname": "melindrea"
+      },
+      {
+        "site": "Instagram",
+        "url": "https://www.instagram.com/melindrea82",
+        "nickname": "melindrea82"
+      },
+      {
+        "site": "Ko-fi",
+        "url": "https://ko-fi.com/melindrea",
+        "nickname": "melindrea"
+      },
+      {
+        "site": "Github",
+        "url": "https://github.com/melindrea",
+        "nickname": "melindrea"
+      },
+      {
+        "site": "Redbubble",
+        "url": "https://melindrea.redbubble.com",
+        "nickname": "melindrea"
+      },
+      {
+        "site": "Discord",
+        "url": "https://discordapp.com/users/529046927321464843",
+        "nickname": "melindrea"
+      },
+      {
+        "site": "Pinterest",
+        "url": "https://www.pinterest.se/melindrea82",
+        "nickname": "melindrea82"
+      }
+    ],
+    "mastodon": [
+      {
+        "nickname": "@melindrea@wandering.shop",
+        "url": "https://wandering.shop/@melindrea",
+        "primary": true
+      },
+      {
+        "nickname": "@melindrea@mastodon.art",
+        "url": "https://mastodon.art/@melindrea"
+      },
+      {
+        "nickname": "@melindrea@queer.party",
+        "url": "https://queer.party/@melindrea"
+      },
+      {
+        "nickname": "@melindrea@mastodon.social",
+        "url": "https://mastodon.social/@melindrea"
+      },
+      {
+        "nickname": "@melindrea@awoo.space",
+        "url": "https://awoo.space/@melindrea"
+      }
+    ]
   }
 }

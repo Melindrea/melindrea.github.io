@@ -1,0 +1,64 @@
+{{> head }}
+
+<body>
+<div id="js-paper-back" class="fixed text-xl bg-slate-700 top-0 left-0 w-full h-screen">
+    <nav class="px-8 py-32">
+        <div class="js-menu-close fixed cursor-pointer top-7 left-7 w-11 h-9 after:absolute after:block after:w-11 after:h-1.5 after:t-1/2 after:bg-white after:rounded-sm before:absolute before:block before:w-11 before:h-1.5 before:t-1/2 before:bg-white before:rounded-sm"></div>
+        <a class="text-gray-200 block mb-6 no-underline" href="#">Home</a>
+        <a class="text-gray-200 block mb-6 no-underline" href="#">About Us</a>
+        <a class="text-gray-200 block mb-6 no-underline" href="#">Our Work</a>
+        <a class="text-gray-200 block mb-6 no-underline" href="#">Contact</a>
+    </nav>
+</div>
+
+<div id="js-paper-window" class="h-screen w-screen relative z-2 overflow-x-hidden overflow-y-scroll">
+    <div id="js-paper-front" class="pointer-events-auto relative z-4 bg-repeat bg-light dark:bg-dark">
+        <div class="js-menu-open text-slate-500 dark:text-slate-400 font-serif font-smallcaps text-xl font-bold sticky z-4 top-7 left-7 w-11 h-9 cursor-pointer select-none"><span>menu</span></div>
+<main class="md:container md:mx-auto md:px-8">
+    <h1>Melindrea <small class="font-smallcaps text-xl text-slate-500 dark:text-slate-400 font-normal"> aka: Marie Hogebrandt, Antonius M., Antonius Marie</small></h1>
+
+<div class="flex flex-wrap">
+    <div>
+        <img class="mr-3 mb-3 max-w-xs rounded-3xl shadow-lg float-left" width="1000" height="1000" src="/assets/images/square-portrait.jpg" alt="Portrait of me with a braided updo, in a vintage style">
+
+        <p class="max-w-prose">Aenean congue pede in nisi tristique interdum. Sed commodo, ipsum ac dignissim ullamcorper, odio nulla venenatis nisi, in porta dolor neque venenatis lacus. Pellentesque fermentum. Mauris sit amet ligula ut tellus gravida mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+    </div>
+    <div>
+        <h2>Presence</h2>
+
+        <ul class="list-disc list-inside px-4">
+            <li><a href="https://ko-fi.com/melindrea/shop">Shop on Ko-fi</a></li>
+            {{#each presence}}
+                <li><a rel="me" href="{{ url }}">{{ site }}: {{ nickname }}</a></li>
+            {{/each}}
+        </ul>
+
+        <h3>Mastodon</h3>
+
+        <ul class="list-disc list-inside px-4">
+            {{#each mastodon}}
+                <li><a rel="me" href="{{ url }}">{{ nickname }}{{#if primary}} (primary){{/if}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
+
+<h2>Works</h2>
+<div class="flex">
+    <div class="redbubble-container"><script src="https://www.redbubble.com/assets/external_portfolio.js"></script>
+    <script id="rb-xzfcxvzx">new RBExternalPortfolio('www.redbubble.com', 'melindrea', 2, 2).renderIframe();</script>
+    </div>
+
+    <div class="kofi-container"><iframe id='kofiframe' src='https://ko-fi.com/melindrea/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='melindrea'></iframe>
+    </div>
+
+</main>
+
+{{> footer }}
+
+</div><!-- /paper-window -->
+</div><!-- /paper-front -->
+    </body>
+</html>

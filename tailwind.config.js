@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
-      serif: ['Playfair Display', 'serif'],
+      serif: ['Cormorant', 'serif'],
     },
     extend: {
       backgroundImage: {

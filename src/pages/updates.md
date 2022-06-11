@@ -1,0 +1,3 @@
+---
+layout: updates-index.hbs
+---

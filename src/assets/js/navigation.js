@@ -28,7 +28,6 @@ var paperMenu = {
     hamburgerFix: function(opening) {
             if(opening) {
                 $('.js-menu-open').css({
-                    position: 'sticky',
                     top: this.$window.scrollTop() + 30 + 'px'
                 });
             } else {

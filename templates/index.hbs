@@ -1,27 +1,24 @@
 {{> head }}
 
 <body>
-<div id="js-paper-back" class="fixed text-xl bg-slate-700 top-0 left-0 w-full h-screen">
-    <nav class="px-8 py-32">
-        <div class="js-menu-close fixed cursor-pointer top-7 left-7 w-11 h-9 after:absolute after:block after:w-11 after:h-1.5 after:t-1/2 after:bg-white after:rounded-sm before:absolute before:block before:w-11 before:h-1.5 before:t-1/2 before:bg-white before:rounded-sm"></div>
-        <a class="text-gray-200 block mb-6 no-underline" href="#">Home</a>
-        <a class="text-gray-200 block mb-6 no-underline" href="#">About Us</a>
-        <a class="text-gray-200 block mb-6 no-underline" href="#">Our Work</a>
-        <a class="text-gray-200 block mb-6 no-underline" href="#">Contact</a>
-    </nav>
-</div>
 
-<div id="js-paper-window" class="h-screen w-screen relative z-2 overflow-x-hidden overflow-y-scroll">
-    <div id="js-paper-front" class="pointer-events-auto relative z-4 bg-repeat bg-light dark:bg-dark">
-        <div class="js-menu-open text-slate-500 dark:text-slate-400 font-serif font-smallcaps text-xl font-bold sticky z-4 top-7 left-7 w-11 h-9 cursor-pointer select-none"><span>menu</span></div>
+ {{> navigation }}
+
 <main class="md:container md:mx-auto md:px-8">
     <h1>Melindrea <small class="font-smallcaps text-xl text-slate-500 dark:text-slate-400 font-normal"> aka: Marie Hogebrandt, Antonius M., Antonius Marie</small></h1>
 
 <div class="flex flex-wrap">
-    <div>
-        <img class="mr-3 mb-3 max-w-xs rounded-3xl shadow-lg float-left" width="1000" height="1000" src="/assets/images/square-portrait.jpg" alt="Portrait of me with a braided updo, in a vintage style">
+    <div class="md:mr-6">
+        <img class="mr-3 mb-3 max-w-xs rounded-3xl shadow-lg md:float-left" width="1000" height="1000" src="/assets/images/square-portrait.jpg" alt="Portrait of me with a braided updo, in a vintage style">
 
-        <p class="max-w-prose">Aenean congue pede in nisi tristique interdum. Sed commodo, ipsum ac dignissim ullamcorper, odio nulla venenatis nisi, in porta dolor neque venenatis lacus. Pellentesque fermentum. Mauris sit amet ligula ut tellus gravida mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        <p class="first-line:font-smallcaps first-line:font-medium first-letter:font-serif
+  first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left max-w-prose mb-2">I am an artist and developer who lives with chronic pain together with my spouse and our wonderful cat. I am online a lot, though a lot of times I will more lurk than talk because it takes energy that I don't always have.</p>
+
+        <p class="max-w-prose mb-2">Another important detail about me is that I'm queer. I'm non-binary (and while I don't object to she/her or he/him I tend to prefer they/them), and while I identified as bi for most of my adult life I've realised that I'm ace and maybe aro. Thankfully my wonderful co-sinner is too, so we're happy in a more platonic love relationship.</p>
+
+        <p class="max-w-prose mb-2">My creative adventures are quite mixed, with everything from water colour painting to digital painting to photo manipulation. In the last category I love to make images that look magical and vintage, with tiny fairies in close-ups being one of my favourite compositions.</p>
+
+        <p class="max-w-prose mb-2">This page has a fairly comprehensive list of my various links, where I'll draw your attention a bit extra to my <a href="https://melindrea.redbubble.com">POD shop at Redbubble</a>, my main <a href="https://wandering.shop/@melindrea">Mastodon profile</a> (though you can find me interacting with the good folks at mastodon.art quite a lot) and my page at <a href="https://ko-fi.com/melindrea">Ko-fi</a>. There I have a tipjar for if you want to support me once or twice, a monthly subscriber model with a special deal for my 100 first subscribers (do you want to be my first? <a href="https://ko-fi.com/melindrea/tiers">Only $3/month!</a>), and a <a href="https://ko-fi.com/melindrea/shop">shop where I sell</a> handmade stickers, print-it-yourself monthly prompt journals and other goodies. </p>
 
     </div>
     <div>

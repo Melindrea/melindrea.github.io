@@ -16,6 +16,10 @@
   a {
     @apply text-slate-800 dark:text-slate-500 underline;
   }
+
+  a:hover, a:focus,a:active {
+    @apply dark:text-slate-300 text-slate-500;
+  }
 }
 
 @tailwind components;
@@ -29,7 +33,7 @@
 
 
 /*
- *  Navigation-specific
+ *  Navigation-specific CSS
  */
 #js-paper-window.tilt {
     overflow: hidden;
@@ -50,4 +54,20 @@
 }
 .js-menu-close:after {
   transform: translateY(-50%) rotate(-45deg);
+}
+
+.no-js #js-paper-window {
+  @apply static;
+}
+
+.no-js #js-paper-back {
+  @apply static h-auto text-lg;
+}
+
+.no-js #js-paper-back nav a {
+  @apply inline mb-0 mr-3;
+}
+
+.no-js #js-paper-back nav {
+  @apply p-4;
 }

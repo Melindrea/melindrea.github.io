@@ -1,0 +1,12 @@
+<div id="js-paper-back" class="fixed text-xl bg-slate-700 top-0 left-0 w-full h-screen">
+    <nav class="px-8 py-32">
+        <div class="hidden js-menu-close fixed cursor-pointer top-7 left-7 w-11 h-9 after:absolute after:block after:w-11 after:h-1.5 after:t-1/2 after:bg-slate-300 after:rounded-sm before:absolute before:block before:w-11 before:h-1.5 before:t-1/2 before:bg-slate-300 before:rounded-sm"></div>
+        {{#each navigation}}
+        <a class="text-slate-200 block mb-6 no-underline font-smallcaps font-medium text-slate-300" href="{{ url }}">{{ name }}</a>
+        {{/each}}
+    </nav>
+</div>
+
+<div id="js-paper-window" class="h-screen w-screen relative z-2 overflow-x-hidden overflow-y-scroll">
+    <div id="js-paper-front" class="pointer-events-auto relative z-4 bg-repeat bg-light dark:bg-dark">
+        <div class="hidden js-menu-open sticky z-4 top-7 left-7 w-11 h-9 cursor-pointer select-none float-left"><img src="/assets/images/menu-open.svg" alt="open menu"></div>

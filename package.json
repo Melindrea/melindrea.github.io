@@ -23,6 +23,7 @@
     "autoprefixer": "^9.8.8",
     "jquery": "^3.6.0",
     "jstransformer-handlebars": "^1.2.0",
+    "luxon": "^2.4.0",
     "metalsmith": "^2.4.3",
     "metalsmith-discover-helpers": "^0.1.1",
     "metalsmith-discover-partials": "^0.1.2",
@@ -41,7 +42,25 @@
   "melindreamakes": {
     "metadata": {
       "sitename": "MelindreaMakes: {art, words, thoughts, code}",
-      "analytics": "UA-42118135-5"
+      "analytics": "UA-42118135-5",
+      "navigation": [
+        {
+          "name": "Home",
+          "url": "/"
+        },
+        {
+          "name": "Posts",
+          "url": "/posts/"
+        },
+        {
+          "name": "Gallery",
+          "url": "/gallery/"
+        },
+        {
+          "name": "Updates",
+          "url": "/updates/"
+        }
+      ]
     },
     "presence": [
       {

@@ -9,7 +9,7 @@ const Metalsmith  = require('metalsmith'),
     discoverHelpers = require('metalsmith-discover-helpers'),
     postcss = require('metalsmith-with-postcss'),
     include    = require('metalsmith-include-files'),
-    melindreamakes = require("./package.json").melindreamakes;
+    melindreamakes = require('./package').melindreamakes;
 
 function presence(files, metalsmith) {
   Object.keys(files).forEach(path => {
@@ -23,6 +23,50 @@ function presence(files, metalsmith) {
   })
 }
 
+function pages(files, metalsmith) {
+    folder = "pages/";
+  Object.keys(files).forEach(path => {
+    if (path.includes(folder)) {
+        new_path = path.replace(folder, '');
+        files[new_path] = files[path];
+        delete files[path];
+    }
+  })
+}
+
+function check(files, metalsmith) {
+    /*folder = 'updates/'; */
+    Object.keys(files).forEach(path => {
+        //if (path.includes(folder) && path !== folder + 'index.html') {
+            console.log(path);
+        //}
+    })
+    //console.log(metalsmith.metadata().collections);
+}
+
+function addPubdates(files, metalsmith) {
+    Object.keys(files).forEach(path => {
+        if (! files[path].pubdate
+            && path.includes('.html')
+            && files[path].stats.birthtime) {
+            files[path].pubdate = files[path].stats.birthtime;
+        }
+    })
+}
+
+function updatesConfig(files, metalsmith) {
+    let updates = metalsmith.metadata().collections.updates;
+    let indexFile = files['updates/index.html'];
+    indexFile['title'] = updates.metadata.title;
+    indexFile['description'] = updates.metadata.description;
+
+    for (let i = 0; i < updates.length; i++) {
+        delete files[updates[i]['path'] + '/index.html'];
+    }
+
+    //console.log(updates);
+}
+
 // Run Metalsmith in the current directory.
 // When the .build() method runs, this reads
 // and strips the frontmatter from each of our
@@ -32,6 +76,7 @@ Metalsmith(__dirname)
     .source('./src')            // source directory
     .destination('./build')     // destination directory
     .clean(true)                // clean destination before
+    .ignore('**/*.DS_Store')
     .use(postcss({
         plugins: {
             'postcss-import': {},
@@ -48,12 +93,30 @@ Metalsmith(__dirname)
     // our source files' content from markdown
     // to HTML fragments.
     .use(markdown())
-    .use(permalinks())
-    .use(presence)
-    .use(discoverHelpers({
-        directory: 'templates/helpers',
-        pattern: /\.js$/
+    .use(permalinks({
+        relative: false
     }))
+    .use(collections({
+        gallery: 'photos/**/*.{jpg,png}',
+        updates: {
+          metadata: {
+            title: 'Short updates',
+            description: 'Quick updates about what is going on',
+            slug: 'updates'
+          },
+          pattern: 'updates/**/*.html',
+          refer: false,
+          sortBy: 'pubdate',
+          reverse: true
+        },
+        blog: 'posts/**/*.html'
+    }))
+    .use(pages)
+    .use(addPubdates)
+    .use(updatesConfig)
+    //.use(check)
+    .use(presence)
+    .use(discoverHelpers())
     .use(discoverPartials({
         directory: 'templates/partials',
         pattern: /\.hbs$/

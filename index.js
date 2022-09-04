@@ -190,7 +190,7 @@ Metalsmith(__dirname)
     })
     //.metadata(melindreamakes.metadata)
     .source('./src')            // source directory
-    .destination('./build')     // destination directory
+    .destination('./docs')     // destination directory
     .clean(true)                // clean destination before
     .ignore('**/*.DS_Store')
     .use(postcss({

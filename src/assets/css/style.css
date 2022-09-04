@@ -1,8 +1,8 @@
 @tailwind base;
 
 @layer base {
-  h1, h2, h3 {
-    @apply font-bold py-2 text-slate-900 dark:text-slate-200 font-serif;
+  h1, h2, h3, h4 {
+    @apply font-bold py-2 text-slate-900 dark:text-slate-300 font-serif;
   }
   h1 {
     @apply text-5xl;
@@ -11,8 +11,22 @@
     @apply text-4xl;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-3xl;
   }
+  h4 {
+    @apply text-2xl;
+    font-variant:  small-caps;
+  }
+
+  h5 {
+    @apply font-bold py-2;
+    font-variant:  small-caps;
+  }
+
+  h6 {
+    @apply font-bold py-2;
+  }
+  
   a {
     @apply text-slate-800 dark:text-slate-500 underline;
   }
@@ -20,9 +34,107 @@
   a:hover, a:focus,a:active {
     @apply dark:text-slate-300 text-slate-500;
   }
+
+  .ampersand {
+    font-style: italic;
+    @apply font-serif;
+  }
 }
 
 @tailwind components;
+
+@layer components {
+  .post-list a {
+    @apply no-underline;
+  }
+  .content p {
+    @apply max-w-prose mb-2;
+  }
+  .post-abstract {
+    @apply italic text-sm;
+  }
+
+  .post-head + p,
+  .page .content > h2:first-child + p {
+    @apply first-line:font-smallcaps first-line:font-medium first-letter:font-serif first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left;
+  }
+  .post-meta {
+    @apply text-sm;
+  }
+
+  article ul, article ol {
+    list-style-position: inside;
+    margin-left: 2rem;
+    @apply max-w-prose mb-2;
+
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article ol {
+    list-style-type: decimal;
+  }
+
+  article ul ul {
+    list-style-type: "◆ ";
+  }
+
+  .toc-widget ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-left: 2rem;
+    @apply max-w-prose mb-2;
+  }
+
+  .toc-widget ol ol {
+    list-style-type: lower-roman;
+  }
+
+  .post-meta-item {
+    @apply m-0 px-2 py-1;
+  }
+  
+  .post-meta-title {
+    @apply font-medium;
+  }
+
+  .breadcrumbs li:not(:last-child)::after {
+    content:'»';
+  }
+
+  .breadcrumbs li a {
+    margin-right: 10px;
+  }
+
+  .breadcrumbs a, .post-list a {
+    @apply text-slate-500 dark:text-slate-400;
+  }
+
+  .site-footer {
+    border-top-style: ridge;
+  }
+
+  .page-header p {
+    border-bottom-style: ridge;
+  }
+  
+  .site-footer .copyright {
+    font-style: italic;
+    max-width: 30ch; /* This might be tweaked once it's a range of years */
+  }
+
+  .site-footer .last-modified {
+    max-width: 30ch; /* This might be tweaked once it's a range of years */
+  }
+
+  .colophon .content a[href^="http"]::after {
+    content: "🔗";
+    font-size: 0.8em;
+  }
+}
+
 @tailwind utilities;
 
 @layer utilities {
@@ -31,43 +143,3 @@
     }
 }
 
-
-/*
- *  Navigation-specific CSS
- */
-#js-paper-window.tilt {
-    overflow: hidden;
-    pointer-events: none;
-}
-#js-paper-window.tilt #js-paper-front {
-    transform: rotate(10deg) translateZ(0);
-}
-
-#js-paper-front {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  transform-origin: center 70%;
-  transition: all 0.3s ease;
-}
-
-.js-menu-close:before {
-  transform: translateY(-50%) rotate(45deg);
-}
-.js-menu-close:after {
-  transform: translateY(-50%) rotate(-45deg);
-}
-
-.no-js #js-paper-window {
-  @apply static;
-}
-
-.no-js #js-paper-back {
-  @apply static h-auto text-lg;
-}
-
-.no-js #js-paper-back nav a {
-  @apply inline mb-0 mr-3;
-}
-
-.no-js #js-paper-back nav {
-  @apply p-4;
-}

@@ -1,0 +1,24 @@
+{{> head }}
+
+<body class="{{classify bodyClasses }}">
+
+ {{> navigation }}
+
+<main class="md:container md:mx-auto md:px-8">
+    
+{{> pageHeader }}
+
+<ul>
+{{#each posts}}
+  <li class="max-w-prose mb-4 {{#unless @last}}pb-2 border-b-4 border-double border-slate-500 dark:border-slate-400{{/unless}}">
+    <h3>{{ title }} <small class="text-lg text-slate-500 dark:text-slate-400 font-normal">({{formatDate pubdate }})</small></h3>
+    {{{ contents }}}
+  </li>
+{{/each}}
+</ul>
+</main>
+
+{{> footer }}
+
+    </body>
+</html>

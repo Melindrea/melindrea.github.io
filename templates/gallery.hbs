@@ -1,0 +1,43 @@
+{{> head }}
+
+<body class="{{classify bodyClasses }}">
+
+ {{> navigation }}
+
+<main class="md:container md:mx-auto md:px-8">
+   {{> pageHeader }}
+
+<ul id="js-gallery" class="columns-2 gap-x-1 sm:columns-3 sm:gap-x-2 md:columns-4"> <!--grid grid-cols-4 gap-1-->
+    {{#each collections.gallery}}<li class="break-inside-avoid mb-1 sm:mb-2 md:mb-4">
+        <a href="/{{path}}"
+        class="js-item"
+        data-sub-html="#gallery-{{slug}}"
+        >
+        <img src="/{{thumbnail}}" alt="{{ description }}" title="{{ title }}" width="{{size.thumbnail.width}}" height="{{size.thumbnail.height}}"/></a>
+    </li>{{/each}}
+</ul>
+<div class="js-gallery-captions hidden">
+<!-- gallery captions -->
+{{#each collections.gallery}}
+<div id="gallery-{{slug}}">
+    <h4>{{ title }} <small class="italic">©{{copyright}}</small></h4>
+    <p>{{ description }}{{#if link}}<a href="{{link}}">About this image</a>{{/if}}</p>
+</div>
+{{/each}}
+</div>
+
+</main>
+
+{{> footer }}
+<script>
+$(function() {
+    lightGallery(document.getElementById('js-gallery'), {
+        selector: '.js-item',
+        thumbnail: true,
+        download: false,
+        plugins: [lgThumbnail, lgZoom],
+    });
+});
+</script>
+    </body>
+</html>

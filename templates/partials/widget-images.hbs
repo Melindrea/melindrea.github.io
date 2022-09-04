@@ -1,0 +1,11 @@
+<div class="widget {{class}}-position image-widget">
+    <h2>Featured Images</h2>
+    <p class="max-w-prose mb-2">All posts and some pages have featured images. Each image is curated from a stock photo site, cropped to the right proportions 
+        (3:1 for posts and 6:1 for pages) and transformed in a unified way, using Analog Efex Pro 2 from [Nik Collection 2012](https://archive.org/details/nikcollection-full-1.2.11). While I have a
+        specific set of rules added, a key thing is to ensure each image has the right amount of darks and lights for my theme.</p>
+    <ul>
+    {{#each @root.images}}
+        <li class="list-disc list-inside">Photo on {{page.type}} <a href="{{page.link}}">{{page.title}}</a> is from photographer <a href="{{source}}">{{creator}}</a></li>
+    {{/each}}
+    </ul>
+</div>

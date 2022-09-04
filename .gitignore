@@ -14,3 +14,11 @@ build/
 *.egg-info/
 
 node_modules
+
+.ideas
+
+src/assets/images/featured-images/**
+src/assets/images/gallery/**
+src/assets/images/page-images/**
+gallery.json
+

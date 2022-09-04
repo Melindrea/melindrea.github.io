@@ -1,0 +1,7 @@
+<div class="widgets-{{position}}">
+{{#each widgets}}
+    {{#ifEquals ../position comparison=this}}
+        {{> (getWidgetPartial @key) class=this}}
+    {{/ifEquals}}
+{{/each}}
+</div>

@@ -1,0 +1,33 @@
+{{> head }}
+
+<body class="{{classify bodyClasses }}">
+{{> navigation }}
+
+<main class="md:container md:mx-auto md:px-8"> 
+
+{{> pageHeader }}
+
+<div class="flex flex-wrap">
+    <section class="md:mr-6">
+    {{> blog-posts }}
+    </section>
+    <aside class="sidebar">
+        <div class="widgets-sidebar">
+            <div class="widget sidebar-position tags-widget">
+            <h3>Tags</h3>
+            <ul>
+            {{#each collections.tags}}
+                {{#if postcount}}<li><a href="/{{ path }}">{{ title }}</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">{{ postcount }}</span></li>{{/if}}
+            {{/each}}
+            </ul>
+            </div>
+        </div>
+    </aside>
+</div>
+
+</main>
+
+{{> footer }}
+
+    </body>
+</html>

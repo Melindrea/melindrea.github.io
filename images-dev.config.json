@@ -1,0 +1,7 @@
+{
+    "key": "melindreamakes",
+    "src": "images-copy",
+    "dest": "src-copy/assets/images",
+    "verbose": false,
+    "dryrun": false
+}

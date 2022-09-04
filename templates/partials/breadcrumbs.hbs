@@ -1,0 +1,5 @@
+<nav class="breadcrumbs text-sm pl-4" aria-label="Breadcrumbs">
+    <ol>
+        {{#each breadcrumbs}}<li class="inline-block p-1">{{#if url}}<a href="{{url}}">{{/if}}{{text}}{{#if url}}</a>{{/if}}</li>{{/each}}
+    </ol>
+</nav>

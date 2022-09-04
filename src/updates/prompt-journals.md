@@ -1,6 +1,6 @@
 ---
-title: Opened my ko-fi shop
-pubdate: 2022-05-29
+title: Prompt Journals
+pubdate: 2022-08-25
 ---
 
-You can now buy June's print-it-yourself prompt journal from [my ko-fi shop](https://ko-fi.com/melindrea/shop). The theme for the first monthly prompt journal is *Solstice* to celebrate the summer solstice.
+At this time the three print-it-yourself prompt journals of Solstice, Water Lilies and Harvest are available to all, in my Ko-fi shop. If you are a member you also have early access to buy September's Moon Journal.

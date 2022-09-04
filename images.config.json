@@ -1,0 +1,7 @@
+{
+    "key": "melindreamakes",
+    "src": "images",
+    "dest": "src/assets/images",
+    "verbose": false,
+    "clean": true
+}

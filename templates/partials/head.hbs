@@ -3,9 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ title }} - {{ sitename }}</title>
+        <title>{{ pagetitle }}</title>
         <meta name="description" content="{{ description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="{{ pagetitle }}">
+        <meta name="twitter:title" content="{{ pagetitle }}">
+        
+        <meta property="og:description" content="{{ description }}{{abstract}}">
+        <meta name="twitter:description" content="{{ description }}{{abstract}}">
+        
+        <meta property="og:image" content="{{ pageimage }}">
+        <meta name="twitter:image" content="{{ pageimage }}">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

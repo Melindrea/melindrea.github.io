@@ -1,6 +1,6 @@
 ---
 title: Index
-description: Biography and links
+description: Index page, with biography, links and how to best find me.
 layout: index.hbs
 presence: true
 mastodon: true

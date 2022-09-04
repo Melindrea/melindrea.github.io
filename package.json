@@ -11,7 +11,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "server": "cd build && python -m http.server 8000",
+        "server": "cd docs && python -m http.server 8000",
         "minify:css": "postcss build/assets/css/style.css > build/assets/css/style.min.css && rm build/assets/css/style.css",
         "build": "python bin/images.py -f images.config.json && export NODE_ENV=prod && node index",
         "dev": "node index",
@@ -69,6 +69,7 @@
     "melindreamakes": {
         "metadata": {
             "sitename": "MelindreaMakes: {art, words, thoughts, code}",
+            "titlesep": " / ",
             "analytics": "UA-42118135-5",
             "copyright": "© 2022 Antonius Marie Hogebrandt, all rights reserved",
             "navigation": {

@@ -125,6 +125,7 @@ function handlePosts(files, postCollection) {
 
         let newPath = 'blog/posts/' + slug(post.title);
         post.path = newPath;
+        post.slug = slug(post.title);
         files[newPath + '/index.html'] = post;
         delete files[oldPath + '/index.html'];
         

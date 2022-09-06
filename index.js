@@ -302,7 +302,7 @@ Metalsmith(__dirname)
         directory: 'templates'
     }))
     .use(sitemap({
-        hostname: 'https://www.melindreamakes.art',
+        hostname: melindreamakes.metadata.siteurl,
         omitIndex: true
     }))
     .use(check)

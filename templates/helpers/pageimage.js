@@ -3,7 +3,7 @@
  */
 let pagetitle = function(context) {
     let page = context.data.root;
-    let image = '/assets/images/';
+    let image = page.siteurl + '/assets/images/';
     if (page.image) {
         if (page.image.slug) {
             image += 'page-images/' + page.image.slug
@@ -13,7 +13,7 @@ let pagetitle = function(context) {
     } else {
         image += 'site-image.jpg';
     }
-
+    
     return image;
 };
 

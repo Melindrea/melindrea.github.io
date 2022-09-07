@@ -56,7 +56,13 @@
 
   .post-head + p,
   .page .content > h2:first-child + p {
-    @apply first-line:font-smallcaps first-line:font-medium first-letter:font-serif first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left;
+    @apply first-letter:font-serif first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left;
+  }
+  
+  .post-head + p,
+  .toc-widget + p,
+  .page .content > h2:first-child + p {
+    @apply first-line:font-smallcaps first-line:font-medium;
   }
   .post-meta {
     @apply text-sm;
@@ -81,15 +87,21 @@
     list-style-type: "◆ ";
   }
 
+  .toc-widget {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    @apply max-w-prose;
+  }
   .toc-widget ol {
     list-style-type: decimal;
     list-style-position: inside;
-    margin-left: 2rem;
-    @apply max-w-prose mb-2;
+    margin: 0;
   }
 
   .toc-widget ol ol {
     list-style-type: lower-roman;
+    margin-left: 1rem;
   }
 
   .post-meta-item {

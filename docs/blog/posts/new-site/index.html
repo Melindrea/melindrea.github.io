@@ -74,6 +74,10 @@
           <h1>How I built this site</h1>
           <p class="post-abstract mb-4">How not to build a site; or How I intended to build a simple one-page site and accidentally a static site with blogging and a gallery.</p>
         </header>
+        <div class="widget toc-widget hidden sm:block">
+          <h3>Table of Contents</h3>
+          <ol class="toc"><li class="toc-item"><a class="toc-link" href="#design-choices">Design choices</a><ol class="toc"><li class="toc-item"><a class="toc-link" href="#cormorant">Cormorant</a></li><li class="toc-item"><a class="toc-link" href="#montserrat">Montserrat</a></li><li class="toc-item"><a class="toc-link" href="#creating-featured-images">Creating featured images</a></li><li class="toc-item"><a class="toc-link" href="#navigation-main--breadcrumbs">Navigation: Main & Breadcrumbs</a></li></ol></li><li class="toc-item"><a class="toc-link" href="#index">Index</a></li><li class="toc-item"><a class="toc-link" href="#gallery">Gallery</a></li><li class="toc-item"><a class="toc-link" href="#blog">Blog</a><ol class="toc"><li class="toc-item"><a class="toc-link" href="#updates">Updates</a></li><li class="toc-item"><a class="toc-link" href="#actual-blog">Actual blog</a></li></ol></li></ol>
+        </div>
       <p>It is always so clear when one starts. In my case, I was wanting something simple but with a bit more personalisation than one of those carrd or linktree etc type of sites (no shade against those sites or the users who use them). I decided to go with a single page with links, some info and such, and (for reasons) decided to build it in python's flask and "freeze" the dynamic page into a pure HTML site. The problem with this came when I after a month wanted to edit it, and couldn't remember how to build the site at all. Not to mention that it felt a bit overkill! Which is why I decided to look for another static site generator.</p>
 <p>After going through several ideas I settled on Metalsmith.io, which is a NodeJS-based on. You can do it with either (to quote their site) "configuration over code" or "code over configuration", where I prefer the latter. In the <code>index.js</code> file I read in all the files in <code>.src</code> and (after various things being done to them) copy them to <code>.build</code>. My specific stack is Markdown files for the content, Handlebars as the templating language and TailwindCSS with PostCSS for the layout.</p>
 <p>The three cornerstones for this site is:</p>
@@ -141,10 +145,6 @@
               <li class="inline"><a href="/blog/tags/how-to" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">how-to</a></li>
           </ul></div>
           </div>
-        </div>
-        <div class="widget sidebar-position toc-widget">
-          <h3>Table of Contents</h3>
-          <ol class="toc"><li class="toc-item"><a class="toc-link" href="#design-choices">Design choices</a><ol class="toc"><li class="toc-item"><a class="toc-link" href="#cormorant">Cormorant</a></li><li class="toc-item"><a class="toc-link" href="#montserrat">Montserrat</a></li><li class="toc-item"><a class="toc-link" href="#creating-featured-images">Creating featured images</a></li><li class="toc-item"><a class="toc-link" href="#navigation-main--breadcrumbs">Navigation: Main & Breadcrumbs</a></li></ol></li><li class="toc-item"><a class="toc-link" href="#index">Index</a></li><li class="toc-item"><a class="toc-link" href="#gallery">Gallery</a></li><li class="toc-item"><a class="toc-link" href="#blog">Blog</a><ol class="toc"><li class="toc-item"><a class="toc-link" href="#updates">Updates</a></li><li class="toc-item"><a class="toc-link" href="#actual-blog">Actual blog</a></li></ol></li></ol>
         </div>
       </div>
       

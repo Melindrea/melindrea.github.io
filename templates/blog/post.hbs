@@ -29,6 +29,10 @@
           <h1>{{ header }}</h1>
           <p class="post-abstract mb-4">{{ abstract }}</p>
         </header>
+        {{#if toc}}<div class="widget toc-widget hidden sm:block">
+          <h3>Table of Contents</h3>
+          {{{ toc }}}
+        </div>{{/if}}
       {{{ contents }}}
       </article>
     </div> <!-- End of column -->
@@ -48,10 +52,6 @@
           </ul></div>
           </div>
         </div>
-        {{#if toc}}<div class="widget sidebar-position toc-widget">
-          <h3>Table of Contents</h3>
-          {{{ toc }}}
-        </div>{{/if}}
       </div>
       
     </aside>

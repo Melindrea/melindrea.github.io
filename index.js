@@ -225,7 +225,7 @@ Metalsmith(__dirname)
             './node_modules/lightgallery/images/*'
         ],
         '' : [
-            'favicon/*'
+            'favicons/*'
         ]
     }))
     .use(concat({

@@ -28,7 +28,8 @@ function plugin(options) {
 
             if (basename in galleryMetadata) {
                 let metadata = galleryMetadata[basename];
-
+                
+                
                 item.thumbnail = Path.dirname(item.path) + '/thumbnails/' + basename;
                 item.slug = slug(filename)
                 Object.assign(item, metadata);
@@ -36,6 +37,14 @@ function plugin(options) {
                 imageInfo.gallery.sizes.push(item.stats.size);
                 let thumbnail = files[item.thumbnail];
                 imageInfo.thumbnails.sizes.push(thumbnail.stats.size);
+                let merchify = true;
+                if ('no-merch' in metadata) {
+                    merchify = ! metadata['no-merch'];
+                }
+                
+                if (! ('links' in metadata) && merchify) {
+                    console.log(basename + ' : ' + metadata.title + ' : ' + metadata.description)
+                }
             } else {
                 console.warn("NB! Image file " + basename + " is not in gallery metadata")
             }
@@ -66,7 +75,7 @@ function plugin(options) {
         });
 
         Object.keys(imageInfo).forEach(key => {
-            console.log(key);
+            //console.log(key);
             let sizes = imageInfo[key].sizes;
             
             let typeData = {
@@ -76,7 +85,7 @@ function plugin(options) {
                 min: Math.round(Math.min(...sizes)/1024)
             };
             
-            console.log(typeData);
+            //console.log(typeData);
         });   
     }
 }

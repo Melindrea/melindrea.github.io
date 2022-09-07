@@ -20,8 +20,8 @@
 <!-- gallery captions -->
 {{#each collections.gallery}}
 <div id="gallery-{{slug}}">
-    <h4>{{ title }} <small class="italic">©{{copyright}}</small></h4>
-    <p>{{ description }}{{#if link}}<a href="{{link}}">About this image</a>{{/if}}</p>
+    <h4 class="text-slate-300 text-xl">{{ title }} <small class="italic">©{{copyright}}</small></h4>
+    <p class="text-slate-300 text-sm max-w-prose text-center mx-auto">{{ description }}{{#if links}}{{{ imagelinks links }}}{{/if}}</p>
 </div>
 {{/each}}
 </div>

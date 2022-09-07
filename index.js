@@ -215,9 +215,6 @@ Metalsmith(__dirname)
             './node_modules/jquery/dist/jquery.slim.min.js'
 
         ],
-        'assets/css': [
-            './node_modules/lightgallery/css/lightgallery-bundle.min.css'
-        ],
         'assets/fonts': [
             './node_modules/lightgallery/fonts/*'
         ],

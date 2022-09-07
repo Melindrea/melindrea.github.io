@@ -161,8 +161,18 @@ function github(files, metalsmith) {
     files['.nojekyll'] = {
         contents: Buffer.from('', 'utf-8')
     };
+    const regex = /(https?:\/\/)/i;
+    let cname = metalsmith.metadata().siteurl.replace(regex, '');
+    files['CNAME'] = {
+        contents: Buffer.from(cname, 'utf-8')
+    }
 }
 
+function favicons(files, metalsmith) {
+    let faviconData = JSON.parse(fs.readFileSync('faviconData.json'));
+    
+    metalsmith.metadata().favicons = faviconData.favicon.html_code;
+}
 function check(files, metalsmith) {
     metalsmith.metadata().collections.blog.forEach(post => {
         /*if (post.toc) {
@@ -215,7 +225,7 @@ Metalsmith(__dirname)
             './node_modules/lightgallery/images/*'
         ],
         '' : [
-            'include/*'
+            'favicon/*'
         ]
     }))
     .use(concat({
@@ -238,6 +248,7 @@ Metalsmith(__dirname)
     // our source files' content from markdown
     // to HTML fragments.
     .use(markdown())
+    .use(favicons)
     .use(addDates)
     .use(publish({
         futureMeta: 'pubdate',

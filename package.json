@@ -13,11 +13,14 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "server": "cd docs && python -m http.server 8000",
         "minify:css": "postcss build/assets/css/style.css > build/assets/css/style.min.css && rm build/assets/css/style.css",
-        "build": "python bin/images.py -f images.config.json && export NODE_ENV=prod && node index",
+        "prebuild": "python bin/images.py -f images.config.json && npm run favicons:update",
+        "build": "export NODE_ENV=prod && node index",
         "dev": "node index",
         "cypress:open": "cypress open",
         "images": "python bin/images.py",
-        "images:verbose": "python bin/images.py --verbose"
+        "images:verbose": "python bin/images.py --verbose",
+        "favicons:generate": "real-favicon generate faviconDescription.json faviconData.json favicons",
+        "favicons:update": "real-favicon check-for-update --fail-on-update faviconData.json"
     },
     "keywords": [],
     "author": {

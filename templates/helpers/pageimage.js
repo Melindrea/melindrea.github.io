@@ -8,7 +8,7 @@ let pagetitle = function(context) {
         if (page.image.slug) {
             image += 'page-images/' + page.image.slug
         } else if (page.slug) {
-            image += 'featured-images/' + page.slug + '/1464-jpg';
+            image += 'featured-images/' + page.slug + '/1464.jpg';
         }
     } else {
         image += 'site-image.jpg';

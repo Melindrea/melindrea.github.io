@@ -58,13 +58,14 @@
             "redbubble": "https://www.redbubble.com/shop/ap/123251880"
         }
     },
-    "beata-beatrice.jpg": {
+    "beata-beatris.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "The ghost Beatrice and her haunted doll Beata. Asylum series.",
+        "description": "The ghost Beatris and her haunted doll Beata. St Dymphna.",
         "copyright": "2022",
-        "title": "Beata, Doll, and Beatrice, Ghost",
+        "title": "Beata, Doll, and Beatris, Ghost",
         "links": {
-            "redbubble": "https://www.redbubble.com/shop/ap/123250180"
+            "redbubble": "https://www.redbubble.com/shop/ap/123250180",
+            "post": "/blog/posts/saint-dymphna"
         }
     },
     "breaking-out.jpg": {
@@ -139,10 +140,13 @@
     },
     "daniel.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "A man walking down a set of stairs with purpose, with the doll Beata hiding in the shadows. Asylum series.",
+        "description": "A man walking down a set of stairs with purpose, with the doll Beata hiding in the shadows. St Dymphna.",
         "title": "Daniel Nowak, Carpenter",
         "copyright": "2022",
-        "no-merch": true
+        "no-merch": true,
+        "links": {
+            "post": "/blog/posts/saint-dymphna"
+        }
     },
     "descending-angel.jpg": {
         "creator": "AM Hogebrandt",
@@ -164,11 +168,12 @@
     },
     "erik.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "Toned in browns with a hint of flame and smoke, this shows a man in front of a brick room, glancing at something. Asylum series.",
+        "description": "Toned in browns with a hint of flame and smoke, this shows a man in front of a brick room, glancing at something. St Dymphna.",
         "title": "Erik Johansson, Ghost",
         "copyright": "2022",
         "links": {
-            "redbubble": "https://www.redbubble.com/shop/ap/123248783"
+            "redbubble": "https://www.redbubble.com/shop/ap/123248783",
+            "post": "/blog/posts/saint-dymphna"
         }
     },
     "fairies-in-forest.jpg": {
@@ -218,14 +223,17 @@
     },
     "hannes.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "A portrait against a worn wall, of a man with broad shoulders and a muscular look. Asylum series.",
+        "description": "A portrait against a worn wall, of a man with broad shoulders and a muscular look. St Dymphna.",
         "title": "Hannes Olsson, Handyman",
         "copyright": "2022",
-        "no-merch": true
+        "no-merch": true,
+        "links": {
+            "post": "/blog/posts/saint-dymphna"
+        }
     },
     "inez.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "Another portrait against a worn wall. This is of a Black woman with a braided crown of bleached hair and highlights of red. Asylum series.",
+        "description": "Another portrait against a worn wall. This is of a Black woman with a braided crown of bleached hair and highlights of red. St Dymphna.",
         "title": "Inez Falk, Teamleader",
         "copyright": "2022",
         "no-merch": true
@@ -374,10 +382,13 @@
     },
     "sol-beata.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "Sol is standing on the same set of stairs as Daniel, but the scene shows more, including mist gathering at the bottom of the stairs and rolling from the top. The doll Beata is half-hidden behind the stairs. Asylum series.",
+        "description": "Sol is standing on the same set of stairs as Daniel, but the scene shows more, including mist gathering at the bottom of the stairs and rolling from the top. The doll Beata is half-hidden behind the stairs. St Dymphna.",
         "title": "Sol, Haunted enby",
         "copyright": "2022",
-        "no-merch": true
+        "no-merch": true,
+        "links": {
+            "post": "/blog/posts/saint-dymphna"
+        }
     },
     "song-weaver.jpg": {
         "creator": "AM Hogebrandt",
@@ -399,11 +410,12 @@
     },
     "tess.jpg": {
         "creator": "AM Hogebrandt",
-        "description": "In front of the same room as the ghost Erik, stands a woman looking more than a little nervous. She's pretty, in jean shorts and a t-shirt, with her dark hair loose. Asylum series.",
+        "description": "In front of the same room as the ghost Erik, stands a woman looking more than a little nervous. She's pretty, in jean shorts and a t-shirt, with her dark hair loose. St Dymphna.",
         "title": "Tess Lindblom, Blogger",
         "copyright": "2022",
         "links": {
-            "redbubble": "https://www.redbubble.com/shop/ap/123249403"
+            "redbubble": "https://www.redbubble.com/shop/ap/123249403",
+            "post": "/blog/posts/saint-dymphna"
         }
     },
     "valkyrie.jpg": {

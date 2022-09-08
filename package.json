@@ -139,6 +139,10 @@
             "writing": {
                 "header": "On all things writing",
                 "description": "Whether about my writing, or how to better your writing, hopefully it's all here"
+            },
+            "dymphna": {
+                "header": "Saint Dymphna; or the Asylum",
+                "description": "Posts about this specific setting"
             }
         },
         "presence": [

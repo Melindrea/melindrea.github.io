@@ -48,6 +48,8 @@
         "metalsmith": "^2.4.3",
         "metalsmith-concat": "^7.0.3",
         "metalsmith-formatcheck": "github:Melindrea/code.metalsmith-formatcheck",
+        "metalsmith-discover-helpers": "github:Melindrea/metalsmith-discover-helpers",
+        "metalsmith-discover-partials": "github:Melindrea/metalsmith-discover-partials",
         "metalsmith-include-files": "^0.1.10",
         "metalsmith-publish": "^0.1.6",
         "metalsmith-sitemap": "^1.2.2",

@@ -40,8 +40,8 @@ Most of the backend work is done with Nodejs, including building the site
     * permalinks
     * table-of-contents
     * concat
-    * discover-helpers (based on the official, see bin/discoverHelper.js)
-    * discover-partials (based on the official, see bin/discoverPartials.js)
+    * discover-helpers (fork)
+    * discover-partials (fork)
     * include-files
     * publish
     * sitemap

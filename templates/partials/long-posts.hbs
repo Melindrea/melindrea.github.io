@@ -1,4 +1,4 @@
-<ul class="post-list {{#if index}}blog-index{{else}}{{context}}-{{slugify title}}{{/if}}">
+<ul class="post-list {{class}}">
   {{#each posts }}
     <li class="max-w-prose mb-4 {{#unless @last}}pb-2 border-b-4 border-double border-slate-500 dark:border-slate-400{{/unless}}"><a href="/{{ path }}">
       <h3>{{ title }}</h3>

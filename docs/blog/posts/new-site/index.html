@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js bg-repeat bg-light dark:bg-dark text-slate-500 dark:text-slate-400 font-sans font-light text-lg" lang="en-US">
+<html class="no-js" lang="en-US">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -32,8 +32,8 @@
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
 
-<body class="blog post new-site">
- <header class="static ">
+<body class="with-sidebar blog post new-site">
+ <header class="static site-header">
      <div class="text-lg bg-slate-700 h-auto drop-shadow-xl">
          <nav class="p-4" aria-label="Main"><ul>
              <li class="inline mb-0 mr-3 font-smallcaps font-medium"><a class="text-slate-300  no-underline" href="/">Home</a></li>
@@ -49,7 +49,7 @@
  </nav>
  </header>
 
-<main class="md:container md:mx-auto md:px-8">
+<main>
 <img
   src="/assets/images/featured-images/new-site/1464.jpg"
   srcset="/assets/images/featured-images/new-site/300.jpg 300w,
@@ -67,8 +67,8 @@
   alt="Featured Image: A close-up of a laptop with some code on the screen"
   class="mb-4">
   
-  <div class="flex flex-wrap">
-    <div class="md:mr-6 content">
+  <div class="content-wrapper">
+    <div class="content">
       <article class="post-content-body">
         <header class="post-head">
           <h1>How I built this site</h1>
@@ -134,20 +134,19 @@
 
     <aside class="sidebar">
       <div class="widgets-sidebar">
-        <div class="widget sidebar-position about-widget">
-          <h3>About</h3>
-          <div class="post-meta">
-            <div class="post-meta-item"><span class="post-meta-title">Reading time: </span><span class="post-meta-info">9 minutes</span></div>
-            <div class="post-meta-item"><span class="post-meta-title">Word count: </span><span class="post-meta-info">2109</span></div>
-            <div class="post-meta-item"><span class="post-meta-title">Published: </span><span class="post-meta-info"></span><time datetime="2022-09-04T02:00:00.000+02:00" itemprop="datePublished">September 4, 2022</time></div>
-            <div class="post-meta-item"><span class="post-meta-title">Tagged: </span><ul class="inline post-meta-info">
-              <li class="inline"><a href="/blog/tags/geek" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">geek</a></li>
-              <li class="inline"><a href="/blog/tags/how-to" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">how-to</a></li>
-          </ul></div>
-          </div>
-        </div>
+              <div class="widget sidebar-position meta-widget">
+                  <h3>About</h3>
+                  <div class="post-meta">
+                          <div class="post-meta-item"><span class="post-meta-title">Reading time: </span><span class="post-meta-info">9 minutes</span></div>
+                          <div class="post-meta-item"><span class="post-meta-title">Word count: </span><span class="post-meta-info">2109</span></div>
+                          <div class="post-meta-item"><span class="post-meta-title">Published: </span><span class="post-meta-info"></span><time datetime="2022-09-04T02:00:00.000+02:00" itemprop="datePublished">September 4, 2022</time></div>
+                          <div class="post-meta-item"><span class="post-meta-title">Tagged: </span><ul class="inline post-meta-info">
+                          
+                      <li class="inline"><a href="/blog/tags/geek" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">geek</a></li>
+                      <li class="inline"><a href="/blog/tags/how-to" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">how-to</a></li>
+                  </ul></div>
+              </div>
       </div>
-      
     </aside>
 </div>
   <nav class="post-navigation flex flex-row">

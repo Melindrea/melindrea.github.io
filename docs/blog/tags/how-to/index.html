@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js bg-repeat bg-light dark:bg-dark text-slate-500 dark:text-slate-400 font-sans font-light text-lg" lang="en-US">
+<html class="no-js" lang="en-US">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -32,8 +32,8 @@
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
 
-<body class="blog tag how-to">
-<header class="static ">
+<body class="with-sidebar blog tag how-to">
+<header class="static site-header">
     <div class="text-lg bg-slate-700 h-auto drop-shadow-xl">
         <nav class="p-4" aria-label="Main"><ul>
             <li class="inline mb-0 mr-3 font-smallcaps font-medium"><a class="text-slate-300  no-underline" href="/">Home</a></li>
@@ -48,35 +48,38 @@
     </ol>
 </nav>
 </header>
-<main class="md:container md:mx-auto md:px-8"> 
+<main> 
 
-<div class="page-header mb-2 p-2 md:p-4 lg:p-8 bg-slate-700 h-50 md:h-132 lg:h-159 xl:h-202 2xl:h-244">
+<header class="page-header mb-2 p-2 md:p-4 lg:p-8 bg-slate-700 h-50 md:h-132 lg:h-159 xl:h-202 2xl:h-244">
     <h1 class="text-slate-300">How-to posts</h1>
     <p class="max-w-prose mb-2 text-slate-300 border-b">Posts where I hope you&#x27;ll find something useful?</p>
-</div>
-<div class="flex flex-wrap">
-    <section class="md:mr-6">
-    <ul class="post-list tag-how-to">
-        <li class="max-w-prose mb-4 "><a href="/blog/posts/new-site">
-          <h3>New site</h3>
-          <img src="/assets/images/featured-images/new-site/767.jpg" alt="A close-up of a laptop with some code on the screen" width="767" height="256">
-          <span class="text-sm">Published September 4, 2022</span>
-          <p>How not to build a site; or How I intended to build a simple one-page site and accidentally a static site with blogging and a gallery.</p>
-        </a></li>
-    </ul>    </section>
+</header>
+<div class="content-wrapper">
+    <section class="content">
+      <ul class="post-list tag-how-to">
+          <li class="max-w-prose mb-4 "><a href="/blog/posts/new-site">
+            <h3>New site</h3>
+            <img src="/assets/images/featured-images/new-site/767.jpg" alt="A close-up of a laptop with some code on the screen" width="767" height="256">
+            <span class="text-sm">Published September 4, 2022</span>
+            <p>How not to build a site; or How I intended to build a simple one-page site and accidentally a static site with blogging and a gallery.</p>
+          </a></li>
+      </ul>    
+    <div class="widgets-bottom">
+    </div>
+    </section>
     <aside class="sidebar">
-        <div class="widgets-sidebar">
-            <div class="widget sidebar-position tags-widget">
-            <h3>Tags</h3>
-            <ul>
-                <li><a href="/blog/tags/artwork">artwork</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
-                <li><a href="/blog/tags/geek">geek</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
-                <li><a href="/blog/tags/how-to">how-to</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
-                <li><a href="/blog/tags/writing">writing</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
-                <li><a href="/blog/tags/dymphna">dymphna</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
-            </ul>
-            </div>
-        </div>
+      <div class="widgets-sidebar">
+              <div class="widget sidebar-position tags-widget">
+                  <h3>Tags</h3>
+                  <ul>
+                      <li><a href="/blog/tags/artwork">artwork</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
+                      <li><a href="/blog/tags/geek">geek</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
+                      <li><a href="/blog/tags/how-to">how-to</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
+                      <li><a href="/blog/tags/writing">writing</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
+                      <li><a href="/blog/tags/dymphna">dymphna</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">1</span></li>
+                  </ul>
+              </div>
+      </div>
     </aside>
 </div>
 

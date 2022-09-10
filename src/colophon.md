@@ -8,7 +8,9 @@ image:
     source: https://unsplash.com/photos/2vdkNvgbgno
     creator: Carmen Peñaranda
 widgets:
-    images: bottom
+    images: 
+        position: bottom
+        titletag: h2
 ---
 
 ## Introduction

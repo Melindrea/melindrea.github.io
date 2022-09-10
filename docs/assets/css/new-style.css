@@ -1,0 +1,4 @@
+:root {
+    --main-bg-color: brown; /* This is a way to create variables, later applied using var(--main-bg-color); */
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9hc3NldHMvY3NzL25ldy1zdHlsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1QkFBdUIsQ0FBQyxrRkFBa0Y7R0FDM0ciLCJmaWxlIjoibmV3LXN0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIjpyb290IHtcbiAgICAtLW1haW4tYmctY29sb3I6IGJyb3duOyAvKiBUaGlzIGlzIGEgd2F5IHRvIGNyZWF0ZSB2YXJpYWJsZXMsIGxhdGVyIGFwcGxpZWQgdXNpbmcgdmFyKC0tbWFpbi1iZy1jb2xvcik7ICovXG4gIH0iXX0= */

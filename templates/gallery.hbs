@@ -4,27 +4,12 @@
 
  {{> navigation }}
 
-<main class="md:container md:mx-auto md:px-8">
+<main>
    {{> pageHeader }}
 
-<ul id="js-gallery" class="columns-2 gap-x-1 sm:columns-3 sm:gap-x-2 md:columns-4"> <!--grid grid-cols-4 gap-1-->
-    {{#each collections.gallery}}<li class="break-inside-avoid mb-1 sm:mb-2 md:mb-4">
-        <a href="/{{path}}"
-        class="js-item"
-        data-sub-html="#gallery-{{slug}}"
-        >
-        <img src="/{{thumbnail}}" alt="{{ description }}" title="{{ title }}" width="{{size.thumbnail.width}}" height="{{size.thumbnail.height}}"/></a>
-    </li>{{/each}}
-</ul>
-<div class="js-gallery-captions hidden">
-<!-- gallery captions -->
-{{#each collections.gallery}}
-<div id="gallery-{{slug}}">
-    <h4 class="text-slate-300 text-xl">{{ title }} <small class="italic">©{{copyright}}</small></h4>
-    <p class="text-slate-300 text-sm max-w-prose text-center mx-auto">{{ description }}{{#if links}}{{{ imagelinks links }}}{{/if}}</p>
-</div>
-{{/each}}
-</div>
+<section class="content">
+    {{> gallery gallery=collections.gallery id='js-gallery'}}
+</section>
 
 </main>
 

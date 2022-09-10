@@ -61,7 +61,17 @@ function handleTags(files, metalsmith) {
                 postcount: posts.length,
                 context: 'tag',
                 layout: 'blog/listing.hbs',
-                path: path
+                path: path,
+                postTemplate: 'long',
+                widgets: {
+                    tags: {
+                        position: 'sidebar'
+                    }
+                },
+                features: {
+                    sidebar: true
+                },
+                listClass: 'tag-' + slug(tag)
             };
             
             let file = {
@@ -122,6 +132,12 @@ function handlePosts(files, postCollection) {
         post.wordcount = getWordCount(post);
         post.estimate = getReadingTime(post.wordcount);
         post.layout = 'blog/post.hbs';
+        post.features = {'sidebar': true};
+        post.widgets = {
+            meta: {
+                position: 'sidebar'
+            }
+        };
 
         let newPath = 'blog/posts/' + slug(post.title);
         post.path = newPath;
@@ -166,6 +182,7 @@ function handleIndices(files, collections) {
         },
         {
             type: 'updates',
+            layout: 'blog/listing',
             deletePosts: true
         }
     ];

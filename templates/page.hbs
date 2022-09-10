@@ -1,24 +1,28 @@
 {{> head }}
 
-<body class="page {{classify bodyClasses }}">
+<body class="{{classify bodyClasses }}">
 
  {{> navigation }}
 
-<main class="md:container md:mx-auto md:px-8">
+<main>
    {{> pageHeader }}
 
-<div class="flex flex-wrap">
-    <article class="md:mr-6 content">
-    
+{{#if features.sidebar}}
+<div class="content-wrapper">
+{{/if}}
+    <article class="content">
       {{{ contents }}}
       
       {{> widgets position="bottom"}}
     </article> <!-- End of column -->
 
+    {{#if features.sidebar}}
     <aside class="sidebar">
       {{> widgets position="sidebar"}}
     </aside>
+    
 </div>
+{{/if}}
 
 </main>
 

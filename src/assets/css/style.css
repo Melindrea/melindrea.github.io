@@ -1,8 +1,15 @@
 @tailwind base;
 
 @layer base {
+  html {
+    @apply bg-repeat bg-light dark:bg-dark text-slate-500 dark:text-slate-400 font-sans font-light text-lg;
+  }
+
+  main {
+    @apply md:container md:mx-auto md:px-8;
+  }
   h1, h2, h3, h4 {
-    @apply font-bold py-2 text-slate-900 dark:text-slate-300 font-serif;
+    @apply font-bold py-2 text-slate-800 dark:text-slate-300 font-serif;
   }
   h1 {
     @apply text-5xl;
@@ -38,6 +45,14 @@
   .ampersand {
     font-style: italic;
     @apply font-serif;
+  }
+
+  .with-sidebar .content-wrapper {
+    @apply flex flex-wrap;
+  }
+
+  .with-sidebar  .content-wrapper .content {
+    @apply md:mr-6;
   }
 }
 
@@ -144,6 +159,14 @@
   .colophon .content a[href^="http"]::after {
     content: "🔗";
     font-size: 0.8em;
+  }
+
+  .gallery ul {
+    @apply columns-2 gap-x-1 sm:columns-3 sm:gap-x-2 md:columns-4;
+  }
+
+  .gallery .gallery-item {
+    @apply break-inside-avoid mb-1 sm:mb-2 md:mb-4;
   }
 
 }

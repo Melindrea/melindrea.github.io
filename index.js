@@ -64,45 +64,42 @@ function bodyClasses(files, metalsmith) {
 
     // Only HTML-files
     Object.keys(files).filter(p => p.endsWith('.html')).forEach(path => {
-        // Gallery: gallery
-        // Index: faq index
-        // blog: blog / blog post <title> / blog tag <title>
-        // updates
         let sections = path.split('/');
-
-        switch (sections[0]) {
-            case 'index.html':
-                files[path].bodyClasses = ['faq', 'index'];
-                break;
-
-            case 'gallery':
-                files[path].bodyClasses = ['gallery'];
-                break;
-            
-            case 'updates':
-                files[path].bodyClasses = ['updates'];
-                break;
-            
-            case 'privacy-cookies':
-                files[path].bodyClasses = ['policy'];
-                break;
-            case 'colophon':
-                files[path].bodyClasses = ['colophon'];
-                break;
-            case 'blog':
-                let classes = ['blog'];
-
-                if (sections[1] !== 'index.html') {
-                    classes.push(...[pluralize.singular(sections[1]), slug(files[path].title)])
-                }
-
-                files[path].bodyClasses = classes;
-                break;
-            default:
-                files[path].bodyClasses = [];
-                //console.log('Page ' + sections[0] + ' uses default page class.');
-        };
+        let bodyClasses = [];
         
+        // Adds body classes to define features, like sidebar
+        if ('features' in files[path]) {
+            bodyClasses = Object.keys(files[path].features).map(x => 'with-' + x);
+        }
+
+        // this removes .hbs and if it's sectioned (ex blog/listing) only takes the first word
+        let layout = files[path].layout.split('.')[0].split('/')[0];
+        bodyClasses.push(layout);
+        
+        // These particular pages/sections require different classes
+        if (['blog', 'index.html', 'privacy-cookies'].includes(sections[0])) {
+            switch (sections[0]) {
+                case 'index.html':
+                    bodyClasses.push('faq');
+                    break;
+
+                case 'privacy-cookies':
+                    bodyClasses.push('policy');
+                    break;
+                
+                case 'blog':
+                    if (sections[1] !== 'index.html') {
+                        bodyClasses.push(...[pluralize.singular(sections[1]), slug(files[path].title)])
+                    }
+
+                    break;
+            }
+        } else {
+            bodyClasses.push(sections[0])
+        }
+        bodyClasses = [... new Set(bodyClasses)] // Only unique values
+        
+        files[path].bodyClasses = bodyClasses;
     });
 }
 
@@ -264,7 +261,9 @@ Metalsmith(__dirname)
             title: 'Updates',
             header: 'Brief updates',
             description: 'Quick details about what is going on',
-            path: 'updates'
+            path: 'updates',
+            postTemplate: 'short',
+            listClass: 'updates',
           },
           pattern: 'updates/**/*.html',
           refer: false,
@@ -280,7 +279,17 @@ Metalsmith(__dirname)
                 header: 'All blog posts',
                 description: 'Where I share my thoughts, ideas and general musings',
                 index: true,
-                path: 'blog'
+                path: 'blog',
+                postTemplate: 'long',
+                listClass: 'blog-index',
+                widgets: {
+                    tags: {
+                        position: 'sidebar'
+                    }
+                },
+                features: {
+                    'sidebar': true
+                }
             }
         }//,
         //tags: {

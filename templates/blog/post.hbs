@@ -4,7 +4,7 @@
  {{> navigation }}
 
 
-<main class="md:container md:mx-auto md:px-8">
+<main>
 <img
   src="/assets/images/featured-images/{{slug}}/1464.jpg"
   srcset="/assets/images/featured-images/{{slug}}/300.jpg 300w,
@@ -22,8 +22,8 @@
   alt="Featured Image: {{ image.description }}"
   class="mb-4">
   
-  <div class="flex flex-wrap">
-    <div class="md:mr-6 content">
+  <div class="content-wrapper">
+    <div class="content">
       <article class="post-content-body">
         <header class="post-head">
           <h1>{{ header }}</h1>
@@ -37,24 +37,9 @@
       </article>
     </div> <!-- End of column -->
 
-    <aside class="sidebar">
-      <div class="widgets-sidebar">
-        <div class="widget sidebar-position about-widget">
-          <h3>About</h3>
-          <div class="post-meta">
-            <div class="post-meta-item"><span class="post-meta-title">Reading time: </span><span class="post-meta-info">{{estimate}}</span></div>
-            <div class="post-meta-item"><span class="post-meta-title">Word count: </span><span class="post-meta-info">{{wordcount}}</span></div>
-            <div class="post-meta-item"><span class="post-meta-title">Published: </span><span class="post-meta-info"></span>{{{ timetag pubdate itemprop="datePublished" }}}</div>
-            <div class="post-meta-item"><span class="post-meta-title">Tagged: </span><ul class="inline post-meta-info">
-            {{#each tags}}
-              <li class="inline"><a href="{{link}}" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">{{ name }}</a></li>
-            {{/each}}
-          </ul></div>
-          </div>
-        </div>
-      </div>
-      
-    </aside>
+    {{#if features.sidebar}}<aside class="sidebar">
+      {{> widgets position="sidebar"}}
+    </aside>{{/if}}
 </div>
   <nav class="post-navigation flex flex-row">
       {{#if previous}}<div class="sm:text-right basis-1/2 sm:mr-4"><span class="font-bold font-serif font-smallcaps hidden sm:inline">Previous post</span><span class="sm:block"><span class="sm:hidden text-slate-500 dark:text-slate-400">« </span><a class="text-sm" href="/{{ previous.path }}">{{ previous.header }}</a></span></div>{{/if}}

@@ -10,8 +10,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'dark': "url('/assets/images/dark-wood.png')",
-        'light': "url('/assets/images/subtle-light-pattern.jpg')",
+        'dark': "url('/assets/images/dark-1.jpg')",
+        'light': "url('/assets/images/light-1.jpg')",
       }
     },
   },

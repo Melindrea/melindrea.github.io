@@ -1,0 +1,13 @@
+<div class="widget {{class}}-position meta-widget">
+    {{{widgettitle "About" titletag=titletag}}}
+    <div class="post-meta">
+            <div class="post-meta-item"><span class="post-meta-title">Reading time: </span><span class="post-meta-info">{{@root.estimate}}</span></div>
+            <div class="post-meta-item"><span class="post-meta-title">Word count: </span><span class="post-meta-info">{{@root.wordcount}}</span></div>
+            <div class="post-meta-item"><span class="post-meta-title">Published: </span><span class="post-meta-info"></span>{{{ timetag @root.pubdate itemprop="datePublished" }}}</div>
+            <div class="post-meta-item"><span class="post-meta-title">Tagged: </span><ul class="inline post-meta-info">
+            
+    {{#each @root.tags}}
+        <li class="inline"><a href="{{link}}" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">{{ name }}</a></li>
+    {{/each}}
+    </ul></div>
+</div>

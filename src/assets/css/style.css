@@ -2,7 +2,7 @@
 
 @layer base {
   html {
-    @apply bg-repeat bg-light dark:bg-dark text-slate-500 dark:text-slate-400 font-sans font-light text-lg;
+    @apply bg-repeat bg-light dark:bg-dark text-slate-600 dark:text-slate-400 font-sans font-light text-lg;
   }
 
   main {

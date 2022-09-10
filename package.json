@@ -73,7 +73,7 @@
         "metadata": {
             "sitename": "MelindreaMakes: {art, words, thoughts, code}",
             "titlesep": " / ",
-            "analytics": "UA-42118135-5",
+            "gtm": "GTM-N664CZV",
             "copyright": "© 2022 Antonius Marie Hogebrandt, all rights reserved",
             "siteurl": "https://melindreamakes.art",
             "navigation": {

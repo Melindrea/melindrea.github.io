@@ -1,8 +1,0 @@
-<div class="widget {{class}}-position tags-widget">
-    {{{widget-title "Tags" titletag=titletag}}}
-    <ul>
-    {{#each @root.collections.tags}}
-        {{#if postcount}}<li><a href="/{{ path }}">{{ title }}</a> <span class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">{{ postcount }}</span></li>{{/if}}
-    {{/each}}
-    </ul>
-</div>

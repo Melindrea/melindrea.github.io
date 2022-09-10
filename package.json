@@ -47,8 +47,6 @@
         "luxon": "^2.4.0",
         "metalsmith": "^2.4.3",
         "metalsmith-concat": "^7.0.3",
-        "metalsmith-discover-helpers": "^0.1.1",
-        "metalsmith-discover-partials": "^0.1.2",
         "metalsmith-formatcheck": "github:Melindrea/code.metalsmith-formatcheck",
         "metalsmith-include-files": "^0.1.10",
         "metalsmith-publish": "^0.1.6",

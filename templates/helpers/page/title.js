@@ -1,7 +1,7 @@
 /*
  * Custom theme helpers for Handlebars.js
  */
-let pagetitle = function(context) {
+module.exports = function(context) {
     let page = context.data.root;
     let pageTitle = page.title;
     let siteTitle = page.sitename;
@@ -25,4 +25,3 @@ let pagetitle = function(context) {
     return titlebits.join(page.titlesep);
 };
 
-module.exports = pagetitle;

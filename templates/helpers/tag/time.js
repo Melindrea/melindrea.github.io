@@ -3,7 +3,7 @@
  */
 const { DateTime } = require('luxon');
 
-let timetag = function(value, options) {
+module.exports = function(value, options) {
     let date = DateTime.fromJSDate(value);
     let attributes = {
         datetime: date.toISO(),
@@ -18,4 +18,3 @@ let timetag = function(value, options) {
     return time;
 };
 
-module.exports = timetag;

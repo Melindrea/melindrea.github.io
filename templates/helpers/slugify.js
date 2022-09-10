@@ -3,8 +3,6 @@
  */
 const slug = require('slug')
 
-let slugify = function(value) {
+module.exports = function(value) {
     return slug(value);
 };
-
-module.exports = slugify;

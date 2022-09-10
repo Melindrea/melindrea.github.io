@@ -2,7 +2,7 @@
  * Custom theme helpers for Handlebars.js
  */
 
-let imagelinks = function(links, context) {
+module.exports = function(links, context) {
     let mapping = {
         redbubble: {
             text: 'Buy products',
@@ -40,4 +40,3 @@ let imagelinks = function(links, context) {
     return '<br>' + formattedlinks.join(' || ');
 };
 
-module.exports = imagelinks;

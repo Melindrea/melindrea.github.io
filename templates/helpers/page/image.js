@@ -1,7 +1,7 @@
 /*
  * Custom theme helpers for Handlebars.js
  */
-let pagetitle = function(context) {
+module.exports = function(context) {
     let page = context.data.root;
     let image = page.siteurl + '/assets/images/';
     if (page.image) {
@@ -16,5 +16,3 @@ let pagetitle = function(context) {
     
     return image;
 };
-
-module.exports = pagetitle;

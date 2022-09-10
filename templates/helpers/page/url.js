@@ -1,7 +1,7 @@
 /*
  * Custom theme helpers for Handlebars.js
  */
-let fullurl = function(context) {
+module.exports = function(context) {
     let page = context.data.root;
     let bits = [
         page.siteurl,
@@ -10,5 +10,3 @@ let fullurl = function(context) {
     
     return bits.join('/')
 };
-
-module.exports = fullurl;

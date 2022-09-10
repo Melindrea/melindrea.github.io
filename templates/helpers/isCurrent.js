@@ -2,7 +2,7 @@
  * Custom theme helpers for Handlebars.js
  */
 // FYI: context === options
-let isCurrent = function(context) {
+module.exports = function(context) {
     const currentMenuItem = context.data.key,
           breadcrumbs = context.data.root.breadcrumbs;
 
@@ -22,4 +22,3 @@ let isCurrent = function(context) {
     }
   };
 
-module.exports = isCurrent;

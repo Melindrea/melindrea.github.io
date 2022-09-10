@@ -3,8 +3,6 @@
  */
 const slug = require('slug')
 
-let classify = function(classes) {
+module.exports = function(classes) {
     return classes.map(x => slug(x)).join(' ');
 };
-
-module.exports = classify;

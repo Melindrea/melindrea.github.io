@@ -20,3 +20,4 @@ src/assets/images/gallery/**
 src/assets/images/page-images/**
 gallery.json
 
+bin/metalsmith*

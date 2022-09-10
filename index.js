@@ -7,8 +7,8 @@ const Metalsmith  = require('metalsmith'),
     permalinks = require('@metalsmith/permalinks'),
     collections = require('@metalsmith/collections'),
     publish = require('metalsmith-publish'),
-    discoverPartials = require('metalsmith-discover-partials'),
-    discoverHelpers = require('metalsmith-discover-helpers'),
+    discoverPartials = require('./bin/metalsmith-discover-partials'),
+    discoverHelpers = require('./bin/metalsmith-discover-helpers'),
     postcss = require('metalsmith-with-postcss'),
     include    = require('metalsmith-include-files'),
     concat = require('metalsmith-concat'),
@@ -255,14 +255,13 @@ Metalsmith(__dirname)
     }))
     .use(collections({
         gallery: 'assets/images/gallery/*.{jpg,png}',
-        thumbnails: 'assets/images/gallery/thumbnails/*.{jpg,png}',
         updates: {
           metadata: {
             title: 'Updates',
             header: 'Brief updates',
             description: 'Quick details about what is going on',
             path: 'updates',
-            postTemplate: 'short',
+            postTemplate: 'micro',
             listClass: 'updates',
           },
           pattern: 'updates/**/*.html',
@@ -291,10 +290,7 @@ Metalsmith(__dirname)
                     'sidebar': true
                 }
             }
-        }//,
-        //tags: {
-        //    pattern: 'blog/tags/**/*.html'
-        //}
+        }
     }))
     .use(blog())
     .use(gallery({
@@ -307,8 +303,7 @@ Metalsmith(__dirname)
         directory: 'templates/helpers'
     }))
     .use(discoverPartials({
-        directory: 'templates/partials',
-        pattern: /\.hbs$/
+        directory: 'templates/partials'
     }))
     .use(toc())
     // Put the HTML fragments from the step above

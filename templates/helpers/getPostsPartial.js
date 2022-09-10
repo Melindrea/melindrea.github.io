@@ -2,10 +2,8 @@
  * Custom theme helpers for Handlebars.js
  */
 
-let getPostsPartial = function(partial, options) {
+module.exports = function(partial, options) {
     //console.log(partial)
     //console.log(options)
-    return partial + '-posts';
+    return 'blog-' + partial + '-posts';
 };
-
-module.exports = getPostsPartial;

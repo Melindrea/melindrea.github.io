@@ -21,4 +21,3 @@ module.exports = function(context) {
       return context.inverse(this);
     }
   };
-

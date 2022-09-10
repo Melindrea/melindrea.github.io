@@ -39,4 +39,3 @@ module.exports = function(links, context) {
 
     return '<br>' + formattedlinks.join(' || ');
 };
-

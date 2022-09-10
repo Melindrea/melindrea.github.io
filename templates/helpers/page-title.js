@@ -1,7 +1,7 @@
 /*
  * Custom theme helpers for Handlebars.js
  */
-module.exports = function(context) {
+module.exports= function(context) {
     let page = context.data.root;
     let pageTitle = page.title;
     let siteTitle = page.sitename;

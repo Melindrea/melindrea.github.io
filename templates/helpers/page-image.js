@@ -1,7 +1,7 @@
 /*
  * Custom theme helpers for Handlebars.js
  */
-module.exports = function(context) {
+module.exports= function(context) {
     let page = context.data.root;
     let image = page.siteurl + '/assets/images/';
     if (page.image) {

@@ -14,7 +14,6 @@ htmlcov/
 node_modules
 
 .ideas
-.vscode
 
 src/assets/images/featured-images/**
 src/assets/images/gallery/**

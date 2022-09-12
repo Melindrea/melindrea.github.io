@@ -2,7 +2,7 @@ venv
 __env__
 *.pyc
 __pycache__/
-
+.env
 instance/
 
 .pytest_cache/

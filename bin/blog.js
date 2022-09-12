@@ -5,7 +5,7 @@ const wordsCount = require('words-count').default,
     slug = require('slug'),
     fs = require('fs'),
     { DateTime } = require('luxon'),
-    {resolve} = require("path"),
+    {resolve} = require('path'),
     melindreamakes = require('../package').melindreamakes;
     
 module.exports = plugin;

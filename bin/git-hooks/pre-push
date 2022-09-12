@@ -28,6 +28,7 @@ console.log(gitObject);
 
 rl.on('line', function (cmd) {
     console.log('STIDIN: ' + cmd);
+    console.log(cmd.split(' '));
 }).on('close', function () {
     process.exit(0);
 });

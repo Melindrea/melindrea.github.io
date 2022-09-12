@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 var argv = require('yargs')
-        .default('env', 'dev')
         .help('h')
         .alias('h', 'help')
         .epilog('Copyright 2015')
@@ -18,17 +17,28 @@ var argv = require('yargs')
     }),
     gitObject = {};
 
+const env = process.env.NODE_ENV || 'dev',
+    { schedulePosts } = require('../post-scheduler');
+/*console.log('env: ', env);
 gitKeys.forEach(function (key) {
     gitObject[key] = process.env[key];
 });
 console.log('Args:', argv);
 console.log('CWD:', process.cwd());
 console.log('__dirname:', __dirname);
-console.log(gitObject);
+console.log(gitObject);*/
 
 rl.on('line', function (cmd) {
-    console.log('STIDIN: ' + cmd);
-    console.log(cmd.split(' '));
+    // This happens if the the process exits normally, and isn't rejected
+    let branch = cmd.split()[0].split('/')[2];
+    console.log(branch);
+    if (branch === 'main') {
+        // do stuff
+    } else {
+        console.log('Not scheduling posts with branch ' + branch);
+        // Except this time since that's the one I'm testing with
+
+    }
 }).on('close', function () {
     process.exit(0);
 });

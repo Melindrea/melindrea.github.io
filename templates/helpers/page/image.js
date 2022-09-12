@@ -7,8 +7,8 @@ module.exports= function(context) {
     if (page.image) {
         if (page.image.slug) {
             image += 'page-images/' + page.image.slug
-        } else if (page.slug) {
-            image += 'featured-images/' + page.slug + '/1464.jpg';
+        } else if (page.context === 'post') {
+            image = page.featuredpath + '/1464.jpg';
         }
     } else {
         image += 'site-image.jpg';

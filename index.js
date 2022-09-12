@@ -294,7 +294,9 @@ Metalsmith(__dirname)
             }
         }
     }))
-    .use(blog())
+    .use(blog({
+            dev: devMode
+    }))
     .use(gallery({
         galleryMetadata: galleryMetadata
     }))

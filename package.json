@@ -20,7 +20,8 @@
         "images": "python bin/images.py",
         "images:verbose": "python bin/images.py --verbose",
         "favicons:generate": "real-favicon generate faviconDescription.json faviconData.json favicons",
-        "favicons:update": "real-favicon check-for-update --fail-on-update faviconData.json"
+        "favicons:update": "real-favicon check-for-update --fail-on-update faviconData.json",
+        "post-scheduler": "node bin/post-scheduler origin git@something:etc"
     },
     "keywords": [],
     "author": {

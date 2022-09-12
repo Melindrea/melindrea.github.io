@@ -1,19 +1,20 @@
 'use strict';
 
-const { post } = require('jquery');
-
 const wordsCount = require('words-count').default,
     { stripHtml } = require("string-strip-html"),
     slug = require('slug'),
     fs = require('fs'),
     { DateTime } = require('luxon'),
+    {resolve} = require("path"),
     melindreamakes = require('../package').melindreamakes;
     
 module.exports = plugin;
 
 function plugin(options) {
-    options = options || {};
-    //let directory = options.directory || 'OEBPS';
+    options = options || {
+        dev: true
+    };
+    
     return function(files, metalsmith, done) {
         setImmediate(done);
         const blogList = metalsmith.metadata().collections.blog || [];
@@ -24,15 +25,138 @@ function plugin(options) {
         handleTags(files, metalsmith);
 
         handlePosts(files, metalsmith.metadata().collections.blog);
+        
+        // Only in prod, but going to fake it for now
+        if (! options.dev) {
+        //if (true) {
+            updatePublishedPosts(metalsmith.metadata().collections.blog);
+        }
 
         handleIndices(files, metalsmith.metadata().collections);
     }
 }
 
+function updatePublishedPosts(postCollection) {
+    const postsfile = resolve('posts.json'),
+        postsData= require(postsfile); 
+    
+    let postArray = []; // This is used to sort-of sort--I want the file to be in something resembling order
+    
+        // I want this to be sync
+    for (let i = 0; i <postCollection.length; i++) {
+        let post = postCollection[i];
+        
+        let postData = {
+            title: post.title,
+            summary: post.abstract,
+            image: {
+                description: post.image.description,
+                path: post.featuredpath + '/1464.jpg'
+            },
+            stats: {
+                modified: post.lastmod,
+                published: post.pubdate
+            },
+            pushed: false,
+            slug: post.slug
+        };
+        
+        // Any already-added posts just needs to be update
+        if (post.slug in postsData) {
+            postData.pushed = postsData[post.slug].pushed;
+        }
+
+        if ('social_media' in post) {
+            postData.addenda = socialMedia(post.social_media);
+        }
+        
+        postArray.push(postData);
+    }
+
+    const postMap = new Map();
+
+    postArray.sort((a, b) => {
+        const aPub = a.stats.published,
+              bPub = b.stats.published;
+
+        return bPub.getTime() - aPub.getTime(); // Want newest at top
+    }).forEach(object => {
+        let slug = object.slug;
+        delete object.slug;
+        postMap.set(slug, object);
+    });
+    
+    const data = JSON.stringify(Object.fromEntries(postMap), null, 4);
+    
+    fs.writeFile(postsfile, data, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log('Posts saved to ' + postsfile);
+    });
+}
+
+function socialMedia(smMeta) {
+    const prefixes = {
+        masto: 'mastodon',
+        tw: 'twitter',
+        fb: 'facebook'
+    },
+    mastodon_groups = {
+        amwriting: '@amwriting@a.gup.pe',
+        fiberarts: '@fiberarts@a.gup.pe'
+    };
+    
+    let addenda = {};
+
+    if ('hashtag' in smMeta) {
+        for (const hashtag of smMeta.hashtag.values()) {
+            let parts = hashtag.split(';');
+            
+            if (parts.length === 1) {
+                if ('general' in addenda) {
+                    addenda.general.push('#' + hashtag);
+                } else {
+                    addenda.general = ['#' + hashtag];
+                }
+            } else if (parts.length === 2) {
+                let type = prefixes[parts[0]];
+
+                if (type in addenda) {
+                    addenda[type].push('#' + parts[1]);
+                } else {
+                    addenda[type] = ['#' + parts[1]];
+                }
+            }
+        }
+    }
+
+    // This is mastodon specific
+    if ('groups' in smMeta) {
+        let groups = [];
+
+        for (const group of smMeta.groups.values()) {
+            if (group in mastodon_groups) {
+                groups.push(mastodon_groups[group]);
+            } else {
+                console.log('Group ' + group + ' is not defined');
+            }
+        }
+
+        if ('mastodon' in addenda) {
+            addenda.mastodon.push(...groups);
+        } else {
+            addenda.mastodon = groups;
+        }
+    }
+
+    return addenda;
+} 
+
 function postHasFeatured(post) {
     // Does it have a valid featured image?
     const sizes = ['1464', '300', '767', '952', '1208'],
-        imagepath = './src/assets/images/featured-images/' + slug(post.title) + '/';
+        imagepath = './src' + post.featuredpath + '/';
     
     for (let i = 0; i < sizes.length; i++) { 
         let path = imagepath + sizes[i] + '.jpg';
@@ -126,6 +250,8 @@ function handlePosts(files, postCollection) {
         
         post['tags'] = tags;
         post.context = 'post';
+        post.featuredpath = '/assets/images/featured-images/' + slug(post.title);
+        
         postHasFeatured(post);
 
         // Word count + estimated reading
@@ -146,31 +272,6 @@ function handlePosts(files, postCollection) {
         delete files[oldPath + '/index.html'];
         
     });
-    /*Object.keys(files).filter(p => p.startsWith('blog/')).forEach(path => {
-        let tags = [];
-        post['collection'].filter(c => c !== 'blog').forEach(function(tag) {
-            let link = 'blog/tags/' + tag;
-            tags.push({
-                link: '/' + link,
-                name: tag
-            });
-
-            if (!(tag in melindreamakes.tags)) {
-                console.warn('NB! Tag "' + tag + '" does not exist yet!')
-            }
-        });
-        post['tags'] = tags;
-        post.context = 'post';
-        postHasFeatured(post);
-
-        // Word count + estimated reading
-        post.wordcount = getWordCount(post);
-        post.estimate = getReadingTime(post.wordcount);
-        post.layout = 'blog/post.hbs';
-
-        let newPath = 'blog/posts' + slug(post.title) + '/index.html';
-        console.log(post.path);
-    });*/
 }
 
 function handleIndices(files, collections) {

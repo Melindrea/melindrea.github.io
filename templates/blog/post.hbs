@@ -6,12 +6,12 @@
 
 <main>
 <img
-  src="/assets/images/featured-images/{{slug}}/1464.jpg"
-  srcset="/assets/images/featured-images/{{slug}}/300.jpg 300w,
-          /assets/images/featured-images/{{slug}}/767.jpg 767w,
-          /assets/images/featured-images/{{slug}}/952.jpg 952w,
-          /assets/images/featured-images/{{slug}}/1208.jpg 1208w,
-          /assets/images/featured-images/{{slug}}/1464.jpg 1464w"
+  src="{{ featuredpath }}/1464.jpg"
+  srcset="{{ featuredpath }}/300.jpg 300w,
+          {{ featuredpath }}/767.jpg 767w,
+          {{ featuredpath }}/952.jpg 952w,
+          {{ featuredpath }}/1208.jpg 1208w,
+          {{ featuredpath }}/1464.jpg 1464w"
   sizes="(max-width: 766px) 300px,
         (max-width: 1023px) 767px,
         (max-width: 1279px) 952px,

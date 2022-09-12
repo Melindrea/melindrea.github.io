@@ -4,6 +4,14 @@ header: Art and writing coming together
 abstract: Choosing and making character images to match and enhance what I have in mind.
 pubdate: 2022-09-08
 
+social_media:
+    hashtag:
+        - masto;mastoart
+    groups:
+        - amwriting
+
+
+
 collection:
     - artwork
     - writing

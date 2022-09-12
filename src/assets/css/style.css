@@ -2,7 +2,7 @@
 
 @layer base {
   html {
-    @apply bg-repeat bg-light dark:bg-dark text-slate-500 dark:text-slate-400 font-sans font-light text-lg;
+    @apply bg-repeat bg-light dark:bg-dark text-slate-600 dark:text-slate-400 font-sans font-light text-lg;
   }
 
   main {
@@ -179,3 +179,12 @@
     }
 }
 
+/* Ensures the first paragraph is on the same row as the marker */
+li p {
+  display: inline;
+}
+
+/* second or further paragraphs still need to be block */
+li p+p {
+  display: block;
+}

@@ -8,6 +8,10 @@ image:
     source: https://unsplash.com/photos/XJXWbfSo2f0
     creator: Luca Bravo
 
+social_media:
+    hashtag:
+        - programming
+
 collection:
     - geek
     - how-to

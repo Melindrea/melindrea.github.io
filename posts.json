@@ -1,17 +1,42 @@
 {
+    "social-media-integration": {
+        "title": "Social Media Integration",
+        "summary": "How to solve a problem like … Melindrea?",
+        "link": "https://melindreamakes.art/blog/posts/social-media-integration/",
+        "image": {
+            "description": "A close-up of writing with a fountain pen",
+            "path": "/assets/images/featured-images/social-media-integration/1464.jpg"
+        },
+        "stats": {
+            "modified": "2022-09-13T23:11:48.449Z",
+            "published": "2022-09-13T00:00:00.000Z"
+        },
+        "pushed": false,
+        "addenda": {
+            "general": [
+                "#MelindreaMakes",
+                "#programming",
+                "#nodejs"
+            ]
+        }
+    },
     "saint-dymphna": {
         "title": "Saint Dymphna",
         "summary": "Choosing and making character images to match and enhance what I have in mind.",
+        "link": "https://melindreamakes.art/blog/posts/saint-dymphna/",
         "image": {
             "description": "A close-up of writing with a fountain pen",
             "path": "/assets/images/featured-images/saint-dymphna/1464.jpg"
         },
         "stats": {
-            "modified": "2022-09-13T08:02:38.678Z",
+            "modified": "2022-09-13T14:27:46.033Z",
             "published": "2022-09-08T00:00:00.000Z"
         },
-        "pushed": false,
+        "pushed": true,
         "addenda": {
+            "general": [
+                "#MelindreaMakes"
+            ],
             "mastodon": [
                 "#mastoart",
                 "@amwriting@a.gup.pe"
@@ -21,18 +46,22 @@
     "new-site": {
         "title": "New site",
         "summary": "How not to build a site; or How I intended to build a simple one-page site and accidentally a static site with blogging and a gallery.",
+        "link": "https://melindreamakes.art/blog/posts/new-site/",
         "image": {
             "description": "A close-up of a laptop with some code on the screen",
             "path": "/assets/images/featured-images/new-site/1464.jpg"
         },
         "stats": {
-            "modified": "2022-09-13T08:02:38.677Z",
+            "modified": "2022-09-13T23:12:16.234Z",
             "published": "2022-09-04T00:00:00.000Z"
         },
         "pushed": true,
         "addenda": {
             "general": [
-                "#programming"
+                "#MelindreaMakes",
+                "#programming",
+                "#nodejs",
+                "#metalsmith"
             ]
         }
     }

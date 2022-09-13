@@ -26,17 +26,15 @@ function plugin(options) {
 
         handlePosts(files, metalsmith.metadata().collections.blog);
         
-        // Only in prod, but going to fake it for now
         if (! options.dev) {
-        //if (true) {
-            updatePublishedPosts(metalsmith.metadata().collections.blog);
+            updatePublishedPosts(metalsmith.metadata().siteurl, metalsmith.metadata().collections.blog);
         }
 
         handleIndices(files, metalsmith.metadata().collections);
     }
 }
 
-function updatePublishedPosts(postCollection) {
+function updatePublishedPosts(baseurl, postCollection) {
     const postsfile = resolve('posts.json'),
         postsData= require(postsfile); 
     
@@ -45,10 +43,11 @@ function updatePublishedPosts(postCollection) {
         // I want this to be sync
     for (let i = 0; i <postCollection.length; i++) {
         let post = postCollection[i];
-        
+
         let postData = {
             title: post.title,
             summary: post.abstract,
+            link: `${baseurl}/${post.path}/`,
             image: {
                 description: post.image.description,
                 path: post.featuredpath + '/1464.jpg'
@@ -107,18 +106,18 @@ function socialMedia(smMeta) {
         fiberarts: '@fiberarts@a.gup.pe'
     };
     
-    let addenda = {};
+    let addenda = {
+        general: [
+            '#MelindreaMakes'
+        ]
+    };
 
     if ('hashtag' in smMeta) {
         for (const hashtag of smMeta.hashtag.values()) {
             let parts = hashtag.split(';');
             
             if (parts.length === 1) {
-                if ('general' in addenda) {
-                    addenda.general.push('#' + hashtag);
-                } else {
-                    addenda.general = ['#' + hashtag];
-                }
+                addenda.general.push('#' + hashtag);
             } else if (parts.length === 2) {
                 let type = prefixes[parts[0]];
 
@@ -171,7 +170,7 @@ function postHasFeatured(post) {
 
 function handleTags(files, metalsmith) {
     // Tags are declared in package.json, under melindreamakes key
-    metalsmith.metadata().collections.tags = [];
+    let tags = [];
     Object.keys(melindreamakes.tags).forEach(tag => {
         let posts = metalsmith.metadata().collections[tag] || [];
     
@@ -181,7 +180,12 @@ function handleTags(files, metalsmith) {
             let fileData = {
                 title: tag,
                 contents: Buffer.from('', 'utf-8'),
-                posts: posts,
+                posts: posts.sort((a, b) => {
+                    const aPubdate = a.pubdate,
+                          bPubdate = b.pubdate;
+
+                    return bPubdate - aPubdate;
+                }),
                 postcount: posts.length,
                 context: 'tag',
                 layout: 'blog/listing.hbs',
@@ -205,11 +209,33 @@ function handleTags(files, metalsmith) {
             };
             
             files[path + '/index.html'] = file;
-            metalsmith.metadata().collections.tags.push(file);
+            tags.push(file);
 
         } else {
             console.log('Tag "' + tag + '" has no posts.')
         }
+    });
+    
+    metalsmith.metadata().collections.tags = tags.sort((a, b) => {
+        // Step 1: Compare post count
+        let postDiff = b.postcount - a.postcount;
+
+        if (postDiff !== 0) {
+            return postDiff;
+        }
+        
+        // Step 2, compare titles
+        const aTitle = a.title.toUpperCase(); // ignore upper and lowercase
+        const bTitle = b.title.toUpperCase(); // ignore upper and lowercase
+        if (aTitle < bTitle) {
+            return -1;
+        }
+        if (aTitle > bTitle) {
+            return 1;
+        }
+
+        // names must be equal
+        return 0;
     });
 }
 
@@ -316,7 +342,12 @@ function createIndexFile(layout, posts) {
     let fileData = {
         contents: Buffer.from('', 'utf-8'),
         layout: layout,
-        posts: posts,
+        posts: posts.sort((a, b) => {
+            const aPubdate = a.pubdate,
+                  bPubdate = b.pubdate;
+
+            return bPubdate - aPubdate;
+        }),
         postcount: posts.length
     };
     

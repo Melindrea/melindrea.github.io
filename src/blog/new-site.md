@@ -11,10 +11,14 @@ image:
 social_media:
     hashtag:
         - programming
+        - nodejs
+        - metalsmith
 
 collection:
     - geek
     - how-to
+    - nodejs
+    - metalsmith
 pubdate: 2022-09-04
 ---
 

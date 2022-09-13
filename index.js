@@ -25,10 +25,8 @@ const Metalsmith  = require('metalsmith'),
     repository = require('./package').repository,
     galleryMetadata = require('./gallery'),
     env = process.env.NODE_ENV || 'development',
-    devMode = (env === 'development');
+    devMode = ['development', 'dev'].includes(env);
     
-
-
 function presence(files, metalsmith) {
   Object.keys(files).forEach(path => {
     if (files[path].presence) {

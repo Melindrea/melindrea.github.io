@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer', 'GTM-N664CZV');</script>
+        <!-- End Google Tag Manager -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Social Media Integration / Posts / MelindreaMakes: {art, words, thoughts, code}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://melindreamakes.art/blog/posts/social-media-integration/">
+
+        <meta property="og:title" content="Social Media Integration / Posts / MelindreaMakes: {art, words, thoughts, code}">
+        <meta name="twitter:title" content="Social Media Integration / Posts / MelindreaMakes: {art, words, thoughts, code}">
+        
+        <meta property="og:description" content="How to solve a problem like … Melindrea?">
+        <meta name="twitter:description" content="How to solve a problem like … Melindrea?">
+        
+        <meta property="og:image" content="/assets/images/featured-images/social-media-integration/1464.jpg">
+        <meta name="twitter:image" content="/assets/images/featured-images/social-media-integration/1464.jpg">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+
+<body class="with-sidebar blog post social-media-integration">
+ <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N664CZV"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+ <header class="static site-header">
+     <div class="text-lg bg-slate-700 h-auto drop-shadow-xl">
+         <nav class="p-4" aria-label="Main"><ul>
+             <li class="inline mb-0 mr-3 font-smallcaps font-medium"><a class="text-slate-300  no-underline" href="/">Home</a></li>
+             <li class="inline mb-0 mr-3 font-smallcaps font-medium"><a aria-current="page" class="text-slate-400  no-underline" href="/blog/">Blog</a></li>
+             <li class="inline mb-0 mr-3 font-smallcaps font-medium"><a class="text-slate-300  no-underline" href="/gallery/">Gallery</a></li>
+             <li class="inline mb-0 mr-3 font-smallcaps font-medium"><a class="text-slate-300  no-underline" href="/updates/">Updates</a></li>
+         </ul></nav>
+     </div>
+     <nav class="breadcrumbs text-sm pl-4" aria-label="Breadcrumbs">
+     <ol>
+         <li class="inline-block p-1"><a href="/">Home</a></li><li class="inline-block p-1"><a href="/blog/">Blog</a></li><li class="inline-block p-1">Automagically posting to social media</li>
+     </ol>
+ </nav>
+ </header>
+
+<main>
+<img
+  src="/assets/images/featured-images/social-media-integration/1464.jpg"
+  srcset="/assets/images/featured-images/social-media-integration/300.jpg 300w,
+          /assets/images/featured-images/social-media-integration/767.jpg 767w,
+          /assets/images/featured-images/social-media-integration/952.jpg 952w,
+          /assets/images/featured-images/social-media-integration/1208.jpg 1208w,
+          /assets/images/featured-images/social-media-integration/1464.jpg 1464w"
+  sizes="(max-width: 766px) 300px,
+        (max-width: 1023px) 767px,
+        (max-width: 1279px) 952px,
+        (max-width: 1535px) 1208px,
+        1536px"
+  width="1464"
+  height="488"
+  alt="Featured Image: A close-up of writing with a fountain pen"
+  class="mb-4">
+  
+  <div class="content-wrapper">
+    <div class="content">
+      <article class="post-content-body">
+        <header class="post-head">
+          <h1>Automagically posting to social media</h1>
+          <p class="post-abstract mb-4">How to solve a problem like … Melindrea?</p>
+        </header>
+        
+      <p>This particular post is part experiment to confirm that my theory is reasonable, and part a description on how to do the thing I&#39;m trying to do, namely simplify the flow of sharing my new posts to social media (in particular mastodon, though once I&#39;ve completed that part of the flow I should be able to expand it to anything that has a public API).</p>
+<p>&quot;Okay, that sounds cool and stuff&quot;, I imagine my audience saying, &quot;but isn&#39;t this a solved problem? Isn&#39;t there a dozen or more plugins that do <em>just exactly this</em>?&quot; Yes, but the complications lie in my site being on github pages without a proper backend. In a more usual CMS (like WordPress and probably Blogger and others of their kind) you write your post and when you click a specific button the post gets published, and generally there&#39;s some kind of &quot;hook&quot; that will notify the plugin(s) that you have a new post out (and the post goes public almost instantly, or at the time you&#39;ve scheduled it to). Meanwhile, I&#39;m writing this post in a textfile, and even once it&#39;s finished it won&#39;t be public until a) I&#39;ve built the latest version and pushed it to github and b) github has realised that there is an update and ran it&#39;s things to get the new version of the site to replace the prior version. Not only does b) take a small amount of time (up to 10 minutes), the changes can be anything. It will do the same thing whether I&#39;ve added a new post, changed CSS, made a new page, added another image to the gallery, etc.</p>
+<p>With that said, I do have a few ideas on how to get it to work (and for you to get my process I will be updating this particular part of the post with crossed out/inserted text where my theory ran head-first into the practice of my site). The flow I&#39;m considering is the following:</p>
+<ol>
+<li><p>Add a <code>posts.json</code> file that when I run <code>npm run build</code> (which builds the site for prod environment) updates the file with <del>any posts that aren&#39;t already in the file</del> <ins>new posts and changes to old posts</ins>. Each post <del>likely</del> has things such as the slug as key and the valu including image link, image description, summary of the post, <ins>published and last modified, list of hashtags</ins> and <del>probably</del> a boolean along the lines of <code>pushed</code> to signify whether I&#39;ve posted about this particular post. By only running it in the build/production pipeline it will only care about posts that are finished enough to be published, and if I change anything (including title, which builds the slug) before it&#39;s published it won&#39;t put the same post in there twice.</p>
+</li>
+<li><p><del>Use a git hook on my computer (<code>pre-push</code> seems a good candidate) that checks whether it&#39;s being pushed to main (since I might want to push a development branch at times), and if it is being pushed to main, run a script that reads <code>posts.json</code> and schedules posts about half an hour from the current time, using the information of any posts that are not yet pushed, and finishes with setting the <code>pushed</code> to true so it won&#39;t be pushed again. By scheduling it for half an hour from the time of the push I should minimise the risk of the post going live before the post does. I probably also want to commit most of the hook script to the repo, because I&#39;m going to be very sad if it goes missing at some point.</del><ins>Yes, that entire paragraph is nixed, will explain further down</ins></p>
+</li>
+</ol>
+<h2 id="listing-current-posts">Listing current posts</h2>
+<p>The first conceit I base this on is that this should only include files that are actually ready to be published--before then they might change titles, slugs and all sorts of things, so <code>posts.json</code> needs to be stable in that sense. Since I already have development vs prod in my build pipeline, that particular bit was easy enough. In the end I tested it in dev mode while working on it, since not only did that give me a new file to work with, the dev pipeline is a lot less heavy than the prod one (in prod images are generated and such).</p>
+<p>At first I was thinking only title, summary, pushed and a bit about the image, but I quickly decided that I wanted to have both published and last modified dates in there. I&#39;d originally intended that it only adds new files, it doesn&#39;t update the existing ones but, again, I realised that having a bit of metadata about them, and that metadata being accurate and up-to-date would be important for this file to be the canonical truth about which posts are published. </p>
+<h3 id="gameplan">Gameplan</h3>
+<ol>
+<li>Load the data from the <code>posts.json</code> file in the root directory of the project</li>
+<li>For each post, check if it exists in the loaded data, and if it does use the value of <code>pushed</code> in the metadata you&#39;re creating from the file</li>
+<li>Stringify the object just created and write it to the same file you loaded it from originally.</li>
+</ol>
+<p>Here&#39;s where things got a bit confusing/hilarious: If you use <code>require</code> with a relative file path, it works off of the path of the file. IE, the file that&#39;s doing all of this is <code>bin/blog.js</code>, so I needed to use <code>require(&#39;../posts.json&#39;)</code>. Unfortunately, <code>fs.writeFile</code> works off of the current working dirctory … which is one step above the file, so if I write to <code>../posts.json</code>, that file will be outside of the repository. I solved this through using <code>path.resolve(&#39;posts.json&#39;)</code> and using the full path to both load and write.</p>
+<p>Next complication came when looking at the file and deciding that I wanted it to be sorted, with the newest post highest up in the file and the oldest at the bottom. As you may or may not know, there is no order to a javascript object. You can sort an array, but you explicitly cannot sort an object (for clarification: there is a &quot;naive&quot; order in javascript objects, but not one that should be trusted in critical code: the solution I came up with is good enough for my usecas, but not for, say, code that ensures the right customer is billed). </p>
+<p>My solution was to rather than adding/replacing the object into the loaded data, I went <code>array</code> =&gt; <code>Map</code> =&gt; <code>Object</code> =&gt; <code>string of valid json</code>. This allowed me to 1) sort the array based on the publication date, 2) create a more-or-less ordered Map (using forEach on the array and Map.set(key, value)), 3) and write it to file as JSON. Maps cannot be used with <code>JSON.stringify</code>, but <code>Object.fromEntries(map)</code> can. </p>
+<p>That concludes step 1: creating the list of posts, to be consumed by whatever I need it to.</p>
+<h2 id="scheduling-social-media-posts">Scheduling social media posts</h2>
+<p>For this, I will be using parts of <a href="https://github.com/Melindrea/githooks">an old repository of mine</a> (here&#39;s to hoping that git hooks haven&#39;t changed …), though only the final bit of the code will be using the hook. If you take nothing else with you from this post, remember this: <strong>Any bit of code that can only be triggered through a build or hook system is badly planned</strong>. What I mean by that is that you should always have a way to trigger the thing manually, with a payload that is close enough to the real.</p>
+<h3 id="gameplan-1">Gameplan</h3>
+<ol>
+<li>Script (like in <code>bin</code> since that is where I store things) that can be triggered from the terminal. Probably based on <a href="https://github.com/Melindrea/githooks/blob/master/hooks/pre-push">this pre-push hook</a>, though I&#39;ll likely need to modernise every single thing in it.</li>
+<li>Once it can be triggered properly, I need the baseline code:
+ a. <code>npm run post-scheduler</code> to trigger it manually (in scripts)
+ b. Read <code>posts.json</code> and pick out entries with <code>pushed: false</code>
+ c. For each of these entries, decide when it should be scheduled (likely +30m for the first, and if there&#39;s more than one it&#39;s +1h for every other. So if it&#39;s ran at noon and have three posts it would be setting the times to 12.30, 13.30 and 14.30)
+ d. Call function with objects and scheduled times, which will be doing the actual connecting to whatever social media stuffs</li>
+<li>Actual connection function: either python or javascript, undecided. While the first, and most important, is for Mastodon, I&#39;ll try to write it in a way that it can be easily expanded or others.</li>
+</ol>
+<h3 id="reality-strikes-again">Reality strikes again</h3>
+<p>So, forget most of the stuff above. I did manage to get the pre-push hook to kind-of work, and thanks to <a href="https://dnasir.com/2022/01/31/using-git-hooks-to-enforce-development-policies/">Dzulqarnain Nasir</a> I learned a new trick: <code>git config core.hooksPath &lt;your folder here&gt;</code> will allow you to use hooks and commit them in the repo, since they&#39;re not stuck in the <code>.git/hooks</code> location. You would still need to make sure it&#39;s configurated correctly, but that could be put into something automated somewhere (ex the <code>postinstall</code> script in <code>package.json</code>). Now, however, back to where things got a lot more complicated.</p>
+<p>I set up a developer account on Mastodon, getting the various keys and secrets and whatnot put into a <code>.env</code> file that is explicitly not committed, installed <a href="https://github.com/vanita5/mastodon-api">mastodon-api</a> and started to experiment on building the posts, the media and such.</p>
+<p>Good news: I don&#39;t actually need to upload media, since mastodon will take the preview from my post, which saves me a step. <em>However</em>, when I tried to use the scheduling part of the API it wasn&#39;t working as expected. I suspect the issue is on my part, but neither of the posts I scheduled (30 and 10 minutes respectively, after the request was sent) showed up in the end. I can post directly from the API, but not schedule a post. (I can see scheduled posts and delete them, too …) Which is less than ideal, considering part of the issue is that it could take up to 10 minutes for the post to show up on my site. I think what I might do with that is to rewrite the scheduler so that it is in no way connected to the hook and just needs to be triggered manually. I can probably live with that.</p>
+<p>Second issue is mitigated by using the terminal for my pushing to github. I have been using Github Desktop for the convenience, but for some reason it doesn&#39;t accept that I have node installed, so instead of getting a hook triggered and the branch pushed to github, I get an error message. I suspect I can solve that, but since the second part of the equation also petered out I&#39;m not putting any energy on it.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Instead of the full automation I was wanting, I&#39;ll have to live with semi-automation: I can still create lists of posts in the build step (and will), and then use an npm-script to post about them to Mastodon (and possibly other services later). I might go with two different types of script for post-to-socialmedia: One creates posts for all not-yet-posted posts (which should be 1 at the most, but I&#39;ll make a loop so nothing gets forgotten) and one that toots a post with a link to a post that&#39;s older than, say, two months, with a &quot;throwbacktoot&quot; kind of hashtag.</p>
+<p>Hopefully this post is one you read because it is the first one I tooted using <code>npm run share</code>.</p>
+
+      </article>
+    </div> <!-- End of column -->
+
+    <aside class="sidebar">
+      <div class="widgets-sidebar">
+              <div class="widget sidebar-position meta-widget">
+                  <h3>About</h3>
+                  <div class="post-meta">
+                          <div class="post-meta-item"><span class="post-meta-title">Reading time: </span><span class="post-meta-info">8 minutes</span></div>
+                          <div class="post-meta-item"><span class="post-meta-title">Word count: </span><span class="post-meta-info">1894</span></div>
+                          <div class="post-meta-item"><span class="post-meta-title">Published: </span><span class="post-meta-info"></span><time datetime="2022-09-13T02:00:00.000+02:00" itemprop="datePublished">September 13, 2022</time></div>
+                          <div class="post-meta-item"><span class="post-meta-title">Tagged: </span><ul class="inline post-meta-info">
+                          
+                      <li class="inline"><a href="/blog/tags/how-to" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">how-to</a></li>
+                      <li class="inline"><a href="/blog/tags/geek" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">geek</a></li>
+                      <li class="inline"><a href="/blog/tags/automation" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">automation</a></li>
+                      <li class="inline"><a href="/blog/tags/git" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">git</a></li>
+                      <li class="inline"><a href="/blog/tags/nodejs" class="bg-slate-700 text-slate-300 rounded-full p-2 no-underline">nodejs</a></li>
+                  </ul></div>
+              </div>
+      </div>
+    </aside>
+</div>
+  <nav class="post-navigation flex flex-row">
+      <div class="sm:text-right basis-1/2 sm:mr-4"><span class="font-bold font-serif font-smallcaps hidden sm:inline">Previous post</span><span class="sm:block"><span class="sm:hidden text-slate-500 dark:text-slate-400">« </span><a class="text-sm" href="/blog/posts/saint-dymphna">Art and writing coming together</a></span></div>
+    
+  </nav>
+</main>
+
+<footer class="border-t border-slate-400 dark:border-slate-600 text-sm py-4 md:container md:mx-auto md:px-8 site-footer font-serif">
+<div class="md:grid md:grid-cols-3 md:gap-4 md:place-content-stretch">
+  <div class="mb-2"><a href='https://ko-fi.com/A67610WU' target='_blank'>
+    <img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Tip me at ko-fi.com' />
+</a></div>
+  <div class="mb-2 md:text-center">
+    <div class="copyright">© 2022 Antonius Marie Hogebrandt, all rights reserved</div>
+    <div class="last-modified">Last updated: <time datetime="2022-09-14T01:11:48.449+02:00">September 14, 2022</time></div>
+    </div>
+  <div class="mb-2 md:text-right">
+    <ul>
+        <li><a href="/privacy-cookies/">Privacy <span class="ampersand">&amp;</span> Cookie policies</a></li>
+        <li><a href="/colophon/">Colophon</a></li>
+        <li><a href="https://github.com/Melindrea/melindrea.github.io.git">Code@Github</a></li>
+    </ul>
+  </div>
+</div>
+
+</footer>
+<script src="/assets/js/jquery.slim.min.js"></script>
+<script src="/assets/js/scripts.max.js"></script>
+
+    </body>
+</html>

@@ -17,11 +17,14 @@
         "build": "export NODE_ENV=prod && node index",
         "dev": "node index",
         "cypress:open": "cypress open",
-        "images": "python bin/images.py",
-        "images:verbose": "python bin/images.py --verbose",
+        "images": "python bin/images.py -f images.config.json",
+        "dev:images": "python bin/images.py -f images-dev.config.json",
         "favicons:generate": "real-favicon generate faviconDescription.json faviconData.json favicons",
         "favicons:update": "real-favicon check-for-update --fail-on-update faviconData.json",
-        "schedule:posts": "node bin/schedule_posts"
+        "share": "export NODE_ENV=prod && node bin/share_posts",
+        "share:tbt": "export NODE_ENV=prod && node bin/share_posts --tbt",
+        "dev:share": "node bin/share_posts",
+        "dev:share:tbt": "node bin/share_posts --tbt"
     },
     "keywords": [],
     "author": {
@@ -146,6 +149,22 @@
             "dymphna": {
                 "header": "Saint Dymphna; or the Asylum",
                 "description": "Posts about this specific setting"
+            },
+            "automation": {
+                "header": "Automation in programming",
+                "description": "How to create flows and things that happend automagically"
+            },
+            "git": {
+                "header": "git",
+                "description": "Tips, tricks, thoughts and ideas on this wonderful version control system"
+            },
+            "nodejs": {
+                "header": "NodeJS (and adjacent technologies)",
+                "description": "Implementation, ruminations or speculations around Javascript in the terminal"
+            },
+            "metalsmith": {
+                "header": "Metalsmith.io",
+                "description": "The static site generator (SSG) I use, with some details on how or why"
             }
         },
         "presence": [
@@ -188,6 +207,11 @@
                 "site": "Pinterest",
                 "url": "https://www.pinterest.se/melindrea82",
                 "nickname": "melindrea82"
+            },
+            {
+                "site": "Twitch",
+                "url": "https://www.twitch.tv/melindrea",
+                "nickname": "melindrea"
             }
         ],
         "mastodon": [

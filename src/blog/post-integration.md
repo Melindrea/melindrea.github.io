@@ -1,22 +1,25 @@
 ---
-title: Social Media Post Integration
+title: Social Media Integration
 header: Automagically posting to social media
 abstract: How to solve a problem like … Melindrea?
-pubdate: 2022-09-14
-publish: draft
+pubdate: 2022-09-13
 
 social_media:
     hashtag:
         - programming
+        - nodejs
 
 collection:
     - how-to
     - geek
+    - automation
+    - git
+    - nodejs
 
 image:
     description: A close-up of writing with a fountain pen
-    source: https://unsplash.com/photos/y3Tl-cbU-CU
-    creator: Digital Content Writers India
+    source: https://unsplash.com/photos/CyFBmFEsytU
+    creator: Marius Masalar
 ---
 
 This particular post is part experiment to confirm that my theory is reasonable, and part a description on how to do the thing I'm trying to do, namely simplify the flow of sharing my new posts to social media (in particular mastodon, though once I've completed that part of the flow I should be able to expand it to anything that has a public API).
@@ -27,7 +30,7 @@ With that said, I do have a few ideas on how to get it to work (and for you to g
 
 1. Add a `posts.json` file that when I run `npm run build` (which builds the site for prod environment) updates the file with ~~any posts that aren't already in the file~~ <ins>new posts and changes to old posts</ins>. Each post ~~likely~~ has things such as the slug as key and the valu including image link, image description, summary of the post, <ins>published and last modified, list of hashtags</ins> and ~~probably~~ a boolean along the lines of `pushed` to signify whether I've posted about this particular post. By only running it in the build/production pipeline it will only care about posts that are finished enough to be published, and if I change anything (including title, which builds the slug) before it's published it won't put the same post in there twice.
 
-2. Use a git hook on my computer (`pre-push` seems a good candidate) that checks whether it's being pushed to main (since I might want to push a development branch at times), and if it is being pushed to main, run a script that reads `posts.json` and schedules posts about half an hour from the current time, using the information of any posts that are not yet pushed, and finishes with setting the `pushed` to true so it won't be pushed again. By scheduling it for half an hour from the time of the push I should minimise the risk of the post going live before the post does. I probably also want to commit most of the hook script to the repo, because I'm going to be very sad if it goes missing at some point.
+2. ~~Use a git hook on my computer (`pre-push` seems a good candidate) that checks whether it's being pushed to main (since I might want to push a development branch at times), and if it is being pushed to main, run a script that reads `posts.json` and schedules posts about half an hour from the current time, using the information of any posts that are not yet pushed, and finishes with setting the `pushed` to true so it won't be pushed again. By scheduling it for half an hour from the time of the push I should minimise the risk of the post going live before the post does. I probably also want to commit most of the hook script to the repo, because I'm going to be very sad if it goes missing at some point.~~<ins>Yes, that entire paragraph is nixed, will explain further down</ins>
 
 ## Listing current posts
 
@@ -62,5 +65,21 @@ For this, I will be using parts of [an old repository of mine](https://github.co
     c. For each of these entries, decide when it should be scheduled (likely +30m for the first, and if there's more than one it's +1h for every other. So if it's ran at noon and have three posts it would be setting the times to 12.30, 13.30 and 14.30)
     d. Call function with objects and scheduled times, which will be doing the actual connecting to whatever social media stuffs
 3. Actual connection function: either python or javascript, undecided. While the first, and most important, is for Mastodon, I'll try to write it in a way that it can be easily expanded or others.
+
+### Reality strikes again
+
+So, forget most of the stuff above. I did manage to get the pre-push hook to kind-of work, and thanks to [Dzulqarnain Nasir](https://dnasir.com/2022/01/31/using-git-hooks-to-enforce-development-policies/) I learned a new trick: `git config core.hooksPath <your folder here>` will allow you to use hooks and commit them in the repo, since they're not stuck in the `.git/hooks` location. You would still need to make sure it's configurated correctly, but that could be put into something automated somewhere (ex the `postinstall` script in `package.json`). Now, however, back to where things got a lot more complicated.
+
+I set up a developer account on Mastodon, getting the various keys and secrets and whatnot put into a `.env` file that is explicitly not committed, installed [mastodon-api](https://github.com/vanita5/mastodon-api) and started to experiment on building the posts, the media and such.
+
+Good news: I don't actually need to upload media, since mastodon will take the preview from my post, which saves me a step. *However*, when I tried to use the scheduling part of the API it wasn't working as expected. I suspect the issue is on my part, but neither of the posts I scheduled (30 and 10 minutes respectively, after the request was sent) showed up in the end. I can post directly from the API, but not schedule a post. (I can see scheduled posts and delete them, too …) Which is less than ideal, considering part of the issue is that it could take up to 10 minutes for the post to show up on my site. I think what I might do with that is to rewrite the scheduler so that it is in no way connected to the hook and just needs to be triggered manually. I can probably live with that.
+
+Second issue is mitigated by using the terminal for my pushing to github. I have been using Github Desktop for the convenience, but for some reason it doesn't accept that I have node installed, so instead of getting a hook triggered and the branch pushed to github, I get an error message. I suspect I can solve that, but since the second part of the equation also petered out I'm not putting any energy on it.
+
+## Conclusion
+
+Instead of the full automation I was wanting, I'll have to live with semi-automation: I can still create lists of posts in the build step (and will), and then use an npm-script to post about them to Mastodon (and possibly other services later). I might go with two different types of script for post-to-socialmedia: One creates posts for all not-yet-posted posts (which should be 1 at the most, but I'll make a loop so nothing gets forgotten) and one that toots a post with a link to a post that's older than, say, two months, with a "throwbacktoot" kind of hashtag.
+
+Hopefully this post is one you read because it is the first one I tooted using `npm run share`.
 
 

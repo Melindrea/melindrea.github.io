@@ -63,6 +63,8 @@ function updatePublishedPosts(baseurl, postCollection) {
         // Any already-added posts just needs to be update
         if (post.slug in postsData) {
             postData.pushed = postsData[post.slug].pushed;
+        } else {
+            console.log(`New post ${post.title} added to posts.`);
         }
 
         if ('social_media' in post) {

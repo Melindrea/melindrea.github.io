@@ -165,6 +165,18 @@
             "metalsmith": {
                 "header": "Metalsmith.io",
                 "description": "The static site generator (SSG) I use, with some details on how or why"
+            },
+            "kofi": {
+                "header": "Ko-fi.com",
+                "description": "My main tipjar/support mechanism"
+            },
+            "for-sale": {
+                "header": "For sale",
+                "description": "About my ko-fi shop or my redbubble shop"
+            },
+            "printable": {
+                "header": "Printable",
+                "description": "About things I've made that you can print yourself (whether freebies or shop items)"
             }
         },
         "presence": [

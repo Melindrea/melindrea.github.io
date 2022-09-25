@@ -1,4 +1,30 @@
 {
+    "prompt-journal": {
+        "title": "Prompt Journal",
+        "summary": "Behind-the-scenes of how I create my prompt journals (which are sold as printables in my ko-fi shop).",
+        "link": "https://melindreamakes.art/blog/posts/prompt-journal/",
+        "image": {
+            "description": "Part of the cover of the Frost Prompt journal and the label",
+            "path": "/assets/images/featured-images/prompt-journal/1464.jpg"
+        },
+        "stats": {
+            "modified": "2022-09-25T22:14:27.850Z",
+            "published": "2022-09-25T00:00:00.000Z"
+        },
+        "pushed": false,
+        "addenda": {
+            "general": [
+                "#MelindreaMakes",
+                "#OnlineBusiness",
+                "#kofi",
+                "#bujo",
+                "#planner"
+            ],
+            "mastodon": [
+                "#mastoart"
+            ]
+        }
+    },
     "social-media-integration": {
         "title": "Social Media Integration",
         "summary": "How to solve a problem like … Melindrea?",

@@ -40,7 +40,7 @@ For typefaces I settled on the serif Cormorant for the headers and a few other d
 
 ### Cormorant
 
-Cormorant is a Claude Garamont-inspired type family by Christian Thalmann, putting it firmly in the old-style type of serifs. It's italic ampersand (<span class="ampersand font-serif text-xl">&amp;</span>) is one of my favourite characters. Both italic and roman characters have interesting details, like the tilt of the letter <span class="font-serif text-xl">o</span>, the high bar on the letter <span class="font-serif text-xl">e</span> and the ball terminal of the letters <span class="font-serif text-xl">f</span> and <span class="font-serif text-xl">c</span>. 
+Cormorant is a Claude Garamont-inspired type family by Christian Thalmann, putting it firmly in the old-style type of serifs. Its italic ampersand (<span class="ampersand font-serif text-xl">&amp;</span>) is one of my favourite characters. Both italic and roman characters have interesting details, like the tilt of the letter <span class="font-serif text-xl">o</span>, the high bar on the letter <span class="font-serif text-xl">e</span> and the ball terminal of the letters <span class="font-serif text-xl">f</span> and <span class="font-serif text-xl">c</span>. 
 
 I've always loved serifs, and Cormorant is a beautifully crafted one which is even open source. There are other open source Garamond-based typefaces, but as a display font I prefer the variance in characters of Cormorant.
 

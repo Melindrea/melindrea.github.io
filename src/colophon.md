@@ -73,7 +73,7 @@ The stylesheets have been optimised to be valid in all browers fulfilling these 
 * Used by > 1%
 * Within the last 2 versions
 
-Two typefaces have been used throughout the site, both from [Google Fonts](https://fonts.google.com/) using the Open Font License.
+Two typefaces have been used throughout the site, both from [Bunny Fonts](https://fonts.bunny.net) using the Open Font License.
 
-* The serif [Cormorant](https://fonts.google.com/specimen/Cormorant/about) for headers and other details
-* The sans-serif [Montserrat](https://fonts.google.com/specimen/Montserrat/about) for body text
+* The serif [Cormorant](https://github.com/CatharsisFonts/Cormorant) for headers and other details
+* The sans-serif [Montserrat](https://github.com/JulietaUla/Montserrat) for body texts

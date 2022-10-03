@@ -258,11 +258,13 @@ class ImageHandler:
         thumbnailDir = destdir / "thumbnails"
         
         self.create_destination_directories(thumbnailDir)
-
+        created = file["file"].metadata["date:create"]
+        
         originalWidth = file['size']['width']
         originalHeight = file['size']['height']
 
         metadata = self._galleryData["metadata"].get(slug, { "creator": "", "description": "", "copyright": "", "title": ""})
+        metadata["pubdate"] = created
         if slug not in self._galleryData["metadata"]:
             print(f"file {slug} is not in gallery-metadata.json")
         metadata["size"] = {}

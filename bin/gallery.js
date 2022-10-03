@@ -1,4 +1,5 @@
 'use strict';
+const { DateTime } = require('luxon');
 const Path = require('node:path'),
       slug = require('slug');
 
@@ -28,10 +29,11 @@ function plugin(options) {
 
             if (basename in galleryMetadata) {
                 let metadata = galleryMetadata[basename];
-                
+                metadata.pubdate = DateTime.fromISO(metadata.pubdate).toJSDate();
                 
                 item.thumbnail = Path.dirname(item.path) + '/thumbnails/' + basename;
                 item.slug = slug(filename)
+                
                 Object.assign(item, metadata);
                 
                 imageInfo.gallery.sizes.push(item.stats.size);
@@ -45,6 +47,7 @@ function plugin(options) {
                 if (! ('links' in metadata) && merchify) {
                     console.log(basename + ' : ' + metadata.title + ' : ' + metadata.description)
                 }
+
             } else {
                 console.warn("NB! Image file " + basename + " is not in gallery metadata")
             }

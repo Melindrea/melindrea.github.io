@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://melindreamakes.art/feed.rss" rel="self" type="application/rss+xml"/>
+        <title>MelindreaMakes: {art, words, crafts, thoughts, code}</title>
+        <link>https://melindreamakes.art</link>
+        <description>A buffet of options to find out more about Melindrea and who they are.</description>
+        <copyright></copyright>
+        <language>en-US</language>
+        <image>
+            <link>https://melindreamakes.art</link>
+            <title>MelindreaMakes: {art, words, crafts, thoughts, code}</title>
+            <description>a dark purply-pink image with an ornamental border and &quot;Melindrea makes&quot; in varigated text</description>
+            <url>https://melindreamakes.artassets/images/rss-logo.jpg</url>
+            <height>122</height>
+            <width>140</width>
+        </image>
+        <lastBuildDate>Mon, 03 Oct 2022 20:06:24 +0200</lastBuildDate>
+        <webMaster>iam@mariehogebrandt.se (Antonius Marie Hogebrandt)</webMaster>
+        <item>
+            <title>Prompt Journal</title>
+            <pubDate>Sun, 25 Sep 2022 02:00:00 +0200</pubDate>
+            <guid isPermaLink="true">https://melindreamakes.art/blog/posts/prompt-journal/</guid>
+            <description><![CDATA[<img src="https://melindreamakes.art/assets/images/featured-images/prompt-journal/952.jpg" alt="Part of the cover of the Frost Prompt journal and the label" width="952" height="317"><p>Behind-the-scenes of how I create my prompt journals (which are sold as printables in my ko-fi shop).</p><p>I first thought of "prompt journals" back in May, when I was looking into what I could use Affinity Publisher (not sponsored!) for. I'd bought Affinity Photo back in February and enjoyed working with it enough that I decided to snag Publisher during their 50% off sale. As an aside, I expect I'll probably want to get Designer in their next 50% off sale. Not because they're not worth the full price (especially Photo is, at least to me), but because my economical situation prefers sales. Anyways, back to the topic at hand.</p>
+<h2 id="what-is-a-prompt-journal">What is a prompt journal?</h2>
+<p>It's inspired by prompt lists (which one can find for free or buy), which gives prompts about what to write or journal about on any particular day. For my idea I wanted each to be thematically associated with the month they were originally published on, but be usable if bought or used outside of that month. For me, at least, forcing daily journaling would quickly become a chore rather than something to do because I wanted it.</p>
+<p>With that in mind I built a prototype of an A5 booklet (easily printed on A4 or even American letter size) with 30 undated prompts. Each journal is built around a theme that fits the month I originally published it in, and it inspires the colours and cover used for that month, as well as many of the prompts. </p>
+<h3 id="detailed-content">Detailed content</h3>
+<p>The cover page has a stock image, the title of the journal and, of course, my name. The first spread has a space for the user's name on the right and details about the prompt journal as well as acknowledgment on the left. </p>
+<p>The following 30 spreads are dedicated to the prompts. Each prompt uses a full spread with the left side blank and the right side containing: a prompt; a place to note the date; and 14 lines to write on.</p>
+<h3 id="acknowledgment">Acknowledgment</h3>
+<ul>
+<li>The ornaments sprinkled through the journal are all from a typeface of fleurons (not available in it's whole anymore) created by <a href="https://www.myfonts.com/collections/wiescher-design-foundry/">Gert Wiescher</a></li>
+<li>Body typeface is <a href="https://fonts.google.com/specimen/Cormorant/about">Cormorant</a> by Catharsis Fonts</li>
+<li>Decorative type face is <a href="https://www.fontsquirrel.com/fonts/aquiline-two">Aqualine Two</a> by Manfred Klein Fonteria</li>
+<li><a href="https://thegraphicsfairy.com/french-frames/">Label</a> is from The Graphics Fairy</li>
+</ul>
+<h2 id="process">Process</h2>
+<p>The first thing I do, for any given month, is to read up on superstitions, "month flower", old believes and such. For October I decided to go with "frost", because in Sweden October is the beginning of winter. For the cover I decided on this <a href="https://unsplash.com/photos/GaWSug6yjfs">frosted over rose</a> by Maximilian Zahn on Unsplash, because on a more personal note: my mother loved roses, and her birthday was in October.</p>
+<p>For the colours to be used throughout the journal I need one colour that looks good on both the cover and the white of the rest of the journal, and one colour that can be darkened or lightened to fit on both. For the first I went with a dark burgundy, and for the second a gray. While the design is quite similar on each journal (the same ornaments and label), I do still try to make each unique, mainly through the use of colours.</p>
+<p>Finally for the prompts, I brainstorm 30 different ones. They can be completely separated from the theme ("What brings you joy?"), adjacent to the theme ("What is your favourite winter scent?") or tightly coupled with the theme ("How does frosted-over trees make you feel?"). I want the prompts to be fun and get you thinking and imagining, whether about what's going on in your life ("What did you learn this month?"), or just spark story seeds ("Imagine a world where frost and snow isn't cold").</p>
+<p>Once I have all things completed (30 prompts, cover, the colours) I use the Data Merge Manager to generate a new file, save it and export it as PDF.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<p>First and foremost, it's up to you whether you print it or not--it can as easily serve as inspiration in it's digital form as printed out. However, this small guide will assume you print it out with one spread per page. Depending on your printer and settings you might be able to print it double-sided, but if you can't, the best way is to print it out, fold the center of each spread and glue the pages together back to back in the right order.</p>
+<h3 id="what-if-i-write-a-lot">What if I write a lot?</h3>
+<p>Well, if you know already when you're creating it that the 14 lines are not going to be enough, you could glue a tab of an extension page between the pages and fold it when not in use. If you realise that one particular day is going to be extra long, you could do something similar, but glue the tab of the extension to the margin of the right-hand page instead of between the pages.</p>
+<p>Or, you could treat either the left-hand page of the spread as extra journaling room, either keeping it on the same day, or continue to the next page.</p>
+<h3 id="what-do-i-do-with-the-blank-page">What do I do with the blank page?</h3>
+<p>Anything you want to: doodle, draw, extra writing space, bullet journaling ... I created it the way I did to make the book easy to customize to your wants and needs.</p>
+<h3 id="does-it-matter-in-which-order-i-follow-the-prompts">Does it matter in which order I follow the prompts?</h3>
+<p>Not at all. If it matters to you to quickly find which prompt you used on a particular day you may want to add some kind of index, but very few of these prompts are expected to be used chronologically. </p>
+<h2 id="final-words">Final Words</h2>
+<p>This post is going up the same day that the October prompt journal becomes available to everyone. If you want to check it out, it's <a href="https://ko-fi.com/melindrea/shop">in my shop</a>. I have five other journals that are available for anyone to buy, and one that is available to my monthly supporters (Mirror), which will be available to everyone in November.</p>
+]]></description>
+            <category>artwork</category>
+            <category>kofi</category>
+            <category>for-sale</category>
+            <category>how-to</category>
+            <category>printable</category>
+        </item>
+        <item>
+            <title>The Faery Thinker</title>
+            <pubDate>Fri, 16 Sep 2022 23:39:22 +0200</pubDate>
+            <guid isPermaLink="false">faery-thinker</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A young faery stands on a tree mushroom, looking into the distance. What could trouble her so?]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Social Media Integration</title>
+            <pubDate>Tue, 13 Sep 2022 02:00:00 +0200</pubDate>
+            <guid isPermaLink="true">https://melindreamakes.art/blog/posts/social-media-integration/</guid>
+            <description><![CDATA[<img src="https://melindreamakes.art/assets/images/featured-images/social-media-integration/952.jpg" alt="A close-up of writing with a fountain pen" width="952" height="317"><p>How to solve a problem like … Melindrea?</p><p>This particular post is part experiment to confirm that my theory is reasonable, and part a description on how to do the thing I'm trying to do, namely simplify the flow of sharing my new posts to social media (in particular mastodon, though once I've completed that part of the flow I should be able to expand it to anything that has a public API).</p>
+<p>"Okay, that sounds cool and stuff", I imagine my audience saying, "but isn't this a solved problem? Isn't there a dozen or more plugins that do <em>just exactly this</em>?" Yes, but the complications lie in my site being on github pages without a proper backend. In a more usual CMS (like WordPress and probably Blogger and others of their kind) you write your post and when you click a specific button the post gets published, and generally there's some kind of "hook" that will notify the plugin(s) that you have a new post out (and the post goes public almost instantly, or at the time you've scheduled it to). Meanwhile, I'm writing this post in a textfile, and even once it's finished it won't be public until a) I've built the latest version and pushed it to github and b) github has realised that there is an update and ran it's things to get the new version of the site to replace the prior version. Not only does b) take a small amount of time (up to 10 minutes), the changes can be anything. It will do the same thing whether I've added a new post, changed CSS, made a new page, added another image to the gallery, etc.</p>
+<p>With that said, I do have a few ideas on how to get it to work (and for you to get my process I will be updating this particular part of the post with crossed out/inserted text where my theory ran head-first into the practice of my site). The flow I'm considering is the following:</p>
+<ol>
+<li><p>Add a <code>posts.json</code> file that when I run <code>npm run build</code> (which builds the site for prod environment) updates the file with <del>any posts that aren't already in the file</del> <ins>new posts and changes to old posts</ins>. Each post <del>likely</del> has things such as the slug as key and the valu including image link, image description, summary of the post, <ins>published and last modified, list of hashtags</ins> and <del>probably</del> a boolean along the lines of <code>pushed</code> to signify whether I've posted about this particular post. By only running it in the build/production pipeline it will only care about posts that are finished enough to be published, and if I change anything (including title, which builds the slug) before it's published it won't put the same post in there twice.</p>
+</li>
+<li><p><del>Use a git hook on my computer (<code>pre-push</code> seems a good candidate) that checks whether it's being pushed to main (since I might want to push a development branch at times), and if it is being pushed to main, run a script that reads <code>posts.json</code> and schedules posts about half an hour from the current time, using the information of any posts that are not yet pushed, and finishes with setting the <code>pushed</code> to true so it won't be pushed again. By scheduling it for half an hour from the time of the push I should minimise the risk of the post going live before the post does. I probably also want to commit most of the hook script to the repo, because I'm going to be very sad if it goes missing at some point.</del><ins>Yes, that entire paragraph is nixed, will explain further down</ins></p>
+</li>
+</ol>
+<h2 id="listing-current-posts">Listing current posts</h2>
+<p>The first conceit I base this on is that this should only include files that are actually ready to be published--before then they might change titles, slugs and all sorts of things, so <code>posts.json</code> needs to be stable in that sense. Since I already have development vs prod in my build pipeline, that particular bit was easy enough. In the end I tested it in dev mode while working on it, since not only did that give me a new file to work with, the dev pipeline is a lot less heavy than the prod one (in prod images are generated and such).</p>
+<p>At first I was thinking only title, summary, pushed and a bit about the image, but I quickly decided that I wanted to have both published and last modified dates in there. I'd originally intended that it only adds new files, it doesn't update the existing ones but, again, I realised that having a bit of metadata about them, and that metadata being accurate and up-to-date would be important for this file to be the canonical truth about which posts are published. </p>
+<h3 id="gameplan">Gameplan</h3>
+<ol>
+<li>Load the data from the <code>posts.json</code> file in the root directory of the project</li>
+<li>For each post, check if it exists in the loaded data, and if it does use the value of <code>pushed</code> in the metadata you're creating from the file</li>
+<li>Stringify the object just created and write it to the same file you loaded it from originally.</li>
+</ol>
+<p>Here's where things got a bit confusing/hilarious: If you use <code>require</code> with a relative file path, it works off of the path of the file. IE, the file that's doing all of this is <code>bin/blog.js</code>, so I needed to use <code>require('../posts.json')</code>. Unfortunately, <code>fs.writeFile</code> works off of the current working dirctory … which is one step above the file, so if I write to <code>../posts.json</code>, that file will be outside of the repository. I solved this through using <code>path.resolve('posts.json')</code> and using the full path to both load and write.</p>
+<p>Next complication came when looking at the file and deciding that I wanted it to be sorted, with the newest post highest up in the file and the oldest at the bottom. As you may or may not know, there is no order to a javascript object. You can sort an array, but you explicitly cannot sort an object (for clarification: there is a "naive" order in javascript objects, but not one that should be trusted in critical code: the solution I came up with is good enough for my usecas, but not for, say, code that ensures the right customer is billed). </p>
+<p>My solution was to rather than adding/replacing the object into the loaded data, I went <code>array</code> =&gt; <code>Map</code> =&gt; <code>Object</code> =&gt; <code>string of valid json</code>. This allowed me to 1) sort the array based on the publication date, 2) create a more-or-less ordered Map (using forEach on the array and Map.set(key, value)), 3) and write it to file as JSON. Maps cannot be used with <code>JSON.stringify</code>, but <code>Object.fromEntries(map)</code> can. </p>
+<p>That concludes step 1: creating the list of posts, to be consumed by whatever I need it to.</p>
+<h2 id="scheduling-social-media-posts">Scheduling social media posts</h2>
+<p>For this, I will be using parts of <a href="https://github.com/Melindrea/githooks">an old repository of mine</a> (here's to hoping that git hooks haven't changed …), though only the final bit of the code will be using the hook. If you take nothing else with you from this post, remember this: <strong>Any bit of code that can only be triggered through a build or hook system is badly planned</strong>. What I mean by that is that you should always have a way to trigger the thing manually, with a payload that is close enough to the real.</p>
+<h3 id="gameplan-1">Gameplan</h3>
+<ol>
+<li>Script (like in <code>bin</code> since that is where I store things) that can be triggered from the terminal. Probably based on <a href="https://github.com/Melindrea/githooks/blob/master/hooks/pre-push">this pre-push hook</a>, though I'll likely need to modernise every single thing in it.</li>
+<li>Once it can be triggered properly, I need the baseline code:
+ a. <code>npm run post-scheduler</code> to trigger it manually (in scripts)
+ b. Read <code>posts.json</code> and pick out entries with <code>pushed: false</code>
+ c. For each of these entries, decide when it should be scheduled (likely +30m for the first, and if there's more than one it's +1h for every other. So if it's ran at noon and have three posts it would be setting the times to 12.30, 13.30 and 14.30)
+ d. Call function with objects and scheduled times, which will be doing the actual connecting to whatever social media stuffs</li>
+<li>Actual connection function: either python or javascript, undecided. While the first, and most important, is for Mastodon, I'll try to write it in a way that it can be easily expanded or others.</li>
+</ol>
+<h3 id="reality-strikes-again">Reality strikes again</h3>
+<p>So, forget most of the stuff above. I did manage to get the pre-push hook to kind-of work, and thanks to <a href="https://dnasir.com/2022/01/31/using-git-hooks-to-enforce-development-policies/">Dzulqarnain Nasir</a> I learned a new trick: <code>git config core.hooksPath &lt;your folder here&gt;</code> will allow you to use hooks and commit them in the repo, since they're not stuck in the <code>.git/hooks</code> location. You would still need to make sure it's configurated correctly, but that could be put into something automated somewhere (ex the <code>postinstall</code> script in <code>package.json</code>). Now, however, back to where things got a lot more complicated.</p>
+<p>I set up a developer account on Mastodon, getting the various keys and secrets and whatnot put into a <code>.env</code> file that is explicitly not committed, installed <a href="https://github.com/vanita5/mastodon-api">mastodon-api</a> and started to experiment on building the posts, the media and such.</p>
+<p>Good news: I don't actually need to upload media, since mastodon will take the preview from my post, which saves me a step. <em>However</em>, when I tried to use the scheduling part of the API it wasn't working as expected. I suspect the issue is on my part, but neither of the posts I scheduled (30 and 10 minutes respectively, after the request was sent) showed up in the end. I can post directly from the API, but not schedule a post. (I can see scheduled posts and delete them, too …) Which is less than ideal, considering part of the issue is that it could take up to 10 minutes for the post to show up on my site. I think what I might do with that is to rewrite the scheduler so that it is in no way connected to the hook and just needs to be triggered manually. I can probably live with that.</p>
+<p>Second issue is mitigated by using the terminal for my pushing to github. I have been using Github Desktop for the convenience, but for some reason it doesn't accept that I have node installed, so instead of getting a hook triggered and the branch pushed to github, I get an error message. I suspect I can solve that, but since the second part of the equation also petered out I'm not putting any energy on it.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Instead of the full automation I was wanting, I'll have to live with semi-automation: I can still create lists of posts in the build step (and will), and then use an npm-script to post about them to Mastodon (and possibly other services later). I might go with two different types of script for post-to-socialmedia: One creates posts for all not-yet-posted posts (which should be 1 at the most, but I'll make a loop so nothing gets forgotten) and one that toots a post with a link to a post that's older than, say, two months, with a "throwbacktoot" kind of hashtag.</p>
+<p>Hopefully this post is one you read because it is the first one I tooted using <code>npm run share</code>.</p>
+]]></description>
+            <category>how-to</category>
+            <category>geek</category>
+            <category>automation</category>
+            <category>git</category>
+            <category>nodejs</category>
+        </item>
+        <item>
+            <title>Beata, Doll, and Beatris, Ghost</title>
+            <pubDate>Thu, 08 Sep 2022 21:17:39 +0200</pubDate>
+            <guid isPermaLink="false">beata-beatris</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[The ghost Beatris and her haunted doll Beata. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Saint Dymphna</title>
+            <pubDate>Thu, 08 Sep 2022 02:00:00 +0200</pubDate>
+            <guid isPermaLink="true">https://melindreamakes.art/blog/posts/saint-dymphna/</guid>
+            <description><![CDATA[<img src="https://melindreamakes.art/assets/images/featured-images/saint-dymphna/952.jpg" alt="A close-up of writing with a fountain pen" width="952" height="317"><p>Choosing and making character images to match and enhance what I have in mind.</p><p>This story (most likely novel-length) started several years ago as an attempt to write dark erotica, but at this point I have realised that is not what I want to write. Of course, there is still the core of attraction between our 1st person point of view (Sol, a non-binary person) and one of the ghosts that haunt Sol's place of work.</p>
+<p>The premise for the story is a group of people who have been hired to clean up and prepare a set of buildings for renovation on a fictional island off the west coast of Sweden. Those buildings are collectively known as Saint Dymphna's psychiatric hospital and have been in disuse since it's closure during the 1990 psychatric reform. The entire area has been bought by a developer to be turned into a luxury spa and hotel. One might think that a former hospital wouldn't be that popular to stay at, but in many ways it is coming full circle.</p>
+<h2 id="saint-dymphna">Saint Dymphna</h2>
+<p>Named for an Irish saint of mental disorders and similar (including victims of sexual violence and incest), it started as a health resort because the spring water was said to be healing to the spirit and mind. In the early 1900s it rebranded slightly to become an asylum--mental hospital for those who were considered to not be curable--but in the 1929 (national) psychiatric reform it opened it's doors to all kinds of patients. To outsiders it was known to be a calming and productive place where the patients were encouraged to do menial work to get better mental health, and under head doctor Andreas Cornell (1932-1947) it was considered progressive in that it allowed patients to spend time together (with nurses and orderlies as chaperons) no matter their social class or diagnosis, and a lot of good research came out of St Dymphna's. Especially the storm wards, where the most dangerous patients were kept.</p>
+<p>A fire in 1945 killed several orderlies and patients. It started investigations into how patients were really treated, leading to several patients being freed and, after two years, Andreas Cornell leaving his position. Finally a second psychatric reform (implemented 1995) closed the doors to Saint Dymphna altogether.</p>
+<h3 id="the-characters">The characters</h3>
+<p>The main cast are the ones staying on the island to clean up the buildings: They're led by Inez Falk and consists of Sol (their last name not revealed), Tess Lindblom, Daniel Nowak and Hannes Olsson, who each have their own (public or not) reasons for taking this particular job. Weaving in and out of the story are several ghosts, with Erik Johansson and the pair of Beata and Beatris (ghost and her doll) taking main stage as Sol unravel mysteries of several generations and time leads to a final confrontation with things even ghosts fear.</p>
+<h2 id="character-images">Character images</h2>
+<p>Knowing that I wanted to make images as inspiration for me, I went to various free stock photo sites (links at the very end) and gathered both backgrounds and portraits that could be used. The very first was the doll Beata. She is visible in three images: the first is her and her best friend Beatris, the second and third include her partly hiding behind the stairs in the images of both Sol and Daniel. </p>
+<p>I wanted to tie all images in the series together, but in a way that kept each image unique. Each image is a manipulation of a person against a background (done in Affinity Photo, my favourite photo editing software), and finished in Analog Efex Pro 2 (part of the free Nik Collection). In AEP2 I age each image and put on that cracked glass frame. If you compare each of the images, you'll notice the exact same crack in the top-left.</p>
+<h3 id="beata-and-beatris">Beata and Beatris</h3>
+<p><img src="https://melindreamakes.art/assets/images/gallery/thumbnails/beata-beatris.jpg" width="350" height="437" alt="A woman and a doll in a vintage style" class="sm:float-left sm:m-2"> As the first image I had a lot of freedom and choose a background that shows someone (or something?) wanting to get in through the door. I left it unclear on what/where that is, since the focus should be on the ghost and her haunted doll. To give Beatris a more ghost-like appearance there is a glow around her, and a slight translucent quality to her. Beata, on the other hand, looks quite solid because she is. </p>
+<p>I wanted the image to look a bit disconcerting, since while Beatris is kind and gentle, she is still dead. And the doll that she loved so much while alive is now walking around as if she was alive (and being quite mischevious at times, like hiding and watching, though not evil or even mean).</p>
+<h3 id="sol-and-daniel">Sol and Daniel</h3>
+<img src="https://melindreamakes.art/assets/images/gallery/thumbnails/sol-beata.jpg" width="350" height="437" alt="A person standing boldly on a set of stairs and looking out, with a doll hiding behind the staircase" class="sm:float-left sm:m-2">
+
+<img src="https://melindreamakes.art/assets/images/gallery/thumbnails/daniel.jpg" width="350" height="437" alt="A man walking with purpose in front of a staircase with a doll hiding behind it" class="sm:float-right sm:m-2">
+
+<p>While these two images are coloured slightly differently and zoomed quite differently, I connect them because they have the same background, with Beata hiding behind the stairs. Sol came first. I found an amazing image of a person standing on the bed of a truck in that bold don't-give-a-fuck stance, and I knew this was perfect for how I wanted Sol to come off. The background came second, in a search of "abandoned" or "haunted" or something like that. It is in fact neither, rather a beautiful image from a museum in Nicaragua. Cropped down with mist and odd lighting, it looked like a brilliant setting for Sol. And then I decided to sneak Beata in behind, because it made sense, seeing that Beata is a mischevious little scamp.</p>
+<p>Daniel's image was one of the last I did, and I knew I wanted to tie it in with one of the prior ones, but wasn't sure how. It didn't help that his feet had strange grass marks around them, so I had to crop that off, as well as edit away the cigarette hanging from his hand (even if he might smoke in the story--I don't know at this point--he probably shouldn't be doing that indoors). I did use a lot of the mist and fog from Sol's image, but changed out the green tones for more brown, and cropped the stairs even closer around him.</p>
+<h3 id="inez-and-hannes">Inez and Hannes</h3>
+<img src="https://melindreamakes.art/assets/images/gallery/thumbnails/inez.jpg" width="350" height="437" alt="A woman standing in front of a worn brick wall, like a studio photo, with her black and bleached braids pulled up until a crown of hair" class="sm:float-left sm:m-2">
+
+<img src="https://melindreamakes.art/assets/images/gallery/thumbnails/hannes.jpg" width="350" height="437" alt="A similar photo to the prior, except it's a man, with something like a club or the handle of a hammer resting on his shoulder" class="sm:float-right sm:m-2">
+
+<p>Inez and Hannes were two I had really strong mental images of what they looked like. When we first meet Inez, she's described this way: "blonde and black coils are piled on top of her head, like a crown wrapped in ribbon", and I wanted to find an image that could match that. As anyone who's ever tried to find stock photos of non-white people can attest to, it is not easy. While I really like the woman I found to use as a model, I didn't find a good full-sized image of her, but only this portrait-like one (against a background of a wall of newspaper), which is why I turned it into something that could come out of a studio rather than a snap taken in action. I am quite pleased with the end result, however.</p>
+<p>Hannes is described as "tall and broad, like a barn with nutcracker hands", and because I like that imagery I had to find something that worked. Again, the best image I found was more like a portrait. It was from the waist up (and I just realised that it was named "man-muscles-muscular-masculine" which amuses the heck out of me). Since I'd done a portrait with Inez, I decided to do something close to that for Hannes. </p>
+<h3 id="erik-and-tess">Erik and Tess</h3>
+<img src="https://melindreamakes.art/assets/images/gallery/thumbnails/erik.jpg" width="350" height="437" alt="A man standing in front of a ruined room. He looks stern and serious, and whisps of smoke is hinted around him." class="sm:float-right sm:m-2">
+
+<img src="https://melindreamakes.art/assets/images/gallery/thumbnails/tess.jpg" width="350" height="437" alt="The same room as the prior, but it's a young woman who has a slightly concerned/scared look on her face" class="sm:float-left sm:m-2">
+
+<p>Erik was the third character image I made. I had a few strong guidelines for how I needed him to look: he needs to look slightly dangerous, quite attractive, and also be dressed in more vintage clothes. There was another picture of the same man that I preferred the look of, but it was black and white which limits my abilities to play with the colours. He died in the 1945 fire, and I wanted that to be hinted in him, so while he has a similar glow and translucence to him that Beatris has, the underlaying colours are far more orange and red, like fire, with a hint of smoke around him and in front of him. Since Erik and Sol have a connection I was playing with putting him into the same stairway as they are, suggesting he is looking at them, but in the end that wasn't working too well, so after also dismissing the background I'd used for Beata and Beatris I settled for this, since it seemed to fit him quite well. Exactly who or what he is looking at is left unstated, though there is one suggestion ...</p>
+<p>... namely Tess. In the original image she was outside, and I expect that the hand hugging her arm and the slightly uncomfortable look on her face is more a testament to it being slightly chilly and she's being forced to stand there in shorts and a tee. But I liked the look of her and it fitted the character a lot. Tess really doesn't like working there, but she's planning on using any footage (video or photos) to propel her career as a blogger and vlogger. Because who doesn't love trauma-porn, right? (No, I am not particularly fond of Tess as a character, or the concept she was built around.) I do like how this image came out. Most of the others there's no real "in-world" reason for, but this one was taken to be a thumbnail for one of Tess's videos, and if asked about her expression she'll probably just wave it off. Because she can't remember why she was so scared in that moment. Or what she sensed that spooked her that badly. </p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="https://unsplash.com/photos/cyalvDVAURE">Sol</a></li>
+<li><a href="https://unsplash.com/photos/A43s83v3B40">Erik</a></li>
+<li><a href="https://unsplash.com/photos/ooiL787Cwzc">Inez</a></li>
+<li><a href="https://pixabay.com/photos/man-muscles-muscular-masculine-2615914/">Hannes</a></li>
+<li><a href="https://pixabay.com/photos/lifestyle-outdoors-portrait-nature-3371126/">Daniel</a></li>
+<li><a href="https://unsplash.com/photos/7mfSzu6_qvA">Tess</a></li>
+<li><a href="https://pixabay.com/photos/doll-collection-blonde-hair-girl-557874/">Beata</a>, <a href="https://unsplash.com/photos/7evfcpkJ3qc">eyes</a> </li>
+<li><a href="https://unsplash.com/photos/gdjDMT4O4qA">Beatris</a></li>
+<li>Asylum<ul>
+<li><a href="https://unsplash.com/photos/igpwuxZofgo">Door</a></li>
+<li><a href="https://unsplash.com/photos/Gm0A9BAE6GU">Staircase</a></li>
+<li><a href="https://unsplash.com/photos/cU1MBlux5KQ">Brick room</a></li>
+</ul>
+</li>
+</ul>
+]]></description>
+            <category>artwork</category>
+            <category>writing</category>
+            <category>dymphna</category>
+        </item>
+        <item>
+            <title>Sensual Android</title>
+            <pubDate>Wed, 07 Sep 2022 14:05:42 +0200</pubDate>
+            <guid isPermaLink="false">android</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A metallic woman in jeans and bra, looking up to the side.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Non-binary pride pop-art</title>
+            <pubDate>Wed, 07 Sep 2022 14:05:42 +0200</pubDate>
+            <guid isPermaLink="false">collage</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Digital collage of flowers and a woman, with the colours of the non-binary flag dominating it.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Mairead, a selkie</title>
+            <pubDate>Wed, 07 Sep 2022 14:05:42 +0200</pubDate>
+            <guid isPermaLink="false">mairead-selkie</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A dark image of a woman in water, with barely her eyes above the surface.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>The Mystic</title>
+            <pubDate>Wed, 07 Sep 2022 14:05:42 +0200</pubDate>
+            <guid isPermaLink="false">portrait-gold-stone</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman in a pale gold robe is standing in a cave filled with black and gold stones.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Speed Weasel—Sharp and fast</title>
+            <pubDate>Wed, 07 Sep 2022 14:05:42 +0200</pubDate>
+            <guid isPermaLink="false">speed-weasel</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A triptych of a desert landscape at twilight, with the right-most panel having a stretching woman moving fast enough to leave a trail of after-images.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Silken Blade of the Heavens, Moonsilver Alchemical</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">alchemical</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman with metallic skin and an intense look.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Bast, Goddess of Cats</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">bast</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A photo of a woman combined with that of a cat.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Breaking Out</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">breaking-out</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman preparing to step out of her framed photograph as she sees a glowing red butterfly flit past.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Bride of the Ocean</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">bride-of-the-ocean</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman facing the veiled sun, with the skirt of her voluminous gown the ocean itself.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>The Bridge</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">bridge</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[While at first glance this looks like only a bridge over a stream, in the distance is a figure with antlers.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Cherry Blossoms in Bloom</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">cherry-blossom-in-bloom</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A collage of a woman against a wall, with parts of her form replaced with cherry blossoms.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Cinderella, a Fairy&apos;s tale</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">cinderella</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A sepia-toned photograph of a fairy sitting on a mushroom, longingly looking towards a house across the lake.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Cosmic Woman</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">cosmic-woman</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A portrait of a smiling woman with the galaxy behind her, and the starry impression of her amongst the stars.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Crack&apos;d from side to side</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">crackd-from-side-to-side</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Pop-art in pinks and teal, with a piece of glass held in front of the subject's face showing realism.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Dancing through Hell</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">dancing-through-hell</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman is seen belly dancing through a portal of red and gold leaves.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Daniel Nowak, Carpenter</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">daniel</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A man walking down a set of stairs with purpose, with the doll Beata hiding in the shadows. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Descending Angel</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">descending-angel</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A raging storm as a beautiful woman, with wing-like ribbons around her, appears among stone ruins.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>The Goddess Ran in the ocean</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">double-exposure</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Toned in blue, this shows an ocean wave superimposed onto a woman looking back.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Erik Johansson, Ghost</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">erik</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Toned in browns with a hint of flame and smoke, this shows a man in front of a brick room, glancing at something. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Fairies in Forest</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">fairies-in-forest</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A sunlit tree with two fairies in it. One is sitting on a mushroom in thought, the other standing and looking at the first.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Fairy on branch</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">fairy-on-branch</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A fairy in a beautiful gown is sitting on a branch, looking back at the bird she shares a seat with.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Flamingos in love</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">flamingo</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Sometimes you're just too faboulus for your surroundings. A desaturated polaroid image is the background, with two flamingos rising out of it in a highly saturated look.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Into the Weald of Iron and Fangs</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">forest-ghost</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A forest toned in red to purple, with a white-clad woman in the background running ... probably away from the ghost in the foreground.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Golden Mona Lisa</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">golden-mona-lisa</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A vintage, worn frame surrounds a woman with a intense look. Her power is accentuated by the golden sheen of her skin.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Hannes Olsson, Handyman</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">hannes</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A portrait against a worn wall, of a man with broad shoulders and a muscular look. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Inez Falk, Teamleader</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">inez</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Another portrait against a worn wall. This is of a Black woman with a braided crown of bleached hair and highlights of red. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Into the mist</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">into-the-mist</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A teen girl glancing back at the viewer as she chooses the path least travelled.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Ran/Islay, Portrait edition</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">islay</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A portrait of a black-haired woman looking back, againt a blue background.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Fairy dancing on a leaf</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">leaf-dancer</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A fairy dancing on a leaf in the rain. As she's enjoying her dance, the leaf is floating in a stream.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Magic Moor</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">magic</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Experiment with ribbons of light creating a magical feeling under the full moon as a woman in black kneels in a ring of fire.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Mirror, mirror</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">mirror-mirror</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman in a wedding dress holds up a mirror, but in the reflection we see someone else. Something wicked.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Fairies dancing in the morning mist</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">mist-fairies</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Some fairies from Swedish myths were thought to be the swirling mist in the early morning.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Negative Butterfly</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">negative-butterfly</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A vintage photo of a butterfly on a flower, except the butterfly is only suggested by negative space in the shape of its wings.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Nils Holgersson</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">nils-holgersson</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[From a Swedish classic, a miniature boy getting off a goose on a lake side landscape, with other geese coming in for the landing.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Ocean on my mind</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">ocean-on-my-mind</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A brick wall in pinks and purples, with the silhouette of a woman's head showing the ocean.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Mythical Ocean</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">ocean</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A red and blue ocean with a ship sailing on it. The colours are quite saturated.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Omen, No Moon Lunar</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">omen</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A person with a third eye and braided hair pulled into a bun, wearing a linen shirt, against a blue background.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Pop-art in Purple</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">orange-girl</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Pop-art experiment based on an image with a girl holding halved oranges in front of her eyes, except the colours are mainly purple.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Titania, Queen of Fairy</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">queen-of-fairies</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Larger than many of my other fairies, this winged and crowned woman is sitting on a tree branch and enjoying life.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Rising ship of Ran</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">ran-ship</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A strange ocean with dark clouds and bright reds and oranges. An old ship is being pulled out of the ocean on a wave.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Völva on Greby burial field</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">shaman</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Based on a photo from Greby burial field, this shows an eerie night and a woman standing between worlds.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Sirius, the Star Dog</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">sirius</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A masssive golden brown dog with an inner light is laying in a teal, high-tech tunnel. There's static in the image.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Sol, Haunted enby</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">sol-beata</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[Sol is standing on the same set of stairs as Daniel, but the scene shows more, including mist gathering at the bottom of the stairs and rolling from the top. The doll Beata is half-hidden behind the stairs. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Song Weaver, Jadeborn Zenith</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">song-weaver</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A woman in red with red hair and marble skin is standing in a hallway with arched windows letting in light.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Stepping Out</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">stepping-out</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A wooden table with some ivy has a vintage book cover laying on it. The woman on the cover image looks ready to step away from it.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Tess Lindblom, Blogger</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">tess</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[In front of the same room as the ghost Erik, stands a woman looking more than a little nervous. She's pretty, in jean shorts and a t-shirt, with her dark hair loose. St Dymphna.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>Modern Valkyria</title>
+            <pubDate>Sun, 04 Sep 2022 16:13:23 +0200</pubDate>
+            <guid isPermaLink="false">valkyrie</guid>
+            <link>https://melindreamakes.art/gallery/</link>
+            <description><![CDATA[A vintage scene of some kind of stone formation, with a black woman (the valkyrie) and her ulv (giant wolf) at the right front.]]></description>
+            <category>gallery</category>
+        </item>
+        <item>
+            <title>New site</title>
+            <pubDate>Sun, 04 Sep 2022 02:00:00 +0200</pubDate>
+            <guid isPermaLink="true">https://melindreamakes.art/blog/posts/new-site/</guid>
+            <description><![CDATA[<img src="https://melindreamakes.art/assets/images/featured-images/new-site/952.jpg" alt="A close-up of a laptop with some code on the screen" width="952" height="317"><p>How not to build a site; or How I intended to build a simple one-page site and accidentally a static site with blogging and a gallery.</p><p>It is always so clear when one starts. In my case, I was wanting something simple but with a bit more personalisation than one of those carrd or linktree etc type of sites (no shade against those sites or the users who use them). I decided to go with a single page with links, some info and such, and (for reasons) decided to build it in python's flask and "freeze" the dynamic page into a pure HTML site. The problem with this came when I after a month wanted to edit it, and couldn't remember how to build the site at all. Not to mention that it felt a bit overkill! Which is why I decided to look for another static site generator.</p>
+<p>After going through several ideas I settled on Metalsmith.io, which is a NodeJS-based on. You can do it with either (to quote their site) "configuration over code" or "code over configuration", where I prefer the latter. In the <code>index.js</code> file I read in all the files in <code>.src</code> and (after various things being done to them) copy them to <code>.build</code>. My specific stack is Markdown files for the content, Handlebars as the templating language and TailwindCSS with PostCSS for the layout.</p>
+<p>The three cornerstones for this site is:</p>
+<ul>
+<li><a href="https://melindreamakes.art#index">Index page with contact information</a></li>
+<li><a href="https://melindreamakes.art#gallery">Gallery of my art</a></li>
+<li><a href="https://melindreamakes.art#blog">Blogging capability</a></li>
+</ul>
+<h2 id="design-choices">Design choices</h2>
+<p>TailwindCSS is a good option for rapid prototyping, and to keep things fairly simple I went with only the colour "slate" in different shades. It's a blue-toned gray that gives a muted background to both the quite colourful gallery and the brown-toned images I'm using for featured images on posts and on some page headers. The idea is to eventually give all pages page header images, too, but I want to get the site ready sooner rather than later. </p>
+<p>For typefaces I settled on the serif Cormorant for the headers and a few other details, and the sans-serif Montserrat for the body texts. Both typefaces have much personality and I feel they complement each other well: Montserrat has large, open letters perfect for reading, without much decoration apart from the shapes, and Cormorant has varying line widths and little flourishes on even the simplest of letters. One thing to keep in mind, however, is that Cormorant's x-height is quite shorter than Montserrat (<span class="font-serif">x</span> vs x). To put that in numbers: My body text is about 18px. For the Cormorant x to be the same height as the Montserrat, it needs to be about 24px. However, at 24px any ascenders will tower above their Montserrat counterparts and descenders will be far below. Most of the time they don't need to be the same size, but in the cases where they're next to each other I've raised the size of Cormorant to 20px vs Montserrat's 18px.</p>
+<h3 id="cormorant">Cormorant</h3>
+<p>Cormorant is a Claude Garamont-inspired type family by Christian Thalmann, putting it firmly in the old-style type of serifs. Its italic ampersand (<span class="ampersand font-serif text-xl">&amp;</span>) is one of my favourite characters. Both italic and roman characters have interesting details, like the tilt of the letter <span class="font-serif text-xl">o</span>, the high bar on the letter <span class="font-serif text-xl">e</span> and the ball terminal of the letters <span class="font-serif text-xl">f</span> and <span class="font-serif text-xl">c</span>. </p>
+<p>I've always loved serifs, and Cormorant is a beautifully crafted one which is even open source. There are other open source Garamond-based typefaces, but as a display font I prefer the variance in characters of Cormorant.</p>
+<h3 id="montserrat">Montserrat</h3>
+<p>Meanwhile, Montserrat is a beautifully geometric typeface. It was inspired by signs in Buenos Aires and originally designed by Julieta Ulanovsky, though it was redrawn by Jacques Le Bailly in 2017. Of sans-serif typefaces, I tend to avoid neo-grotesque ones (Helvetica and Arial are two common ones in that category), but I like both geometric (Futura, Montserrat) and humanist (Verdana, Calibri, Droid Sans) ones. I decided on Montserrat since it contrasts well with Cormorant--one of the draws of humanist typefaces is that they have forms often associated with serif typefaces. What I like with Montserrat is how the bowl of the letters aobqpecd are the exact same form, giving a pleasing symmetry. It also manages to keep at least 0 and capital O from being too similar, even if it's almost impossible to tell the difference between I and l.</p>
+<h3 id="creating-featured-images">Creating featured images</h3>
+<p>While my art uses different techniques, for the featured images (whether for a post or page) I wanted to use a unified look. The pages have background images that are in a 6:1 scale and the posts are images in 3:1. </p>
+<ol>
+<li>Using free stock photos I find an image that fits my writing</li>
+<li>In Affinity Photo (AP) I crop it to the right ratios, adding small adjustments (like darkening or lightening) before exporting it to jpg</li>
+<li>With the exported image I load Analog Efex Pro 2 (AEP2; part of the free Nik Collections rather than the newer, paid-for Nik Collections). While I could run that in AP, I've noticed that it on my computer sometimes crashes, so that's why I do it in two steps. I expect that my effects are largely anachronistic in their composition, but that doesn't matter to me<ul>
+<li>I adjust the basic settings of the image like Detail Extraction, Brightness and Contrast to make the image dark enough for my light text, and still visibly of the thing it was originally</li>
+<li>Using the Light Leak section I put in a bar of light ("Crisp" category) in the top-right corner</li>
+<li>In Dirt &amp; Scratches the image gets aged with one of the Organic options</li>
+<li>Some more age is added with a Photo Plate Corroded texture</li>
+<li>With the Film Type options I add a nice brown-green tint to the image alongside a fair amount of graininess. This is one of my favourite parts of AEP2--the beautiful colours you get by adding old analog styles</li>
+<li>Finally a Lightbox texture under Frames to give the edges a "cracked glass" look</li>
+</ul>
+</li>
+<li>Finally, I have a python script that uses ImageMagick to copy and resize the images, since especially the posts have several widths depending on the width of the screen.</li>
+</ol>
+<h3 id="navigation-main--breadcrumbs">Navigation: Main <span class="ampersand">&amp;</span> Breadcrumbs</h3>
+<p>Both menu and breadcrumbs are coded using lists, since to me that makes the most sense. For the main nav it's an unordered list and the breadcrumbs use an ordered list. There's nothing really wrong about using either a) an unordered list for breadcrumbs or b) something that isn't a list, but since this site is about me indulging myself (and letting you all in on my thought processes) I went with what I preferred. Which is also why the items of the breadcrumbs are divided with », as <code>li::after</code> content.</p>
+<p>A prior version of this design used a really cool menu, where when you clicked a particular button the main page would tilt and reveal the menu. It was really cool, but I ended up scrapping it because it was too finicky to get it to look right on even the small amount of pages I had, so the thought of how much it'd break at my future posts hurt my head. Instead I went with the option I'd always had for anyone who doesn't have javascript active, and while I miss the snazziness of the prior, the simplicity of a standard navbar felt like it fit my design principles more. It just works.</p>
+<h2 id="index">Index</h2>
+<p>This was the original one-page of the site. I wanted links, some calls to action to go to either of my shops and a small bio. It uses it's own template, since it even now has a lot of things none of the other pages have, like the generated links to my various online presence (taken from <code>package.json</code>) and widgets from RedBubble and Ko-Fi. I did have a Twitter widget a while, but since I am a lot more active on Mastodon than I am Twitter, it was one of the things that I removed when building up more of the site.</p>
+<h2 id="gallery">Gallery</h2>
+<p>I have most of my digital art up on Ko-Fi as well, but I wanted to have them on my own site as well, since that allows me a bit more leeway in how I display them. Since I do offer up downloads of my art in high quality to my <a href="https://ko-fi.com/melindrea/tiers">monthly supporters</a>, I also wanted to keep the "full size" images small enough to not compete with that. </p>
+<p>The first look on the gallery is a masonry-esque page filled with thumbnails. To be able to have that layout without adding extra javascript I made all thumbnails be 350px wide, with varying height. If you don't use javascript, the thumbnail will lead to the larger sized image, and if you do it will trigger the lightbox gallery (lightGallery.js). The full size is 650px at it's shortest side, rather than the width, since I realised that if I limited to a specific width the portrait-aligned images would be larger than the landscapes. While I do have a fondness for portrait-aligned art, not all of it is.</p>
+<p>For the gallery images, I use the same script as for the featured images, but add a few more options. In particular, I have a <code>gallery-metadata.json</code> file with filenames mapped to metadata (like title, description and a few other things) which is combined with the sizes of the thumbnails and full images when the files are resized and cloned over to the directory where the site builder can use them.</p>
+<p>I'd originally intended to make the image-handling script in nodejs as well, but after a bit of butting my head against async it occurred to me that no. I actually don't really need it to be async? Because I have few enough images that it doesn't take much time, and while I do regenerate the images before the building, that's when I do build-to-publish, not build-to-develop.</p>
+<p>In the building script I combine the information from the (generated) <code>gallery.json</code> and the files in the gallery collection to create the Gallery page. It is not a page that is kind to bandwidth, with both more javascript and CSS (lightGallery) than other pages, and (at counting) 43 images. Each thumbnail (image on the page) is on average 45kB (biggest is 94kB, smallest is 21kb). The full sized images (not loaded on page load) are 145kB on average, with the biggest at 270kb and smallest 85kb.</p>
+<h2 id="blog">Blog</h2>
+<p>The blogging capability is divided into two parts: Updates and Blog. Both use Metalsmith Collections, in different ways, and each have a root page that's generated in build by the script, rather than being their own files. The script <code>bin/blog.js</code> creates updates, blog and each tag (defined, again, in <code>package.json</code>), adding posts and other info as needed.</p>
+<h3 id="updates">Updates</h3>
+<p>Updates can really only be  called "microblogging", since it has short, dated items with what's going on in my life (whether personal or professional). The intention is to post a quick update at least weekly, where all of these are collected on a single page. I expect I will be either limiting the updates to a number (discarding the older ones) or add pagination later, but that is for Future!Me to worry about (because if I keep worrying about that, I'll never finish the first version).</p>
+<h3 id="actual-blog">Actual blog</h3>
+<p>A few things were a stumbling stone for me when I was setting up the blog. One was how I wanted to set up the url, and also what to call it. The first variant was Posts with an index page that showed all posts and then each post under posts/slug. The posts were defined from a collection, but that brought the additional issue that I had to make the regex for what counts as a "post" to not include <code>posts/index.html</code>. I also realised that I probably wanted tags, and I hadn't at that point figured out how to create pages from an object without starting with an actual file, so the tags were all saved as <code>tags/tag-name</code>. The advantage with that was that I could easily create a collection that were just tags (well ... at first they were categories, but I decided I preferred using the tags-taxonomy). </p>
+<p>Each post (like this one!) is at their core a markdown file with yaml frontmatter, which includes the alt for the featured image, publication date and a few other important items. They use a shared <code>blog/post</code> template with next/previous pagination, links to the tags and some snazzy metadata, like the word count and estimated read time.</p>
+]]></description>
+            <category>geek</category>
+            <category>how-to</category>
+            <category>nodejs</category>
+            <category>metalsmith</category>
+        </item>
+    </channel>
+</rss>

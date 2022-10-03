@@ -9,8 +9,6 @@ const Metalsmith  = require('metalsmith'),
     publish = require('metalsmith-publish'),
     discoverPartials = require('metalsmith-discover-partials'),
     discoverHelpers = require('metalsmith-discover-helpers'),
-    //discoverPartials = require('./bin/metalsmith-discover-partials'),
-    //discoverHelpers = require('./bin/metalsmith-discover-helpers'),
     postcss = require('metalsmith-with-postcss'),
     include    = require('metalsmith-include-files'),
     concat = require('metalsmith-concat'),
@@ -20,6 +18,7 @@ const Metalsmith  = require('metalsmith'),
     fs = require('fs'),
     pluralize = require('pluralize'),
     gallery = require('./bin/gallery'),
+    rss = require('./bin/rss'),
     blog = require('./bin/blog'),
     melindreamakes = require('./package').melindreamakes,
     repository = require('./package').repository,
@@ -170,6 +169,7 @@ function favicons(files, metalsmith) {
     
     metalsmith.metadata().favicons = faviconData.favicon.html_code;
 }
+
 function check(files, metalsmith) {
     metalsmith.metadata().collections.blog.forEach(post => {
         /*if (post.toc) {
@@ -297,6 +297,11 @@ Metalsmith(__dirname)
     }))
     .use(gallery({
         galleryMetadata: galleryMetadata
+    }))
+    .use(rss({
+        url: melindreamakes.metadata.siteurl,
+        title: melindreamakes.metadata.sitename,
+        description: melindreamakes.metadata.description
     }))
     .use(presence)
     .use(breadcrumbs)

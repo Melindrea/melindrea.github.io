@@ -87,22 +87,22 @@
     @apply text-sm;
   }
 
-  article ul, article ol {
+  article ul, article ol, .post-item ul, .post-item ol {
     list-style-position: inside;
     margin-left: 2rem;
     @apply max-w-prose mb-2;
 
   }
 
-  article ul {
+  article ul, .post-item ul {
     list-style-type: square;
   }
 
-  article ol {
+  article ol, .post-item ol {
     list-style-type: decimal;
   }
 
-  article ul ul {
+  article ul ul, .post-item ul ul {
     list-style-type: "◆ ";
   }
 

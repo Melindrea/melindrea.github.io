@@ -238,6 +238,10 @@
                 "primary": true
             },
             {
+                "nickname": "@melindrea@handmade.social",
+                "url": "https://handmade.social/@melindrea"
+            },
+            {
                 "nickname": "@melindrea@mastodon.art",
                 "url": "https://mastodon.art/@melindrea"
             },

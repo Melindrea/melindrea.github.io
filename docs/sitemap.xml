@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://melindreamakes.art/colophon/</loc> <lastmod>2022-10-02</lastmod> </url>
 <url> <loc>https://melindreamakes.art/gallery/</loc> <lastmod>2022-09-10</lastmod> </url>
-<url> <loc>https://melindreamakes.art/</loc> <lastmod>2022-11-08</lastmod> </url>
+<url> <loc>https://melindreamakes.art/</loc> <lastmod>2022-11-15</lastmod> </url>
 <url> <loc>https://melindreamakes.art/privacy-cookies/</loc> <lastmod>2022-09-10</lastmod> </url>
 <url> <loc>https://melindreamakes.art/blog/tags/artwork/</loc> <lastmod>2022-09-26</lastmod> </url>
 <url> <loc>https://melindreamakes.art/blog/tags/geek/</loc> <lastmod>2022-09-29</lastmod> </url>
@@ -21,5 +21,5 @@
 <url> <loc>https://melindreamakes.art/blog/posts/saint-dymphna/</loc> <lastmod>2022-09-13</lastmod> </url>
 <url> <loc>https://melindreamakes.art/blog/posts/new-site/</loc> <lastmod>2022-09-29</lastmod> </url>
 <url> <loc>https://melindreamakes.art/blog/</loc> <lastmod>2022-09-29</lastmod> </url>
-<url> <loc>https://melindreamakes.art/updates/</loc> <lastmod>2022-11-12</lastmod> </url>
+<url> <loc>https://melindreamakes.art/updates/</loc> <lastmod>2022-11-15</lastmod> </url>
 </urlset>

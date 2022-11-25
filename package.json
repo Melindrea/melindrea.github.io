@@ -132,6 +132,10 @@
                     "startsWith": "gallery",
                     "thumbnails": true
                 }
+            },
+            "webfinger": {
+                "user": "melindrea",
+                "domain": "wandering.shop"
             }
         },
         "tags": {

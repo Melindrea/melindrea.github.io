@@ -7,6 +7,7 @@ const Metalsmith  = require('metalsmith'),
     permalinks = require('@metalsmith/permalinks'),
     collections = require('@metalsmith/collections'),
     publish = require('metalsmith-publish'),
+    webfinger = require('./bin/metalsmith-static-webfinger'),
     discoverPartials = require('metalsmith-discover-partials'),
     discoverHelpers = require('metalsmith-discover-helpers'),
     postcss = require('metalsmith-with-postcss'),
@@ -326,6 +327,7 @@ Metalsmith(__dirname)
     }))
     .use(check)
     .use(github)
+    .use(webfinger(melindreamakes.metadata.webfinger))
     // And tell Metalsmith to fire it all off.
     .build(function(err, files) {
 

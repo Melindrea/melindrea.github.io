@@ -5,7 +5,7 @@ const wordsCount = require('words-count').default,
     slug = require('slug'),
     fs = require('fs'),
     { DateTime } = require('luxon'),
-    {resolve} = require('path'),
+    {resolve, sep} = require('path'),
     melindreamakes = require('../package').melindreamakes;
     
 module.exports = plugin;
@@ -157,11 +157,11 @@ function socialMedia(smMeta) {
 function postHasFeatured(post) {
     // Does it have a valid featured image?
     const sizes = ['1464', '300', '767', '952', '1208'],
-        imagepath = './src' + post.featuredpath + '/';
+        image_url_path = './src' + post.featuredpath + '/';
     
     for (let i = 0; i < sizes.length; i++) { 
-        let path = imagepath + sizes[i] + '.jpg';
-        if (! fs.existsSync(path)) {
+        let url = image_url_path + sizes[i] + '.jpg';
+        if (! fs.existsSync(url)) {
             console.warn('NB: Post "' + post.title + '" has no featured image.')
             return false;
         }
@@ -170,14 +170,25 @@ function postHasFeatured(post) {
     return true;
 }
 
+function getFilePath(items) {
+    // Gets a file path with the separator based on the OS
+    return items.join(sep);
+}
+
+function getUrlPath(items) {
+    // Gets an url path with / separating the items
+    return items.join('/')
+}
+
 function handleTags(files, metalsmith) {
     // Tags are declared in package.json, under melindreamakes key
     let tags = [];
+    
     Object.keys(melindreamakes.tags).forEach(tag => {
         let posts = metalsmith.metadata().collections[tag] || [];
     
         if (posts.length > 0) {
-            const path = 'blog/tags/' + tag;
+            const url = getUrlPath(['blog', 'tags', tag]);
             
             let fileData = {
                 title: tag,
@@ -191,7 +202,7 @@ function handleTags(files, metalsmith) {
                 postcount: posts.length,
                 context: 'tag',
                 layout: 'blog/listing.hbs',
-                path: path,
+                path: url,
                 postTemplate: 'long',
                 widgets: {
                     tags: {
@@ -210,7 +221,7 @@ function handleTags(files, metalsmith) {
                 ...getListDates(posts)
             };
             
-            files[path + '/index.html'] = file;
+            files[url + '/index.html'] = file;
             tags.push(file);
 
         } else {
@@ -262,7 +273,7 @@ function getListDates(posts) {
 function handlePosts(files, postCollection) {
     postCollection.forEach(post => {
         let tags = [];
-        let oldPath = post.path;
+        let originalFilePath = post.path.replace('/', sep) + sep + 'index.html';
 
         post['collection'].filter(c => c !== 'blog').forEach(tag => {
             let link = 'blog/tags/' + tag;
@@ -293,11 +304,12 @@ function handlePosts(files, postCollection) {
             }
         };
 
-        let newPath = 'blog/posts/' + slug(post.title);
-        post.path = newPath;
-        post.slug = slug(post.title);
-        files[newPath + '/index.html'] = post;
-        delete files[oldPath + '/index.html'];
+        let postslug = slug(post.title);
+        post.path = getUrlPath(['blog', 'posts', postslug, 'index.html']);
+        post.slug = postslug;
+        
+        files[getFilePath(['blog', 'posts', postslug, 'index.html'])] = post;
+        delete files[originalFilePath];
         
     });
 }
@@ -319,11 +331,11 @@ function handleIndices(files, collections) {
     for (let i = 0; i < indices.length; i++) {
         let index = indices[i];
 
-        let layout = "layout" in index ? index.layout : index.type;
+        let layout = 'layout' in index ? index.layout : index.type;
         let posts = collections[index.type];
-        let path = index.type + '/index.html';
+        let filepath = index.type + sep + 'index.html';
 
-        files[path] = createIndexFile(layout + '.hbs', posts);
+        files[filepath] = createIndexFile(layout + '.hbs', posts);
 
         if (index.deletePosts) {
             deletePosts(files, posts);
@@ -334,9 +346,9 @@ function handleIndices(files, collections) {
 
 function deletePosts(files, posts) {
     for (let i = 0; i < posts.length; i++) {
-        let path = posts[i]['path'] + '/index.html';
-        //console.log('Deleting file "' + path + '"')
-        delete files[path];
+        let filepath = posts[i]['path'].replace('/', sep) + sep + 'index.html';
+        //console.log('Deleting file "' + filepath + '"')
+        delete files[filepath];
     }
 }
 

@@ -1,7 +1,8 @@
 'use strict';
 const { DateTime } = require('luxon');
 const Path = require('node:path'),
-      slug = require('slug');
+      slug = require('slug'),
+      {sep} = require('path');
 
 module.exports = plugin;
 function plugin(options) {
@@ -26,18 +27,19 @@ function plugin(options) {
             let item = gallery[i];
             let basename = Path.basename(item.path);
             let filename = Path.parse(item.path).name
-
+            
             if (basename in galleryMetadata) {
                 let metadata = galleryMetadata[basename];
                 metadata.pubdate = DateTime.fromISO(metadata.pubdate).toJSDate();
                 
-                item.thumbnail = Path.dirname(item.path) + '/thumbnails/' + basename;
+                item.thumbnail = Path.dirname(item.path) + sep + 'thumbnails' + sep + basename;
                 item.slug = slug(filename)
                 
                 Object.assign(item, metadata);
                 
                 imageInfo.gallery.sizes.push(item.stats.size);
                 let thumbnail = files[item.thumbnail];
+                
                 imageInfo.thumbnails.sizes.push(thumbnail.stats.size);
                 let merchify = true;
                 if ('no-merch' in metadata) {

@@ -14,15 +14,15 @@
         "server": "cd docs && python -m http.server 8000",
         "minify:css": "postcss build/assets/css/style.css > build/assets/css/style.min.css && rm build/assets/css/style.css",
         "prebuild": "python bin/images.py -f images.config.json && npm run favicons:update",
-        "build": "export NODE_ENV=prod && node index",
+        "build": "cross-env NODE_ENV=prod && node index",
         "dev": "node index",
         "cypress:open": "cypress open",
         "images": "python bin/images.py -f images.config.json",
         "dev:images": "python bin/images.py -f images-dev.config.json",
         "favicons:generate": "real-favicon generate faviconDescription.json faviconData.json favicons",
         "favicons:update": "real-favicon check-for-update --fail-on-update faviconData.json",
-        "share": "export NODE_ENV=prod && node bin/share_posts",
-        "share:tbt": "export NODE_ENV=prod && node bin/share_posts --tbt",
+        "share": "cross-env NODE_ENV=prod && node bin/share_posts",
+        "share:tbt": "cross-env NODE_ENV=prod && node bin/share_posts --tbt",
         "dev:share": "node bin/share_posts",
         "dev:share:tbt": "node bin/share_posts --tbt"
     },
@@ -41,6 +41,7 @@
         "@metalsmith/table-of-contents": "^1.0.0",
         "autoprefixer": "^9.8.8",
         "cheerio": "^1.0.0-rc.12",
+        "cross-env": "^7.0.3",
         "cssnano": "^5.1.11",
         "cypress": "^10.9.0",
         "cypress-html-validate": "^5.0.5",
@@ -84,7 +85,7 @@
             "sitename": "MelindreaMakes: {art, words, crafts, thoughts, code}",
             "titlesep": " / ",
             "gtm": "GTM-N664CZV",
-            "copyright": "© 2022 Antonius Marie Hogebrandt, all rights reserved",
+            "copyright": "© 2022-2023 Antonius Marie Hogebrandt, all rights reserved",
             "siteurl": "https://melindreamakes.art",
             "description": "A buffet of options to find out more about Melindrea and who they are.",
             "navigation": {
@@ -266,5 +267,8 @@
                 "url": "https://awoo.space/@melindrea"
             }
         ]
+    },
+    "dependencies": {
+        "cli-real-favicon": "^0.0.8"
     }
 }

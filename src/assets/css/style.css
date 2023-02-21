@@ -35,7 +35,7 @@
   }
   
   a {
-    @apply text-slate-800 dark:text-slate-500 underline;
+    @apply text-slate-800 dark:text-slate-400 underline;
   }
 
   a:hover, a:focus,a:active {

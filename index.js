@@ -2,12 +2,13 @@
 
 // Get our requirements, installed by npm
 const Metalsmith  = require('metalsmith'),
+    {sep} = require('path'),
     markdown    = require('@metalsmith/markdown'),
     layouts     = require('@metalsmith/layouts'),
     permalinks = require('@metalsmith/permalinks'),
     collections = require('@metalsmith/collections'),
     publish = require('metalsmith-publish'),
-    webfinger = require('./bin/metalsmith-static-webfinger'),
+    //webfinger = require('./bin/metalsmith-static-webfinger'),
     discoverPartials = require('metalsmith-discover-partials'),
     discoverHelpers = require('metalsmith-discover-helpers'),
     postcss = require('metalsmith-with-postcss'),
@@ -63,17 +64,17 @@ function addDates(files, metalsmith) {
 function bodyClasses(files, metalsmith) {
 
     // Only HTML-files
-    Object.keys(files).filter(p => p.endsWith('.html')).forEach(path => {
-        let sections = path.split('/');
+    Object.keys(files).filter(p => p.endsWith('.html')).forEach(filepath => {
+        let sections = filepath.split('/');
         let bodyClasses = [];
         
         // Adds body classes to define features, like sidebar
-        if ('features' in files[path]) {
-            bodyClasses = Object.keys(files[path].features).map(x => 'with-' + x);
+        if ('features' in files[filepath]) {
+            bodyClasses = Object.keys(files[filepath].features).map(x => 'with-' + x);
         }
 
-        // this removes .hbs and if it's sectioned (ex blog/listing) only takes the first word
-        let layout = files[path].layout.split('.')[0].split('/')[0];
+        // this removes .hbs and if it's sectioned (pex blog/listing) only takes the first word
+        let layout = files[filepath].layout.split('.')[0].split('/')[0];
         bodyClasses.push(layout);
         
         // These particular pages/sections require different classes
@@ -89,7 +90,7 @@ function bodyClasses(files, metalsmith) {
                 
                 case 'blog':
                     if (sections[1] !== 'index.html') {
-                        bodyClasses.push(...[pluralize.singular(sections[1]), slug(files[path].title)])
+                        bodyClasses.push(...[pluralize.singular(sections[1]), slug(files[filepath].title)])
                     }
 
                     break;
@@ -99,7 +100,7 @@ function bodyClasses(files, metalsmith) {
         }
         bodyClasses = [... new Set(bodyClasses)] // Only unique values
         
-        files[path].bodyClasses = bodyClasses;
+        files[filepath].bodyClasses = bodyClasses;
     });
 }
 
@@ -172,7 +173,9 @@ function favicons(files, metalsmith) {
 }
 
 function check(files, metalsmith) {
-    metalsmith.metadata().collections.blog.forEach(post => {
+    Object.keys(files).forEach(filepath => {
+        
+    //metalsmith.metadata().collections.blog.forEach(post => {
         /*if (post.toc) {
             console.log(post.title)
             console.log(post.toc)
@@ -211,7 +214,7 @@ Metalsmith(__dirname)
     .use(include({            // include external JavaScript
         'assets/js': [
             './node_modules/jquery/dist/jquery.slim.min.js'
-
+    
         ],
         'assets/fonts': [
             './node_modules/lightgallery/fonts/*'
@@ -307,6 +310,7 @@ Metalsmith(__dirname)
     .use(presence)
     .use(breadcrumbs)
     .use(bodyClasses)
+    .use(check)
     .use(discoverHelpers({
         directory: 'templates/helpers'
     }))
@@ -327,9 +331,8 @@ Metalsmith(__dirname)
     }))
     .use(check)
     .use(github)
-    .use(webfinger(melindreamakes.metadata.webfinger))
+    //.use(webfinger(melindreamakes.metadata.webfinger))
     // And tell Metalsmith to fire it all off.
     .build(function(err, files) {
-
         if (err) { throw err; }
     });

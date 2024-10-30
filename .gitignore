@@ -15,6 +15,7 @@ node_modules
 docs_original
 
 .ideas
+.vscode/settings.json
 
 src/assets/images/featured-images/**
 src/assets/images/gallery/**

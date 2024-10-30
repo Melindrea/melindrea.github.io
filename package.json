@@ -14,18 +14,18 @@
         "server": "cd docs && python -m http.server 8000",
         "minify:css": "postcss build/assets/css/style.css > build/assets/css/style.min.css && rm build/assets/css/style.css",
         "prebuild": "python bin/images.py -f images.config.json && npm run favicons:update",
-        "build": "cross-env NODE_ENV=prod && node metalsmith.js",
+        "build": "set NODE_ENV=prod && node metalsmith.js",
         "dev": "node metalsmith.js",
         "cypress:open": "cypress open",
         "images": "python bin/images.py -f images.config.json",
         "dev:images": "python bin/images.py -f images-dev.config.json",
         "favicons:generate": "real-favicon generate faviconDescription.json faviconData.json favicons",
         "favicons:update": "real-favicon check-for-update --fail-on-update faviconData.json",
-        "share": "cross-env NODE_ENV=prod && node bin/share_posts",
-        "share:tbt": "cross-env NODE_ENV=prod && node bin/share_posts --tbt",
+        "share": "set NODE_ENV=prod && node bin/share_posts",
+        "share:tbt": "set NODE_ENV=prod && node bin/share_posts --tbt",
         "dev:share": "node bin/share_posts",
         "dev:share:tbt": "node bin/share_posts --tbt",
-        "start": "cross-env NODE_ENV=development DEBUG=@metalsmith* node metalsmith.js"
+        "start": "set NODE_ENV=development DEBUG=@metalsmith* node metalsmith.js"
     },
     "keywords": [],
     "author": {

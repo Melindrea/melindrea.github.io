@@ -3,6 +3,8 @@ Personal website hosted on github pages
 
 Using Metalsmith to generate the site, markdown to write the posts, handlebars for layouts and CSS + Javascript to style and make things prettified and functional in the browser.
 
+**NB**: `"set NODE_ENV=prod"` works in Windows, might not work in *nix.
+
 ### TODO
 - Rewrite the Handlebars plugins into one and make it ESM-compatible and to not crash if there's no helpers/partials!
 - Then rewrite slugify & classify to go back to using "slug" rather than "slugify"

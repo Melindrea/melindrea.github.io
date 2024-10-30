@@ -2,13 +2,13 @@
     "prompt-journal": {
         "title": "Prompt Journal",
         "summary": "Behind-the-scenes of how I create my prompt journals (which are sold as printables in my ko-fi shop).",
-        "link": "https://melindreamakes.art/blog/posts/prompt-journal/",
+        "link": "https://melindreamakes.art/blog/posts/prompt-journal/index.html/",
         "image": {
             "description": "Part of the cover of the Frost Prompt journal and the label",
             "path": "/assets/images/featured-images/prompt-journal/1464.jpg"
         },
         "stats": {
-            "modified": "2022-09-25T22:14:27.850Z",
+            "modified": "2024-10-30T05:40:07.115Z",
             "published": "2022-09-25T00:00:00.000Z"
         },
         "pushed": true,
@@ -28,13 +28,13 @@
     "social-media-integration": {
         "title": "Social Media Integration",
         "summary": "How to solve a problem like … Melindrea?",
-        "link": "https://melindreamakes.art/blog/posts/social-media-integration/",
+        "link": "https://melindreamakes.art/blog/posts/social-media-integration/index.html/",
         "image": {
             "description": "A close-up of writing with a fountain pen",
             "path": "/assets/images/featured-images/social-media-integration/1464.jpg"
         },
         "stats": {
-            "modified": "2022-09-13T23:11:48.449Z",
+            "modified": "2024-10-30T05:40:07.115Z",
             "published": "2022-09-13T00:00:00.000Z"
         },
         "pushed": true,
@@ -49,13 +49,13 @@
     "saint-dymphna": {
         "title": "Saint Dymphna",
         "summary": "Choosing and making character images to match and enhance what I have in mind.",
-        "link": "https://melindreamakes.art/blog/posts/saint-dymphna/",
+        "link": "https://melindreamakes.art/blog/posts/saint-dymphna/index.html/",
         "image": {
             "description": "A close-up of writing with a fountain pen",
             "path": "/assets/images/featured-images/saint-dymphna/1464.jpg"
         },
         "stats": {
-            "modified": "2022-09-13T14:27:46.033Z",
+            "modified": "2024-10-30T05:40:07.116Z",
             "published": "2022-09-08T00:00:00.000Z"
         },
         "pushed": true,
@@ -72,13 +72,13 @@
     "new-site": {
         "title": "New site",
         "summary": "How not to build a site; or How I intended to build a simple one-page site and accidentally a static site with blogging and a gallery.",
-        "link": "https://melindreamakes.art/blog/posts/new-site/",
+        "link": "https://melindreamakes.art/blog/posts/new-site/index.html/",
         "image": {
             "description": "A close-up of a laptop with some code on the screen",
             "path": "/assets/images/featured-images/new-site/1464.jpg"
         },
         "stats": {
-            "modified": "2022-09-29T13:18:13.290Z",
+            "modified": "2024-10-30T05:40:07.114Z",
             "published": "2022-09-04T00:00:00.000Z"
         },
         "pushed": true,

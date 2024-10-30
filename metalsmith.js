@@ -30,7 +30,6 @@ const env = process.env.NODE_ENV || 'development';
 const devMode = ['development', 'dev'].includes(env);
 const melindreamakes = packageJson.melindreamakes;
 const repository = packageJson.repository;
-
 function presence(files, metalsmith) {
     Object.keys(files).forEach(path => {
       if (files[path].presence) {

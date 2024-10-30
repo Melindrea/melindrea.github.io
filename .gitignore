@@ -12,6 +12,7 @@ htmlcov/
 *.egg-info/
 
 node_modules
+docs_original
 
 .ideas
 
@@ -19,5 +20,6 @@ src/assets/images/featured-images/**
 src/assets/images/gallery/**
 src/assets/images/page-images/**
 gallery.json
+gallery.mjs
 
 bin/metalsmith*

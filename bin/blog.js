@@ -1,16 +1,15 @@
-'use strict';
 
-const wordsCount = require('words-count').default,
-    { stripHtml } = require("string-strip-html"),
-    slug = require('slug'),
-    fs = require('fs'),
-    { DateTime } = require('luxon'),
-    {resolve, sep} = require('path'),
-    melindreamakes = require('../package').melindreamakes;
+// This is a CommonJS module, hence the workaround
+import wordsCount from 'words-count';
+import { stripHtml } from 'string-strip-html';
+import slug from 'slug';
+import fs from 'fs';
+import {resolve, sep} from 'node:path';
+
+import packageJson from '../package.mjs';
+const melindreamakes = packageJson.melindreamakes;
     
-module.exports = plugin;
-
-function plugin(options) {
+export default function plugin(options) {
     options = options || {
         dev: true
     };
@@ -25,7 +24,6 @@ function plugin(options) {
         handleTags(files, metalsmith);
 
         handlePosts(files, metalsmith.metadata().collections.blog);
-        
         if (! options.dev) {
             updatePublishedPosts(metalsmith.metadata().siteurl, metalsmith.metadata().collections.blog);
         }
@@ -35,8 +33,8 @@ function plugin(options) {
 }
 
 function updatePublishedPosts(baseurl, postCollection) {
-    const postsfile = resolve('posts.json'),
-        postsData= require(postsfile); 
+    const postsfile = resolve('posts.json');
+    const postsData = JSON.parse(fs.readFileSync(postsfile));
     
     let postArray = []; // This is used to sort-of sort--I want the file to be in something resembling order
     
@@ -157,11 +155,11 @@ function socialMedia(smMeta) {
 function postHasFeatured(post) {
     // Does it have a valid featured image?
     const sizes = ['1464', '300', '767', '952', '1208'],
-        image_url_path = './src' + post.featuredpath + '/';
+        image_file_path = '.' + sep + 'src' + post.featuredpath + sep;
     
     for (let i = 0; i < sizes.length; i++) { 
-        let url = image_url_path + sizes[i] + '.jpg';
-        if (! fs.existsSync(url)) {
+        let path = image_file_path + sizes[i] + '.jpg';
+        if (! fs.existsSync(path)) {
             console.warn('NB: Post "' + post.title + '" has no featured image.')
             return false;
         }
@@ -188,7 +186,7 @@ function handleTags(files, metalsmith) {
         let posts = metalsmith.metadata().collections[tag] || [];
     
         if (posts.length > 0) {
-            const url = getUrlPath(['blog', 'tags', tag]);
+            const tag_path = getFilePath(['blog', 'tags', tag]);
             
             let fileData = {
                 title: tag,
@@ -201,8 +199,8 @@ function handleTags(files, metalsmith) {
                 }),
                 postcount: posts.length,
                 context: 'tag',
-                layout: 'blog/listing.hbs',
-                path: url,
+                layout: 'blog' + sep + 'listing.hbs',
+                path: tag_path,
                 postTemplate: 'long',
                 widgets: {
                     tags: {
@@ -220,8 +218,7 @@ function handleTags(files, metalsmith) {
                 ...melindreamakes.tags[tag],
                 ...getListDates(posts)
             };
-            
-            files[url + '/index.html'] = file;
+            files[tag_path + sep + 'index.html'] = file;
             tags.push(file);
 
         } else {
@@ -229,27 +226,7 @@ function handleTags(files, metalsmith) {
         }
     });
     
-    metalsmith.metadata().collections.tags = tags.sort((a, b) => {
-        // Step 1: Compare post count
-        let postDiff = b.postcount - a.postcount;
-
-        if (postDiff !== 0) {
-            return postDiff;
-        }
-        
-        // Step 2, compare titles
-        const aTitle = a.title.toUpperCase(); // ignore upper and lowercase
-        const bTitle = b.title.toUpperCase(); // ignore upper and lowercase
-        if (aTitle < bTitle) {
-            return -1;
-        }
-        if (aTitle > bTitle) {
-            return 1;
-        }
-
-        // names must be equal
-        return 0;
-    });
+    
 }
 
 function getListDates(posts) {
@@ -273,8 +250,8 @@ function getListDates(posts) {
 function handlePosts(files, postCollection) {
     postCollection.forEach(post => {
         let tags = [];
-        let originalFilePath = post.path.replace('/', sep) + sep + 'index.html';
-
+        let originalFilePath = post.path.replace('/', sep);
+        
         post['collection'].filter(c => c !== 'blog').forEach(tag => {
             let link = 'blog/tags/' + tag;
             tags.push({
@@ -305,10 +282,11 @@ function handlePosts(files, postCollection) {
         };
 
         let postslug = slug(post.title);
-        post.path = getUrlPath(['blog', 'posts', postslug, 'index.html']);
+        const path_parts = ['blog', 'posts', postslug, 'index.html']
+        post.path = getUrlPath(path_parts);
         post.slug = postslug;
         
-        files[getFilePath(['blog', 'posts', postslug, 'index.html'])] = post;
+        files[getFilePath(path_parts)] = post;
         delete files[originalFilePath];
         
     });
@@ -373,7 +351,7 @@ function createIndexFile(layout, posts) {
 }
 
 function getWordCount(post) {
-    return wordsCount(stripHtml(post.contents.toString()).result);
+    return wordsCount.wordsCount(stripHtml(post.contents.toString()).result);
 }
 
 function getReadingTime(count) {

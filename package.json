@@ -1,9 +1,9 @@
 {
     "name": "@melindrea/melindreamakes",
     "private": true,
-    "version": "2.0.0",
+    "version": "3.0.0",
     "description": "My personal website, built in NodeJS and generated from Markdown.",
-    "main": "index.js",
+    "type": "module",
     "homepage": "https://github.com/Melindrea/melindrea.github.io#readme",
     "repository": {
         "type": "git",
@@ -14,8 +14,8 @@
         "server": "cd docs && python -m http.server 8000",
         "minify:css": "postcss build/assets/css/style.css > build/assets/css/style.min.css && rm build/assets/css/style.css",
         "prebuild": "python bin/images.py -f images.config.json && npm run favicons:update",
-        "build": "cross-env NODE_ENV=prod && node index",
-        "dev": "node index",
+        "build": "cross-env NODE_ENV=prod && node metalsmith.js",
+        "dev": "node metalsmith.js",
         "cypress:open": "cypress open",
         "images": "python bin/images.py -f images.config.json",
         "dev:images": "python bin/images.py -f images-dev.config.json",
@@ -24,7 +24,8 @@
         "share": "cross-env NODE_ENV=prod && node bin/share_posts",
         "share:tbt": "cross-env NODE_ENV=prod && node bin/share_posts --tbt",
         "dev:share": "node bin/share_posts",
-        "dev:share:tbt": "node bin/share_posts --tbt"
+        "dev:share:tbt": "node bin/share_posts --tbt",
+        "start": "cross-env NODE_ENV=development DEBUG=@metalsmith* node metalsmith.js"
     },
     "keywords": [],
     "author": {
@@ -37,39 +38,39 @@
         "@metalsmith/collections": "^1.2.1",
         "@metalsmith/layouts": "^2.5.1",
         "@metalsmith/markdown": "^1.6.0",
-        "@metalsmith/permalinks": "^2.4.0",
+        "@metalsmith/permalinks": "^3.0.1",
+        "@metalsmith/postcss": "^5.4.1",
         "@metalsmith/table-of-contents": "^1.0.0",
-        "autoprefixer": "^9.8.8",
+        "autoprefixer": "^10.4.20",
         "cheerio": "^1.0.0-rc.12",
         "cross-env": "^7.0.3",
-        "cssnano": "^5.1.11",
-        "cypress": "^10.9.0",
-        "cypress-html-validate": "^5.0.5",
+        "cssnano": "^7.0.6",
+        "cypress": "^13.15.1",
+        "cypress-html-validate": "^6.1.0",
         "dotenv": "^16.0.2",
-        "glob": "^8.0.3",
         "gm": "^1.23.1",
-        "html-validate": "^7.5.0",
+        "html-validate": "^8.24.2",
         "jquery": "^3.6.0",
         "jsonfile": "^6.1.0",
         "jstransformer-handlebars": "^1.2.0",
         "lightgallery": "^2.5.0",
-        "luxon": "^2.4.0",
+        "luxon": "^3.5.0",
         "mastodon-api": "^1.3.0",
         "metalsmith": "^2.4.3",
         "metalsmith-concat": "^7.0.3",
         "metalsmith-discover-helpers": "github:Melindrea/metalsmith-discover-helpers",
         "metalsmith-discover-partials": "github:Melindrea/metalsmith-discover-partials",
         "metalsmith-formatcheck": "github:Melindrea/code.metalsmith-formatcheck",
-        "metalsmith-include-files": "^0.1.10",
+        "metalsmith-include-files": "^3.0.2",
         "metalsmith-publish": "^0.1.6",
         "metalsmith-sitemap": "^1.2.2",
-        "metalsmith-with-postcss": "^1.1.0",
         "pluralize": "^8.0.0",
         "postcss": "^8.4.14",
-        "postcss-cli": "^9.1.0",
-        "postcss-import": "^12.0.1",
-        "slug": "^6.0.0",
-        "string-strip-html": "^8.3.0",
+        "postcss-cli": "^11.0.0",
+        "postcss-import": "^16.1.0",
+        "slug": "^10.0.0",
+        "slugify": "^1.6.6",
+        "string-strip-html": "^13.4.8",
         "tailwindcss": "^3.1.1",
         "terser": "^5.14.1",
         "words-count": "^2.0.2",
@@ -85,7 +86,7 @@
             "sitename": "MelindreaMakes: {art, words, crafts, thoughts, code}",
             "titlesep": " / ",
             "gtm": "GTM-N664CZV",
-            "copyright": "© 2022-2023 Antonius Marie Hogebrandt, all rights reserved",
+            "copyright": "© 2022-2024 Antonius Marie Hogebrandt, all rights reserved",
             "siteurl": "https://melindreamakes.art",
             "description": "A buffet of options to find out more about Melindrea and who they are.",
             "navigation": {
@@ -136,13 +137,17 @@
             },
             "webfinger": {
                 "user": "melindrea",
-                "domain": "wandering.shop"
+                "domain": "beige.party"
             }
         },
         "tags": {
             "artwork": {
                 "header": "Posts about artworks",
                 "description": "Sometimes about art in general, but mainly about my art in particular"
+            },
+            "crafts": {
+                "header": "Posts about crafts and crafting",
+                "description": "Crafts are differentiated from arts in that their primary function is usability as opposed to aesthetics (though they are often both)"
             },
             "geek": {
                 "header": "Geek posts",
@@ -196,11 +201,6 @@
                 "nickname": "melindrea"
             },
             {
-                "site": "Pixelfed",
-                "url": "https://pixelfed.social/i/web/profile/496097619330497402",
-                "nickname": "melindrea"
-            },
-            {
                 "site": "Ravelry",
                 "url": "https://www.ravelry.com/people/melindrea",
                 "nickname": "melindrea"
@@ -238,9 +238,13 @@
         ],
         "mastodon": [
             {
-                "nickname": "@melindrea@wandering.shop",
-                "url": "https://wandering.shop/@melindrea",
+                "nickname": "@melindrea@beige.party",
+                "url": "https://beige.party/@melindrea",
                 "primary": true
+            },
+            {
+                "nickname": "@melindrea@wandering.shop",
+                "url": "https://wandering.shop/@melindrea"
             },
             {
                 "nickname": "@melindrea@handmade.social",
@@ -269,6 +273,6 @@
         ]
     },
     "dependencies": {
-        "cli-real-favicon": "^0.0.8"
+        "cli-real-favicon": "^0.0.9"
     }
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-//const { schedulePosts } = require('./social-integration');
+//const { schedulePosts } = require('./social-integration.cjs');
 
 //schedulePosts();
 const {resolve} = require('path'),
@@ -17,7 +17,7 @@ const {resolve} = require('path'),
         .boolean('tbt')
         .default('tbt', false)
         .argv,
-    { publishNew, publishRandom } = require('./social-integration'),
+    { publishNew, publishRandom } = require('./social-integration.cjs'),
     env = process.env.NODE_ENV || 'dev';
 
 //console.log(pkg.melindreamakes.metadata)

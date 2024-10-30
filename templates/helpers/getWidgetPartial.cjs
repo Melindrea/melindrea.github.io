@@ -3,5 +3,5 @@
  */
 
 module.exports = function(partial) {
-    return "widget-" + partial;
+    return 'widget-' + partial;
 };

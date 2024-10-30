@@ -13,7 +13,6 @@ module.exports = function(links, context) {
             external: false
         }
     };
-
     let formattedlinks = [];
     Object.keys(links).forEach(type => {
         let linkMap = mapping[type];

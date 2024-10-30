@@ -1,13 +1,10 @@
-'use strict';
 
-const xml = require('xml'),
-    { DateTime } = require('luxon'),
-    fs = require('fs'),
-    cheerio = require('cheerio');
+import xml from 'xml';
+import { DateTime } from 'luxon';
+import * as cheerio from 'cheerio';
     
-module.exports = plugin;
 
-function plugin(options) {
+export default function rss(options) {
     options = options || {};
     
     return function(files, metalsmith, done) {
@@ -55,42 +52,45 @@ function parsePost(post, url) {
 
     $("a[href^='/'], img[src^='/'], a[href^='#']").each(function () {
         const $this = $(this);
+        
         if ($this.attr('href')) {
             $this.attr('href', `${url}${$this.attr('href')}`);
         }
         if ($this.attr('src')) {
             $this.attr('src', `${url}${$this.attr('src')}`);
         }
+        
     });
         
-            
-    const postContent = $('body').html(),
-        date = DateTime.fromJSDate(post.pubdate),
-        imageLink = `${url}${post.featuredpath}/952.jpg`,
-
-        imageTag = `<img src="${imageLink}" alt="${post.image.description}" width="952" height="317">`,
-        description = `${imageTag}<p>${post.abstract}</p>${postContent}`,
+    const postContent = $('body').html();
+    const date = DateTime.fromJSDate(post.pubdate);
+    const imageLink = `${url}${post.featuredpath}/952.jpg`;
+    const imageTag = `<img src="${imageLink}" alt="${post.image.description}" width="952" height="317">`;
+    const description = `${imageTag}<p>${post.abstract}</p>${postContent}`;
+    let categories = [];
+    if (post.tags) {
         categories = post.tags.map(tag => {
             return {
                 category: tag.name
             };
-        }),
-        item = { item: [
-            { title: post.title },
-            { pubDate: date.toRFC2822()},
-            {
-                guid: [
-                    { _attr: { isPermaLink: true } },
-                    `${url}/${post.path}/`,
-                ]
+        });
+    }
+    const item = { item: [
+        { title: post.title },
+        { pubDate: date.toRFC2822()},
+        {
+            guid: [
+                { _attr: { isPermaLink: true } },
+                `${url}/${post.path}/`,
+            ]
+        },
+        {
+            description: {
+                _cdata: description,
             },
-            {
-                description: {
-                    _cdata: description,
-                },
-            },
-            ...categories
-        ] };
+        },
+        ...categories
+    ] };
 
     return item;
 }
@@ -115,6 +115,7 @@ function buildFeed(items, url) {
     return feedItems;
  
 }
+
 function createChannelNode(options, posts) {
     return [
         {
@@ -146,7 +147,7 @@ function createChannelNode(options, posts) {
                 { link: options.url },
                 { title: options.title },
                 { description: 'a dark purply-pink image with an ornamental border and "Melindrea makes" in varigated text'},
-                { url: `${options.url}assets/images/rss-logo.jpg` },
+                { url: `${options.url}/assets/images/rss-logo.jpg` },
                 { height: 122 },
                 { width: 140 },
             ]
@@ -160,6 +161,7 @@ function createChannelNode(options, posts) {
         ...posts
       ];
 }
+
 function createRSSFeed(channel) {
     const rssObject =  {
         rss: [{
@@ -176,4 +178,3 @@ function createRSSFeed(channel) {
 
     return xml(rssObject, { declaration: true, indent: true });
 }
-

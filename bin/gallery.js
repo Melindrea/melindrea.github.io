@@ -1,14 +1,13 @@
-'use strict';
-const { DateTime } = require('luxon');
-const Path = require('node:path'),
-      slug = require('slug'),
-      {sep} = require('path');
 
-module.exports = plugin;
-function plugin(options) {
+import { DateTime } from 'luxon';
+import Path from 'node:path';
+import slug from 'slug';
+
+import { pathToLink } from './file-functions.js';
+
+export default function gallery(options) {
     options = options || {};
     let galleryMetadata = options.galleryMetadata || {};
-    
     return function(files, metalsmith, done) {
         setImmediate(done);
 
@@ -32,7 +31,9 @@ function plugin(options) {
                 let metadata = galleryMetadata[basename];
                 metadata.pubdate = DateTime.fromISO(metadata.pubdate).toJSDate();
                 
-                item.thumbnail = Path.dirname(item.path) + sep + 'thumbnails' + sep + basename;
+                item.thumbnail = Path.dirname(item.path) + Path.sep + 'thumbnails' + Path.sep + basename;
+                item.thumb_src = pathToLink(item.thumbnail);
+                item.link = pathToLink(item.path);
                 item.slug = slug(filename)
                 
                 Object.assign(item, metadata);
@@ -49,7 +50,7 @@ function plugin(options) {
                 if (! ('links' in metadata) && merchify) {
                     console.log(basename + ' : ' + metadata.title + ' : ' + metadata.description)
                 }
-
+                
             } else {
                 console.warn("NB! Image file " + basename + " is not in gallery metadata")
             }
@@ -57,24 +58,25 @@ function plugin(options) {
         
         // Parses through files and create a featured images thing
         metalsmith.metadata().images = [];
-        Object.keys(files).filter(p => p.endsWith('.html')).forEach(path => {
-            let file = files[path];
+        Object.keys(files).filter(p => p.endsWith('.html')).forEach(file_path => {
+            let file = files[file_path];
             
-            if ("image" in file) {
+            if ('image' in file) {
                 let image = file.image;
-                let context = "page";
-                if ("context" in file) {
+                let context = 'page';
+                if ('context' in file) {
                     context = file.context;
                 }
                 let object = {
                     page: {
                         title: file.title,
-                        link: '/' + path,
+                        link: '/' + pathToLink(file_path),
                         type: context
                     },
                     source: image.source,
                     creator: image.creator
                 };
+                
                 metalsmith.metadata().images.push(object);
             }
         });

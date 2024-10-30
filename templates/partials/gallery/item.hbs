@@ -1,9 +1,9 @@
 <li class="gallery-item">
-    <a href="/{{path}}"
+    <a href="/{{link}}"
     class="js-item"
     data-sub-html="#gallery-{{slug}}"
     >
-    <img src="/{{thumbnail}}" alt="{{ description }}" title="{{ title }}" width="{{size.thumbnail.width}}" height="{{size.thumbnail.height}}"/></a>
+    <img src="/{{thumb_src}}" alt="{{ description }}" title="{{ title }}" width="{{size.thumbnail.width}}" height="{{size.thumbnail.height}}"/></a>
     <div id="gallery-{{slug}}" class="gallery-caption hidden">
         <h4 class="text-slate-300 text-xl">{{ title }} <small class="italic">©{{copyright}}</small></h4>
         <p class="text-slate-300 text-sm max-w-prose text-center mx-auto">{{ description }}{{#if links}}{{{ imagelinks links }}}{{/if}}</p>

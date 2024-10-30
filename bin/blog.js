@@ -7,6 +7,7 @@ import fs from 'fs';
 import { resolve, sep } from 'node:path';
 
 import packageJson from '../package.mjs';
+import { pathToLink } from './file-functions.js';
 const melindreamakes = packageJson.melindreamakes;
 
 export default function plugin (options) {
@@ -180,11 +181,11 @@ function getUrlPath (items) {
 
 function handleTags (files, metalsmith) {
   // Tags are declared in package.json, under melindreamakes key
-  const tags = [];
-
+  //const tags = [];
+  metalsmith.metadata().collections['tags'] = [];
   Object.keys(melindreamakes.tags).forEach(tag => {
     const posts = metalsmith.metadata().collections[tag] || [];
-
+    
     if (posts.length > 0) {
       const tagPath = getFilePath(['blog', 'tags', tag]);
 
@@ -201,6 +202,7 @@ function handleTags (files, metalsmith) {
         context: 'tag',
         layout: 'blog' + sep + 'listing.hbs',
         path: tagPath,
+        url: pathToLink(tagPath),
         postTemplate: 'long',
         widgets: {
           tags: {
@@ -219,7 +221,8 @@ function handleTags (files, metalsmith) {
         ...getListDates(posts)
       };
       files[tagPath + sep + 'index.html'] = file;
-      tags.push(file);
+      //tags.push(file);
+      metalsmith.metadata().collections['tags'].push(file);
     } else {
       console.log('Tag "' + tag + '" has no posts.');
     }

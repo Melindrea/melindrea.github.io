@@ -36,16 +36,15 @@ Especially as an artist, I want to give credit to the giants on whose shoulders 
 Most of the backend work is done with Nodejs, including building the site
 * [Metalsmith](https://metalsmith.io/): Static site generator with [plugins](https://metalsmith.io/plugins/)
     * layouts
+    * collections
     * markdown
     * permalinks
     * table-of-contents
     * concat
-    * discover-helpers (fork)
-    * discover-partials (fork)
     * include-files
     * publish
     * sitemap
-    * with-postcss
+    * postcss
 * [Markdown](https://daringfireball.net/projects/markdown/): Text-to-HTML conversion tool, via MarkedJS and the original syntax
 * [PostCSS](https://postcss.org/) with [TailwindCSS](https://tailwindcss.com/): Valid (and prefixed, when necessary) CSS
 * [Cypress](https://www.cypress.io/): Testing (at the moment minimal)

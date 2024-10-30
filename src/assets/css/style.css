@@ -165,7 +165,7 @@
     font-size: 0.8em;
   }
 
-  .gallery ul {
+  .gallery main ul {
     @apply columns-2 gap-x-1 sm:columns-3 sm:gap-x-2 md:columns-4;
   }
 

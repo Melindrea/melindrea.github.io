@@ -866,7 +866,7 @@ article ul ul, .post-item ul ul {
     font-size: 0.8em;
   }
 
-.gallery ul {
+.gallery main ul {
   -webkit-columns: 2;
      -moz-columns: 2;
           columns: 2;
@@ -877,7 +877,7 @@ article ul ul, .post-item ul ul {
 
 @media (min-width: 640px) {
 
-  .gallery ul {
+  .gallery main ul {
     -webkit-columns: 3;
        -moz-columns: 3;
             columns: 3;
@@ -889,7 +889,7 @@ article ul ul, .post-item ul ul {
 
 @media (min-width: 768px) {
 
-  .gallery ul {
+  .gallery main ul {
     -webkit-columns: 4;
        -moz-columns: 4;
             columns: 4;

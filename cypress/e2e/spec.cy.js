@@ -3,11 +3,12 @@ describe('Index page', () => {
     cy.visit('http://localhost:8000');
 
     cy.htmlvalidate({
-      "rules": {
-        "require-sri": "off",
-        "no-deprecated-attr": "off",
-        "element-required-attributes": "off",
-        "script-type": "off"
-      }});
-  })
-})
+      rules: {
+        'require-sri': 'off',
+        'no-deprecated-attr': 'off',
+        'element-required-attributes': 'off',
+        'script-type': 'off'
+      }
+    });
+  });
+});

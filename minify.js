@@ -1,5 +1,5 @@
-const minify = require('@node-minify/core'),
-      terser = require('@node-minify/terser');
+const minify = require('@node-minify/core');
+const terser = require('@node-minify/terser');
 
 minify({
   compressor: terser,
@@ -9,8 +9,7 @@ minify({
     warnings: true, // pass true to display compressor warnings.
     mangle: false // pass false to skip mangling names.
   },
-  callback: function(err, min) {
+  callback: function (err, min) {
     if (err) console.error(err);
   }
 });
-

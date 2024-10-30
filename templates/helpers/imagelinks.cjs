@@ -2,39 +2,39 @@
  * Custom theme helpers for Handlebars.js
  */
 
-module.exports = function(links, context) {
-    let mapping = {
-        redbubble: {
-            text: 'Buy products',
-            external: true
-        },
-        post: {
-            text: 'About image',
-            external: false
-        }
-    };
-    let formattedlinks = [];
-    Object.keys(links).forEach(type => {
-        let linkMap = mapping[type];
-        let link = '<a href="' + links[type] + '"';
-        
-        if (linkMap.external) {
-            link += ' target="_blank" rel="noopener noreferrer"';
-        }
-
-        link += '>' + linkMap.text + '</a>';
-        if (links[type]) {
-            formattedlinks.push(link);
-        }
-    });
-    
-    if (formattedlinks.length < 1) {
-        return;
+module.exports = function (links, context) {
+  const mapping = {
+    redbubble: {
+      text: 'Buy products',
+      external: true
+    },
+    post: {
+      text: 'About image',
+      external: false
     }
-    
-    if (formattedlinks.length === 1) {
-        return ' ' + formattedlinks[0];
+  };
+  const formattedlinks = [];
+  Object.keys(links).forEach(type => {
+    const linkMap = mapping[type];
+    let link = '<a href="' + links[type] + '"';
+
+    if (linkMap.external) {
+      link += ' target="_blank" rel="noopener noreferrer"';
     }
 
-    return '<br>' + formattedlinks.join(' || ');
+    link += '>' + linkMap.text + '</a>';
+    if (links[type]) {
+      formattedlinks.push(link);
+    }
+  });
+
+  if (formattedlinks.length < 1) {
+    return;
+  }
+
+  if (formattedlinks.length === 1) {
+    return ' ' + formattedlinks[0];
+  }
+
+  return '<br>' + formattedlinks.join(' || ');
 };

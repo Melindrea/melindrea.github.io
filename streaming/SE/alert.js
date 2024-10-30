@@ -1,4 +1,4 @@
-//get data from the 🤟 StreamElements 🤟 data injection
+// get data from the 🤟 StreamElements 🤟 data injection
 const name = '{{name}}';
 const animation = 'wobble';
 
@@ -14,11 +14,10 @@ userNameContainer.innerHTML = stringToAnimatedHTML(name, animation);
  * @param anim: the animation to use on the text
  * @returns {string}
  */
-function stringToAnimatedHTML(s, anim) {
-    let stringAsArray = s.split('');
-    stringAsArray = stringAsArray.map((letter) => {
-        return `<span class="animated-letter ${anim}">${letter}</span>`
-    });
-    return stringAsArray.join('');
-
+function stringToAnimatedHTML (s, anim) {
+  let stringAsArray = s.split('');
+  stringAsArray = stringAsArray.map((letter) => {
+    return `<span class="animated-letter ${anim}">${letter}</span>`;
+  });
+  return stringAsArray.join('');
 }

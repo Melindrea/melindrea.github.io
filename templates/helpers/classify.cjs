@@ -3,10 +3,10 @@
  */
 const slugify = require('slugify');
 
-module.exports = function(classes) {
-    return classes.map(x => slugify(x, {
-        lower: true,
-        strict: true,
-        regex: true
-    })).join(' ');
+module.exports = function (classes) {
+  return classes.map(x => slugify(x, {
+    lower: true,
+    strict: true,
+    regex: true
+  })).join(' ');
 };

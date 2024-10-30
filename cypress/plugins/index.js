@@ -1,1 +1,1 @@
-import htmlvalidate from "cypress-html-validate/plugin";
+import htmlvalidate from 'cypress-html-validate/plugin';

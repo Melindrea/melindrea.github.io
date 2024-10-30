@@ -3,8 +3,8 @@
  */
 const { DateTime } = require('luxon');
 
-module.exports = function(value) {
-    let date = DateTime.fromJSDate(value);
+module.exports = function (value) {
+  const date = DateTime.fromJSDate(value);
 
-    return date.toFormat('MMMM d, yyyy');
+  return date.toFormat('MMMM d, yyyy');
 };

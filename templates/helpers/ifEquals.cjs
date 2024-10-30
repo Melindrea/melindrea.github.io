@@ -1,8 +1,7 @@
 /*
  * Custom theme helpers for Handlebars.js
  */
-module.exports = function(context, options) {
-    
+module.exports = function (context, options) {
   if (options.hash.comparison === context) {
     return options.fn(this);
   } else {

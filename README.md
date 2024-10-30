@@ -8,6 +8,10 @@ Using Metalsmith to generate the site, markdown to write the posts, handlebars f
 ### TODO
 - Rewrite the Handlebars plugins into one and make it ESM-compatible and to not crash if there's no helpers/partials!
 - Then rewrite slugify & classify to go back to using "slug" rather than "slugify"
+- Terser for mangling/minifying prod JS
+- ES-lint (decide on my rules!) for linting JS
+- cssnano for CSS compression
+- html-validation/formatcheck
 
 ### Notes
 Update metalsmith-discover-helpers & metalsmith-dicover-partials with the following at the top of the function:

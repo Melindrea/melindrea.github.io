@@ -6,8 +6,6 @@ import layouts from '@metalsmith/layouts';
 import markdown from '@metalsmith/markdown';
 import permalinks from '@metalsmith/permalinks';
 import publish from 'metalsmith-publish';
-import discoverPartials from 'metalsmith-discover-partials';
-import discoverHelpers from 'metalsmith-discover-helpers';
 import postcss from '@metalsmith/postcss';
 import include from 'metalsmith-include-files';
 import concat from 'metalsmith-concat';
@@ -18,6 +16,7 @@ import toc from '@metalsmith/table-of-contents';
 import rss from './bin/rss.js';
 import gallery from './bin/gallery.js';
 import blog from './bin/blog.js';
+import handlebarsDiscoverer from './bin/handlebars-discoverer.js';
 import { addDates, bodyClasses, breadcrumbs, github, favicons } from './bin/file-functions.js';
 
 // JSON objects
@@ -183,12 +182,11 @@ Metalsmith(__dirname)
     .use(breadcrumbs)
     .use(bodyClasses)
     .use(check)
-    .use(discoverHelpers({
-        directory: 'templates/helpers',
-        pattern: '.cjs'
-    }))
-    .use(discoverPartials({
-        directory: 'templates/partials'
+    .use(handlebarsDiscoverer({
+        directories: {
+            helpers: 'templates/helpers',
+            partials: 'templates/partials',
+        }
     }))
     .use(toc())
     // Put the HTML fragments from the step above
@@ -209,4 +207,4 @@ Metalsmith(__dirname)
     .build((err) => {           // build process
         if (err) { throw err; }        // error handling is required
         console.log(`Build success in ${((performance.now() - t1) / 1000).toFixed(1)}s`)
-      });
+    });

@@ -23,3 +23,6 @@ src/assets/images/page-images/**
 gallery.json
 
 bin/metalsmith*
+
+foo/
+base_case.js

@@ -168,6 +168,10 @@
                 "header": "How-to posts",
                 "description": "Posts where I hope you'll find something useful?"
             },
+            "personal": {
+                "header": "Sharing my authentic self",
+                "description": "Sometimes I feel the need to share things from deep inside of me."
+            },
             "writing": {
                 "header": "On all things writing",
                 "description": "Whether about my writing, or how to better your writing, hopefully it's all here"

@@ -48,7 +48,7 @@ export default function gallery (options) {
         }
 
         if (!('links' in metadata) && merchify) {
-          console.log(basename + ' : ' + metadata.title + ' : ' + metadata.description);
+          console.log(basename + ' : ' + metadata.title + ' : ' + metadata.description + ' has no merch.');
         }
       } else {
         console.warn('NB! Image file ' + basename + ' is not in gallery metadata');

@@ -322,8 +322,8 @@ function handleIndices (files, collections) {
 
 function deletePosts (files, posts) {
   for (let i = 0; i < posts.length; i++) {
-    const filepath = posts[i].path.replace('/', sep) + sep + 'index.html';
-    // console.log('Deleting file "' + filepath + '"')
+    const filepath = posts[i].path.replace('/', sep);
+    //console.log('Deleting file "' + filepath + '"')
     delete files[filepath];
   }
 }

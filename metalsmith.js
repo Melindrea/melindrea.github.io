@@ -140,7 +140,8 @@ Metalsmith(__dirname)
       pattern: 'updates/**/*.html',
       refer: false,
       sortBy: 'pubdate',
-      reverse: true
+      reverse: true,
+      limit: 10
     },
     blog: {
       pattern: 'blog/**/*.html',

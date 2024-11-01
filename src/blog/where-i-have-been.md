@@ -1,7 +1,7 @@
 ---
 title: Where have I been
 header: Where I have been for the last few years 
-abstract: 
+abstract: A brief essay on how my brain works (or not), and how that affects my life.
 image:
     description: Collection of steel containers of mixed sizes, several of them a bit rusty
     source: https://unsplash.com/photos/pile-of-assorted-color-steel-containers-yOblHvTdKug

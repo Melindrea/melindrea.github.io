@@ -1,14 +1,14 @@
 {
     "where-have-i-been": {
         "title": "Where have I been",
-        "summary": null,
+        "summary": "A brief essay on how my brain works (or not), and how that affects my life.",
         "link": "https://melindreamakes.art/blog/posts/where-have-i-been/index.html/",
         "image": {
             "description": "Collection of steel containers of mixed sizes, several of them a bit rusty",
             "path": "/assets/images/featured-images/where-have-i-been/1464.jpg"
         },
         "stats": {
-            "modified": "2024-10-31T12:31:08.044Z",
+            "modified": "2024-11-01T14:28:06.719Z",
             "published": "2024-10-30T19:46:58.557Z"
         },
         "pushed": false

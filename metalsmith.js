@@ -132,10 +132,15 @@ Metalsmith(__dirname)
       metadata: {
         title: 'Updates',
         header: 'Brief updates',
-        description: 'Quick details about what is going on',
+        description: 'quick details about what is going on',
         path: 'updates',
         postTemplate: 'micro',
-        listClass: 'updates'
+        listClass: 'updates',
+        image: {
+          slug: 'updates.jpg',
+          source: 'https://unsplash.com/photos/happy-birthday-greeting-card-on-brown-floral-textile-Iu8lD0411sc',
+          creator: 'Elena Mozhvilo'
+        }
       },
       pattern: 'updates/**/*.html',
       refer: false,
@@ -150,7 +155,7 @@ Metalsmith(__dirname)
       metadata: {
         title: 'Blog',
         header: 'All blog posts',
-        description: 'Where I share my thoughts, ideas and general musings',
+        description: 'where I share my thoughts, ideas and general musings',
         index: true,
         path: 'blog',
         postTemplate: 'long',
@@ -159,6 +164,11 @@ Metalsmith(__dirname)
           tags: {
             position: 'sidebar'
           }
+        },
+        image: {
+          slug: 'blog.jpg',
+          source: 'https://unsplash.com/photos/brown-and-green-square-box-mQPHWfsS4yY',
+          creator: 'Mitul Gajera'
         },
         features: {
           sidebar: true

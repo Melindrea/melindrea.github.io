@@ -134,7 +134,7 @@ class ImageHandler:
         return self.isAspectRatio(width, height, ratio)
        
     def loadImages(self) -> dict:
-        """ Loads images into a dictionry, sorted based on the directories they're in. """
+        """ Loads images into a dictionary, sorted based on the directories they're in. """
         images = {}
         
         for imageContext, data in self.imageData.items():
@@ -146,7 +146,7 @@ class ImageHandler:
                 ratio = data["ratio"]
             for filename in list(self.source.glob(fileglob)):
                 file = Image(filename =filename)
-
+                
                 if (self.useFile(file.width, file.height, ratio)):
                     filedata = {
                         "size": { "width": file.width, "height": file.height},
@@ -155,7 +155,7 @@ class ImageHandler:
                     }
                     files.append(filedata)
                 else:
-                    print(f"File {filename} was discarded from list of {imageContext} images.")
+                    print(f"File {filename} (width: {file.width}, height: {file.height}, ratio: {ratio}) was discarded from list of {imageContext} images as its size was off.")
             
             images[imageContext] = files
 
